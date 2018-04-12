@@ -41,6 +41,18 @@ h2.section-title {
   color: #4B5C74;
 }
 
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /** SECTION HEADER/HERO **/
 .section-header {
   width: 100%;
@@ -146,8 +158,8 @@ h2.section-title {
 
 .section-how-it-works .how_it_work_row .feature-block {
   position: relative;
-  -webkit-box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
-          box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0px 6px 11px rgba(71,86,106,0.1);
+          box-shadow: 0px 6px 11px rgba(71,86,106,0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,6 +267,56 @@ h2.section-title {
 
 .section-testimonials .section-title {
   margin-bottom: 45px;
+}
+
+.section-testimonials img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.section-testimonials .testimonials {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 13px rgba(71,86,106,0.12);
+  padding: 30px;
+}
+
+.section-testimonials .testimonials-name {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #4B5C74;
+  text-align: left;
+  margin: 0px;
+}
+
+.section-testimonials .testimonials-country {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #798DA9;
+  text-align: left;
+  margin: 5px 0px;  
+}
+
+.section-testimonials .testimonials-hosted_by {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #798DA9;
+  text-align: left;
+  margin: 0px;
+}
+
+.section-testimonials .testimonials-text {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #798DA9;
+  text-align: left;
+  margin: 20px 0px 0px;
 }
 
 /** SECTION PARTNERSHIPS **/
