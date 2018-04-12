@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>Universal Student Housing | Host List</title>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="css/selectric.css" />
+
+<!--  jQuery plugin to customize HTML selects -->
+
+<link rel="stylesheet" type="text/css" href="css/hint.min.css" />
+
+<!-- tooltip library -->
+
+<link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+
+<!-- daterange calendar -->
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+<!-- bootstrap library -->
+
+<link rel="stylesheet" type="text/css" href="css/sumoselect.min.css" />
+
+<!-- swiper slider library -->
+
+<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+
+<!--  Single/Multi Select plugin  -->
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+</head>
+
+<body  data-spy="scroll" data-target=".scrollspy">
+<header class="top fixed">
+        <div class="container"> <a class="logo" href="/"><img src="images/logo.svg" class="img-responsive"/></a>
+                <nav class="mainmenu">
+                        <ul>
+                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
+                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
+                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a></li>
+                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
+                                <li>
+                                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                                </li>
+                        </ul>
+                </nav>
+                <div class="nav-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
+        </div>
+</header>
+
+<!-- Main Top Image -->
+
+<div class="row row-slider">
+        <div class="col-xs-6 col-sm-6 col-md-6 hidden-xs hidden-sm"> <img src="images/profile1.jpg" class="img-responsive img-full" /> </div>
+        <div class="col-sm-12 col-md-6"> <img src="images/profile2.jpg" class="img-responsive img-full" /> </div>
+        <div class="container container-abs">
+                <div class="row row-slider">
+                        <div class="col-md-12"> <a class="btn btn-primary btn-view-photos">View Photos</a> </div>
+                </div>
+        </div>
+</div>
+<div class="container">
+        <div class="clearifx">
+                <div class="row"> 
+                        
+                        <!--   Right Side  -->
+                        
+                        <div class="col-md-8" > 
+                                
+                                <!--  host details section   -->
+                                
+                                <section class="profile-section topSmallMargin">
+                                        <h2 class="title-section">Your Host</h2>
+                                        <div class="row">
+                                                <div class="col-md-2 col-sm-3">
+                                                        <div class="host_profile-pic"> <img class="img-circle" src="uploads/host/host-27.jpg" alt=""> </div>
+                                                        <div class="host_profile-info">
+                                                                <h3>Martin K.</h3>
+                                                                <p>67 years</p>
+                                                        </div>
+                                                </div>
+                                                <div class="col-md-10  ol-sm-9" >
+                                                        <h3>Visited and Approved by Homestay Match Ambassador</h3>
+                                                        <div class="notes">
+                                                                <p>Host since 2012</p>
+                                                                <p class="smallTxt">23 students hosted</p>
+                                                        </div>
+                                                        <p>Hi! I am Mike. Here's a few sentences about Mike, his background, family, house, hobbies, work, motivations, previous experiences hosting students. Welcoming mood.</p>
+                                                        <div class="swiper-hosts">
+                                                                <div class="swiper-container">
+                                                                        <div class="swiper-wrapper swiper-hosts">
+                                                                                <div class="swiper-slide">
+                                                                                        <div class="holder">
+                                                                                                <div class="host-people"> <img class="img-circle img-responsive" src="uploads/host/host-12.jpg" alt="">
+                                                                                                        <p class="name">Susan</p>
+                                                                                                        <div class="caption">
+                                                                                                                <p class="smallTxt">Wife</p>
+                                                                                                                <span class="smallTxt">32 yrs old</span> </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                        <div class="holder">
+                                                                                                <div class="host-people">
+                                                                                                        <div class="img-holder"> <img class="img-circle img-responsive" src="images/daugter.svg" alt=""> </div>
+                                                                                                        <div class="caption">
+                                                                                                                <p class="smallTxt">Daughter</p>
+                                                                                                                <span class="smallTxt">36 yrs old</span> </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                        <div class="holder">
+                                                                                                <div class="host-people">
+                                                                                                        <div class="img-holder"> <img class="img-circle img-responsive" src="images/daugter.svg" alt=""> </div>
+                                                                                                        <div class="caption">
+                                                                                                                <p class="smallTxt">Daughter</p>
+                                                                                                                <span class="smallTxt">36 yrs old</span> </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                        <div class="holder">
+                                                                                                <div class="host-people">
+                                                                                                        <div class="img-holder"> <img class="img-circle img-responsive" src="images/son.svg" alt=""> </div>
+                                                                                                        <div class="caption">
+                                                                                                                <p class="smallTxt">Son</p>
+                                                                                                                <span class="smallTxt">32 yrs old</span> </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                        <div class="holder">
+                                                                                                <div class="host-people">
+                                                                                                        <div class="img-holder"> <img class="img-circle img-responsive" src="images/dog.svg" alt=""> </div>
+                                                                                                        <div class="caption">
+                                                                                                                <p class="smallTxt">Dog</p>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                        <div class="holder">
+                                                                                                <div class="host-people">
+                                                                                                        <div class="img-holder"> <img class="img-circle img-responsive" src="images/cat.svg" alt=""> </div>
+                                                                                                        <div class="caption">
+                                                                                                                <p class="smallTxt">Cat</p>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                        <div class="holder">
+                                                                                                <div class="host-people">
+                                                                                                        <div class="img-holder"> <img class="img-circle img-responsive" src="images/cat.svg" alt=""> </div>
+                                                                                                        <div class="caption">
+                                                                                                                <p class="smallTxt">Cat</p>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                        <div class="holder">
+                                                                                                <div class="host-people">
+                                                                                                        <div class="img-holder"> <img class="img-circle img-responsive" src="images/cat.svg" alt=""> </div>
+                                                                                                        <div class="caption">
+                                                                                                                <p class="smallTxt">Cat</p>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                        <div class="holder">
+                                                                                                <div class="host-people">
+                                                                                                        <div class="img-holder"> <img class="img-circle img-responsive" src="images/cat.svg" alt=""> </div>
+                                                                                                        <div class="caption">
+                                                                                                                <p class="smallTxt">Cat</p>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                        <div class="holder">
+                                                                                                <div class="host-people">
+                                                                                                        <div class="img-holder"> <img class="img-circle img-responsive" src="images/cat.svg" alt=""> </div>
+                                                                                                        <div class="caption">
+                                                                                                                <p class="smallTxt">Cat</p>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                        
+                                                                        <!-- Add Pagination --> 
+                                                                        
+                                                                </div>
+                                                                <div class="swiper-button-next"></div>
+                                                                <div class="swiper-button-prev"></div>
+                                                        </div>
+                                                        <div id=""> </div>
+                                                </div>
+                                        </div>
+                                </section>
+                                
+                                <!--  hosteay section   -->
+                                
+                                <section class="profile-section">
+                                        <h2 class="title-section">The homestay</h2>
+                                        <div>
+                                                <p>Description of the room and house (plus distance to university etc) Just filler text from now LA is a big city but my apartment is in quite a central location to quickly drive/Uber/bus to places like Beverly Hills, Santa Monica, Venice Beach...</p>
+                                                <a id="homestay-expand" class="expand-link" href="javascript: void(0);">Read more about this homestay&nbsp;&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                                <div id="homestay-extra">
+                                                        <p>More content ...</p>
+                                                </div>
+                                                <br/>
+                                                <div class="row">
+                                                        <form id="form-amenities" name="form-amenities" method="">
+                                                                <div class="col-xs-12">
+                                                                        <h3 class="mb-20 mt-20">Homestay options available</h3>
+                                                                        <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                        <ul class="list-amenities inline  pull-left">
+                                                                                                <li><img src="images/room.svg" class="img-responsive" /> Room only</li>
+                                                                                                <li><img src="images/breakfast.svg" class="img-responsive" /> Room with breakfast</li>
+                                                                                                <li><img src="images/dinner.svg" class="img-responsive" /> Room with breakfast and dinner</li>
+                                                                                        </ul>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                                <div class="col-md-12 col-sm-12">
+                                                                                        <h3 class="mb-20 mt-20">House amenities</h3>
+                                                                                        
+                                                                                        <ul class="list-amenities">
+                                                                                                <li><img src="images/wifi.svg" class="img-responsive" /> Wifi</li>
+                                                                                                <li><img src="images/airconditing.svg" class="img-responsive" /> Air Conditioning</li>
+                                                                                                <li><img src="images/washer.svg" class="img-responsive" /> Washer</li>
+                                                                                                <li><img src="images/heater.svg" class="img-responsive" /> Heater</li>
+                                                                                        </ul>
+                                                                                </div>
+                                                                                <div class="col-md-12 col-sm-12">
+                                                                                        <h3 class="mb-20 mt-20">Bedroom amenities</h3>
+                                                                                       
+                                                                                        <ul class="list-amenities">
+                                                                                                <li><img src="images/desk.svg" class="img-responsive" /> Desk</li>
+                                                                                                <li><img src="images/dresser.svg" class="img-responsive" /> Dresser</li>
+                                                                                                <li><img src="images/tv.svg" class="img-responsive" /> Basic Cable TV in bedroom</li>
+                                                                                                <li><img src="images/bathroom.svg" class="img-responsive" /> Private bathroom</li>
+                                                                                        </ul>
+                                                                                        <ul class="list-amenities full hide">
+                                                                                                <li><img src="images/cooking.svg" class="img-responsive" /> Limited Cooking (e.g. microwave, kettle, toaster)</li>
+                                                                                                <li><img src="images/stove.svg" class="img-responsive" /> Full (e.g. stove, oven)</li>
+                                                                                        </ul>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </form>
+                                                </div>
+                                                <a id="amenity-expand" class="expand-link" href="javascript: void(0);">Show all amenities&nbsp;&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                                <div id="amenity-extra">
+                                                        <p>More content ...</p>
+                                                </div>
+                                        </div>
+                                </section>
+                                
+                                <!--  rules section   -->
+                                
+                                <section class="profile-section">
+                                        <h2 class="title-section">House Rules</h2>
+                                        <div>
+                                                <ul class="list-check">
+                                                        <li>No smoking</li>
+                                                        <li>Not suitable for pets</li>
+                                                        <li>No parties or events</li>
+                                                        <li>If you intend having extra guests this must be agreed upon before your stay</li>
+                                                </ul>
+                                                <a id="rules-expand" class="expand-link" href="javascript: void(0);">Read all rules&nbsp;&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                                <div id="rules-extra">
+                                                        <p>Parking: The Hideaway guests (lower apartment) park at the other end of the drive so both cars can get in and out freely. The Retreat (upper apartment) parks under the carport closest to the house.</p>
+                                                        <p>ALL trash must be disposed of in the BLACK trash cans on the street and not in the green cans on the property.</p>
+                                                </div>
+                                        </div>
+                                </section>
+                                
+                                <!--  guests comments section   -->
+                                
+                                <section class="profile-section hide">
+                                        <h2 class="title-section">What guests say about this homestay</h2>
+                                        <div class="guest-comment">
+                                                <div class="row">
+                                                        <div class="col-md-2" >
+                                                                <div class="host_profile-pic"> <img class="img-circle" src="uploads/host/host-11.jpg" alt=""> </div>
+                                                        </div>
+                                                        <div class="col-md-10" >
+                                                                <div class="guest-info">
+                                                                        <h3>John</h3>
+                                                                        <p class="smallTxt">November 2017</p>
+                                                                </div>
+                                                                <p>Mike and Lisa were outstanding hosts. They were attentive to our every need. The house is a gem! We woke up every morning to an incredible sunrise and magnificent views. This is a very special place.</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="guest-comment">
+                                                <div class="row">
+                                                        <div class="col-md-2" >
+                                                                <div class="host_profile-pic"> <img class="img-circle" src="uploads/host/host-27.jpg" alt=""> </div>
+                                                        </div>
+                                                        <div class="col-md-10" >
+                                                                <div class="guest-info">
+                                                                        <h3>Jun-seo</h3>
+                                                                        <p class="smallTxt">September 2017</p>
+                                                                </div>
+                                                                <p>Mike and Lisa is honestly a great couple and they not only have a great house with the best view, but also a beautiful garden! Recommended!</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </section>
+                                
+                                <!--  more rooms section   -->
+                                
+                                <section id="more-rooms-left" class="profile-section">
+                                        <h2 class="title-section">More bedrooms in this home</h2>
+                                        <div class="row">
+                                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <div class="bedroom-holder"> <img src="images/bedroom1.jpg" class="img-responsive img-rounded img-full"/>
+                                                                <div class="overlay-bedroom"></div>
+                                                                <div class="bedroom-info"> <span>Blue Bedroom</span>
+                                                                        <p>From <small>$25</small> Per Day</p>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <div class="bedroom-holder"> <img src="images/bedroom2.jpg" class="img-responsive img-rounded img-full"/>
+                                                                <div class="overlay-bedroom"></div>
+                                                                <div class="bedroom-info"> <span>Green Bedroom</span>
+                                                                        <p>From <small>$25</small> Per Day</p>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <div class="bedroom-holder"> <img src="images/bedroom3.jpg" class="img-responsive img-rounded img-full"/>
+                                                                <div class="overlay-bedroom"></div>
+                                                                <div class="bedroom-info"> <span>Red Bedroom</span>
+                                                                        <p>From <small>$25</small> Per Day</p>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </section>
+                                
+                                <!--  neighborhood section   -->
+                                
+                                <section id="neighborhood-left" class="profile-section clearfix">
+                                        <h2 class="title-section">The neighborhood</h2>
+                                        <p>Opening in 1929, the design was considered one of the nation's most well planned and beautifully laid out of commercial areas. Harold Janss had hired major architects and instructed them to follow a Mediterranean theme, with clay tile roofs, decorative Spanish tile, paseos, patios and courtyards. <br/>
+                                                <br/>
+                                                Buildings at strategic points, including theaters, used towers to serve as beacons for drivers on Wilshire Boulevard. Janss picked the first slate of businesses and determined their location in the neighborhood.</p>
+                                </section>
+                        </div>
+                        
+                        <!--  Left Side: Form  -->
+                        
+                        <div class="col-md-4 scrollspy" >
+                                <div id="profile-form-box" class="" data-spy="affix">
+                                        <div class="form-box-header">
+                                                <div class="host_room_info">
+                                                        <div class="host_amount width30">$&nbsp;110<span>Per&nbsp;Night</span></div>
+                                                        <div class="host_plan width70"><span>Room + Breakfast & Dinner</span></div>
+                                                </div>
+                                        </div>
+                                        <div class="form-box-content">
+                                                <form name="form-profile" action="" method="post">
+                                                        <div class="clearfix moveDate field-box">
+                                                                <div class="checkDate">
+                                                                        <label for="guests">Move In</label>
+                                                                        <br/>
+                                                                        <input type="text" id="movein" class="" name="movein" placeholder="Move in" tabindex="1" >
+                                                                </div>
+                                                                <div class="checkDate">
+                                                                        <label for="guests">Move Out</label>
+                                                                        <br/>
+                                                                        <input type="text" id="moveout" class="" name="moveout" placeholder="Move out" tabindex="2" >
+                                                                </div>
+                                                        </div>
+                                                        <div class="field-box">
+                                                                <label for="guests">Guests</label>
+                                                                <br/>
+                                                                <select id="guests" name="guests" tabindex="3">
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                        <option value="4">4</option>
+                                                                        <option value="5">5</option>
+                                                                </select>
+                                                        </div>
+                                                        <div class="field-box">
+                                                                <label for="plan">Homestay Plan</label>
+                                                                <br/>
+                                                                <select id="plan" name="plan" tabindex="4">
+                                                                        
+                                                                        <!--  multiple  -->
+                                                                        
+                                                                        <option value="room">Room</option>
+                                                                        <option value="room-b">Room + Breakfast</option>
+                                                                        <option value="room-b-d">Room + Breakfast & Dinner</option>
+                                                                </select>
+                                                        </div>
+                                                        <div class="field-box">
+                                                                <table class="price-table">
+                                                                        <tbody>
+                                                                                <tr>
+                                                                                        <td><span class="blue">$33</span> x 28 days</td>
+                                                                                        <td class="blue">$200</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                        <td>Booking Fee<a title="more info" data-toggle="modal" data-target="#bfModal"><img class="firstQ" alt="more info" src="images/info.svg" /></a></td>
+                                                                                        <td class="blue">$300</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                        <td>Processing Fee<a title="more info" data-toggle="modal" data-target="#pfModal"><img class="firstQ" alt="more info" src="images/info.svg" /></a></td>
+                                                                                        <td class="blue">$300</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                        <td><strong>Total</strong></td>
+                                                                                        <td class="blue">$800</td>
+                                                                                </tr>
+                                                                        </tbody>
+                                                                </table>
+                                                        </div>
+                                                        <div class="field-box">
+                                                                <input class="submit_btn" type="submit" name="submit" value="Request Homestay">
+                                                        </div>
+                                                </form>
+                                                <p class="smallNote text-center">You won't be charged yet</p>
+                                        </div>
+                                </div>
+                                 <!--  more rooms section: duplicated for the responsive form position  -->
+                                
+                                <section id="more-rooms-right" class="profile-section">
+                                        <h2 class="title-section">More bedrooms in this home</h2>
+                                        <div class="row">
+                                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <div class="bedroom-holder"> <img src="images/bedroom1.jpg" class="img-responsive img-rounded img-full"/>
+                                                                <div class="overlay-bedroom"></div>
+                                                                <div class="bedroom-info"> <span>Blue Bedroom</span>
+                                                                        <p>From <small>$25</small> Per Day</p>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <div class="bedroom-holder"> <img src="images/bedroom2.jpg" class="img-responsive img-rounded img-full"/>
+                                                                <div class="overlay-bedroom"></div>
+                                                                <div class="bedroom-info"> <span>Green Bedroom</span>
+                                                                        <p>From <small>$25</small> Per Day</p>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <div class="bedroom-holder"> <img src="images/bedroom3.jpg" class="img-responsive img-rounded img-full"/>
+                                                                <div class="overlay-bedroom"></div>
+                                                                <div class="bedroom-info"> <span>Red Bedroom</span>
+                                                                        <p>From <small>$25</small> Per Day</p>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </section>
+                        </div>
+                        
+                        <!-- Modal Popup Booking Fee  -->
+                        
+                        <div class="modal fade ushPopup" id="bfModal" role="dialog">
+                                <div class="modal-dialog"> 
+                                        
+                                        <!-- Modal content-->
+                                        
+                                        <div class="modal-content">
+                                                <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title blue"><strong>Booking Fee</strong></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                        <p> </p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="modal fade ushPopup" id="pfModal" role="dialog">
+                                <div class="modal-dialog"> 
+                                        
+                                        <!-- Modal content-->
+                                        
+                                        <div class="modal-content">
+                                                <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title blue"><strong>Processing Fee</strong></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                        <p> </p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        
+        <!-- Map section -->
+        
+        <div id="Map" class="col-xs-12 padding-0">
+        		<section id="neighborhood-bottom" class="profile-section clearfix">
+                    <h2 class="title-section">The neighborhood</h2>
+                    <p>Opening in 1929, the design was considered one of the nation's most well planned and beautifully laid out of commercial areas. Harold Janss had hired major architects and instructed them to follow a Mediterranean theme, with clay tile roofs, decorative Spanish tile, paseos, patios and courtyards. <br/>
+                            <br/>
+                            Buildings at strategic points, including theaters, used towers to serve as beacons for drivers on Wilshire Boulevard. Janss picked the first slate of businesses and determined their location in the neighborhood.</p>
+            </section>
+                <div id="map-profile"></div>
+        </div>
+</div>
+
+<!--  Footer  -->
+
+<footer class="footer">
+        <div class="footer-bg1">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-4 col-sm-3"> <img class="img-table img-footer" src="images/footerlogo.svg" alt="" /> </div>
+                                <div class="col-md-4 col-sm-6">
+                                        <div class="row">
+                                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                                        <nav class="footer-nav pl-xs-150">
+                                                                <h6>Company</h6>
+                                                                <ul>
+                                                                        <li><a href="#">About Us</a></li>
+                                                                        <li><a href="#">Contact</a></li>
+                                                                        <li><a href="/help.html">Help</a></li>
+                                                                        <li><a href="#">Partners</a></li>
+                                                                        <li><a href="#">Terms & Conditions</a></li>
+                                                                        <li><a href="#">Experience Homestay</a></li>
+                                                                </ul>
+                                                        </nav>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                                        <nav class="footer-nav pr-xs-150">
+                                                                <h6>Host</h6>
+                                                                <ul>
+                                                                        <li><a href="#">Become a host</a></li>
+                                                                        <li><a href="#">Refer a friend</a></li>
+                                                                        <li><a href="#">Why host with us</a></li>
+                                                                        <li><a href="#">Ideal Hosting</a></li>
+                                                                </ul>
+                                                        </nav>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="col-md-12">
+                                                        <div id="social-footer">
+                                                                <ul class="list-social clearfix">
+                                                                        <li> <a href="javascrip:void(0);"> <i class="fa fa-facebook fa-fw"></i> </a> </li>
+                                                                        <li> <a href="javascrip:void(0);"> <i class="fa fa-twitter fa-fw"></i> </a> </li>
+                                                                        <li> <a href="javascrip:void(0);"> <i class="fa fa-google-plus fa-fw"></i> </a> </li>
+                                                                        <li> <a href="javascrip:void(0);"> <i class="fa fa-pinterest fa-fw"></i> </a> </li>
+                                                                        <li> <a href="javascrip:void(0);"> <i class="fa fa-instagram fa-fw"></i> </a> </li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="row">
+                                                <div class="col-xs-12 text-center">
+                                                        <p class="copyright">H.S. Match<br/>
+                                                                424 Kelton Ave., Suite 514. Los Angeles, California CA 90024</p>
+                                                        <p class="copyright">LLC. © 2017. All Rights Reserved.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</footer>
+<div class="otherContainer">
+        <div class="buttonContainer">
+                <button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+        </div>
+</div>
+<div class="ontop"></div>
+
+<!-- Popup Group DIV -->
+
+<div id="popup-group" class="popup-wrapper"></div>
+
+<!-- Popup Group DIV end //--> 
+
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery-ui.min.js"></script> 
+<script src="js/jquery.ui.touch-punch.min.js"></script> 
+<script src="js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects --> 
+
+<script src="js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   --> 
+
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/custom.js"></script> 
+<script src="js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  --> 
+
+<script src="js/daterangepicker.js"></script> <!--  date picker  --> 
+
+<script src="js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
+
+<!-- Include Date Range Picker --> 
+
+<!-- Google Map - list of destinations --> 
+
+<!-- <script src="https://maps.google.com/maps/api/js?libraries=placeses,geometry,places&key=AIzaSyCiMT2KwUzR_nC52PZUXLHITgAlTdIKkrE"></script>  --> 
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyAb63loxs1OJOsWwDOf-l9IVG_8oX0RsBs&amp;"></script> 
+<script src="js/CustomMarker.js"></script> 
+<script src="js/swiper.min.js"></script> 
+<script>
+
+        var map;
+
+        var myCenter = new google.maps.LatLng(34.069297, -118.455495);
+
+        function initialize() {
+
+            var mapOptions = {
+
+                zoom: 14,
+
+                center: myCenter,
+
+                panControl: false,
+
+                mapTypeControl: false,
+
+                streetViewControl: false,
+
+                scrollwheel: false,
+
+                //draggable: false,
+
+                zoomControlOptions: {
+
+                    style: google.maps.ZoomControlStyle.SMALL,
+
+                    position: google.maps.ControlPosition.LEFT_TOP
+
+                },
+
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+
+            };
+
+            map = new google.maps.Map(document.getElementById('map-profile'), mapOptions);
+
+
+
+            var marker1 = new google.maps.Marker({
+
+                position: new google.maps.LatLng(34.059297, -118.445254),
+
+                icon: "images/marker_host.png",
+
+				labelClass: "host-marker",
+
+                title: "UCLA Extension"
+
+            });
+
+			//marker1.setMap(map);
+
+			var marker2 = new MarkerWithLabel({
+
+				map: map,
+
+                position: new google.maps.LatLng(34.059297, -118.445254),
+
+				icon: "images/blank-marker.png",
+
+				labelAnchor: new google.maps.Point(57, 57),
+
+			  	labelClass: "host-marker", // your desired CSS class
+
+			  	labelInBackground: true
+
+            });
+
+            var infowindow2 = new google.maps.InfoWindow({ // Create a new InfoWindow
+
+  				content:"<strong>UCLA</strong> - a public research university in the Westwood district of <em>Los Angelesone</em>" // HTML contents of the InfoWindow
+
+  			});
+
+			google.maps.event.addListener(marker2, 'click', function() { // Add a Click Listener to our marker
+
+				infowindow2.open(map,marker2); // Open our InfoWindow
+
+			});
+
+
+
+			/*var marker2 = new MarkerWithLabel({
+
+			  map: map,
+
+			  //animation: google.maps.Animation.DROP,
+
+			  position: new google.maps.LatLng(34.069839, -118.463289),
+
+			  icon: "images/marker2.png",
+
+			  labelContent: "$120",
+
+			  labelAnchor: new google.maps.Point(35, 36),
+
+			  labelClass: "custom-marker", // your desired CSS class
+
+			  labelInBackground: true
+
+			}); */
+
+		
+
+			var infowindow1 = new google.maps.InfoWindow({ // Create a new InfoWindow
+
+  				content:"<strong>UCLA</strong> - a public research university in the Westwood district of <em>Los Angelesone</em>" // HTML contents of the InfoWindow
+
+  			});
+
+			google.maps.event.addListener(marker1, 'click', function() { // Add a Click Listener to our marker
+
+				infowindow1.open(map,marker1); // Open our InfoWindow
+
+			});
+
+			/*var infowindow2 = new google.maps.InfoWindow({ // Create a new InfoWindow
+
+  				content:"<strong>Host 1</strong>" // HTML contents of the InfoWindow
+
+  			});
+
+			google.maps.event.addListener(marker2, 'click', function() { // Add a Click Listener to our marker
+
+				infowindow2.open(map,marker2); // Open our InfoWindow
+
+			});*/
+
+
+
+        }
+
+
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+    </script> 
+<script type="text/javascript">
+
+                $(function(){
+
+					//********  TILES CAROUSEL  *****//
+
+					$('.carousel').carousel({
+
+						interval: false
+
+					});
+
+					//********   FILTERS  **********//
+
+					$('#location').SumoSelect({
+
+						placeholder: 'Place'
+
+					});
+
+					$('#roomType').SumoSelect({ triggerChangeCombined: true, placeholder: "Room Type" });
+
+					/*var last_valid_selection = null;
+
+					$('#roomType').change(function (event) {
+
+						if ($(this).val().length > 2) {
+
+							alert('You can only choose 2!');
+
+							var $this = $(this);
+
+							$this[0].sumo.unSelectAll();
+
+							$.each(last_valid_selection, function (i, e) {
+
+								$this[0].sumo.selectItem($this.find('option[value="' + e + '"]').index());
+
+							});
+
+						} else {
+
+							last_valid_selection = $(this).val();
+
+						}
+
+					});*/
+
+				});
+
+            </script> 
+
+<!-- Google language translation --> 
+
+<script type="text/javascript">
+
+            var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+
+            function googleTranslateElementInit(){
+
+                if (duplicate_google_translate_counter == 0) {
+
+                    new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+
+                }
+
+                duplicate_google_translate_counter++;
+
+            }
+
+            </script> 
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
+<!-- Calendar section  --> 
+
+<script type="text/javascript">
+
+                //********  Date picker initialization   *********//
+
+                $(function(){
+
+					//******   Scrolling FORM   ********/
+						$(window).on('beforeunload', function(){
+						  $(window).scrollTop(0);
+						});
+						$('#profile-form-box').affix({
+							offset: {
+								//top: 100,
+								top: $('#profile-form-box').offset().top - 90,
+								bottom: $('#Map').outerHeight(true) + 520
+							}
+						});
+
+					//******   Date Picker   ********/
+
+					var today = new Date();
+
+					var firstDay = new Date(today.getFullYear(),today.getMonth(),today.getDate());
+
+					$("#movein").daterangepicker({
+
+						singleDatePicker: true,
+
+						showDropdowns: false,
+
+						 locale: {
+
+						  format: 'MMM DD YYYY'
+
+						},
+
+						minDate: firstDay
+
+					});
+
+					$("#moveout").daterangepicker({
+
+						singleDatePicker: true,
+
+						showDropdowns: false,
+
+						locale: {
+
+						  format: 'MMM DD YYYY'
+
+						},
+
+						minDate: firstDay
+
+					});
+
+					
+
+					//Collapse - expande Box
+
+					$('#rules-expand').click(function() {
+
+						$(this).find('i').toggleClass('fa fa-chevron-up fa fa-chevron-down');
+
+						$('#rules-extra').toggle();
+
+					});
+
+					$('#homestay-expand').click(function() {
+
+						$(this).find('i').toggleClass('fa fa-chevron-up fa fa-chevron-down');
+
+						$('#homestay-extra').toggle();
+
+					});
+
+					$('#amenity-expand').click(function() {
+
+						$(this).find('i').toggleClass('fa fa-chevron-up fa fa-chevron-down');
+
+						$('#amenity-extra').toggle();
+
+					});
+
+					
+
+				});
+
+            </script> 
+<script>
+
+    var swiper = new Swiper('.swiper-container', {
+
+      slidesPerView: 4,
+
+      spaceBetween: 20,
+
+      navigation: {
+
+        nextEl: '.swiper-button-next',
+
+        prevEl: '.swiper-button-prev',
+
+      },
+
+		
+
+		
+
+		
+
+	breakpoints: {
+
+        1024: {
+
+          slidesPerView: 4,
+
+          spaceBetween: 40,
+
+        },
+
+        768: {
+
+          slidesPerView: 3,
+
+          spaceBetween: 30,
+
+        },
+
+        640: {
+
+          slidesPerView: 2,
+
+          spaceBetween: 20,
+
+        },
+
+        320: {
+
+          slidesPerView: 2,
+
+          spaceBetween: 10,
+
+        }
+
+      }
+
+    });
+
+	
+
+	
+
+  </script>
+    
+   
+</body>
+</html>

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>Universal Student Housing | Home Page</title>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+<!-- jQuery plugin carousel slider  -->
+<link rel="stylesheet" type="text/css" href="css/selectric.css" />
+<!--  jQuery plugin to customize HTML selects -->
+<link rel="stylesheet" type="text/css" href="css/hint.min.css" />
+<!-- tooltip library -->
+<link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+<!-- daterange calendar -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<!-- bootstrap library -->
+<link rel="stylesheet" type="text/css" href="css/sumoselect.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+</head>
+<body class="clshomepage">
+<header class="top fixed">
+        <div class="container"> <a class="logo" href="/"><img src="images/logo.svg" alt="" class="img-responsive"/></a>
+                <nav class="mainmenu">
+                        <ul>
+                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
+                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
+                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a> </li>
+                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
+                                <li>
+                                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                                </li>
+                        </ul>
+                </nav>
+                <div class="nav-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
+        </div>
+</header>
+<div id="container">
+        <section class="header-bg section activeTheme">
+                <div class="container">
+                        <div id="intro" class="intro">
+                                <h1>Find the Homestay You Need</h1>
+                                <p>The Most Trusted Housing Organization For Students in the US</p>
+                        </div>
+                        <div id="main-search" class="row main-search " data-layout="aurora" itemscope="">
+                                <form name="frmhomesearch" id="frmhomesearch" method="POST">
+                                        <div class="main-search-full">
+                                                <div class="destination-field left"> 
+                                                        <!-- <input class="" data-label="Address, School, or City" id="destination" name="destination" placeholder="Select School" tabindex="1" type="text">	 -->
+                                                        <select id="destination" name="destination" tabindex="1">
+                                                                <option value="" disabled selected>Select School</option>
+                                                                <option value="ucla">UCLA</option>
+                                                                <option value="uie">UC Irvine Extension</option>
+                                                                <option value="occ">Santa Monica College</option>
+                                                                <option value="asu">Arizona State University</option>
+                                                                <option value="ube">UC Berkeley Extension</option>
+                                                                <option value="ccsf">City College of San Francisco</option>
+                                                                <option value="csulb">California State University, Long Beach</option>
+                                                                <option value="csun">California State University, Northridge</option>
+                                                                <option value="pcc">Pasadena City College</option>
+                                                        </select>
+                                                </div>
+                                                <div class="move-out-field left position dateCont">
+                                                        <input data-float-label="true" data-label="move Out" id="fromDatePicker" name="move-in" placeholder="Move in - Move out" tabindex="23" type="text" readonly="true" autocomplete="false">
+                                                </div>
+                                                <div class="search left">
+                                                        <input type="hidden" value="" id="latitude">
+                                                        <input type="hidden" value="" id="longitude">
+                                                        <button class="search-btn" type="submit" tabindex="4">Search</button>
+                                                </div>
+                                        </div>
+                                </form>
+                        </div>
+                </div>
+        </section>
+        <section class="section_wrp section pt-100 pb-100">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-4 ccol-sm-4 col-xs-12">
+                                        <div class="feature-block no-b no-s"> <span class="feature-holder" ><img src="images/icon1.svg" class="img-responsive img-table" /> </span>
+                                                <h1>Location</h1>
+                                                <p>Search housing options close to your school based on your preferences</p>
+                                        </div>
+                                </div>
+                                <div class="col-md-4 ccol-sm-4 col-xs-12">
+                                        <div class="feature-block no-b no-s"> <span class="feature-holder" ><img src="images/icon2.svg" class="img-responsive img-table" /> </span>
+                                                <h1>Ideal Hosts</h1>
+                                                <p>Our host who wants to share their culture, language and home with you</p>
+                                        </div>
+                                </div>
+                                <div class="col-md-4 ccol-sm-4 col-xs-12">
+                                        <div class="feature-block no-b no-s"> <span class="feature-holder" ><img src="images/icon3.svg" class="img-responsive img-table" /> </span>
+                                                <h1>Met & Verified</h1>
+                                                <p>We meet each host and verify every home to ensure your comfort</p>
+                                        </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-md-offset-2 col-md-8">
+                                        <p class="fullwidth pt-100 text-detail">Searching for a place to stay through HomestayMatch is designed to be easy.
+                                                
+                                                We have taken into consideration distance to your school, public transportation and quality of our host rooms. We have analyzed all those factors so the search results you receive are the most relevant for you. Thousands of students have already experienced that it works.</p>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <section class="section_wrp section_box">
+                <div class="container">
+                        <div id="works" class="">
+                                <h2 class="fullwidth mb-50 mt-30 text-bold">Find your Homestay in 3 steps</h2>
+                                <div class="how_it_work_row row">
+                                        <div class="col-sm-4 comeup">
+                                                <div class="feature-block">
+                                                        <div class="icon-steps"> <img src="images/icon4.svg" class="img-responsive img-table" /><span>1</span> </div>
+                                                        <div class="how_content">
+                                                                <h3 class="mb-10">Find Amazing Hosts</h3>
+                                                                <p>We have personally met and approved single host! They are approved every single host!. They are located near your campus and public transportation, and are happy to share the english language and culture of their city.</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-sm-4 js-reveal">
+                                                <div class="feature-block">
+                                                        <div class="icon-steps"> <img src="images/icon5.svg" class="img-responsive img-table" /><span>2</span> </div>
+                                                        <div class="how_content">
+                                                                <h3 class="mb-10">Book your Homestay</h3>
+                                                                <p>Set your preferences, review photos of the bedroom, house and all the amenities offered. Choose the homestay you like the most and book it!.</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-sm-4 js-reveal">
+                                                <div class="feature-block">
+                                                        <div class="icon-steps"> <img src="images/icon6.svg" class="img-responsive img-table" /><span>3</span> </div>
+                                                        <div class="how_content">
+                                                                <h3 class="mb-10">Movein</h3>
+                                                                <p>Get ready for your trip! The host will be there to received you and make you feel at home the moment you arrive. And we can pick you up at the airport if you wish.</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                            
+                            
+                            <div class="row">
+                                <div class="col-md-offset-2 col-md-8">
+                                        <h2 class="text-bold mt-80 mb-50">Partnership with prestigious educational institutions in the US</h2>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-md-offset-1 col-md-10"> 
+                                        <!-- repeast this div with 5 item in each -->
+                                        <div class="partner_logo_row row">
+                                                <div class="col-sm-3 col-xs-6">
+                                                        <div class="partner_logo"> <img src="images/partner/partner-01.png" alt=""/> </div>
+                                                </div>
+                                                <div class="col-sm-3 col-xs-6">
+                                                        <div class="partner_logo"> <img src="images/partner/partner-02.png" alt=""/> </div>
+                                                </div>
+                                                <div class="col-sm-3 col-xs-6">
+                                                        <div class="partner_logo"> <img src="images/partner/partner-03.png" alt=""/> </div>
+                                                </div>
+                                                <div class="col-sm-3 col-xs-6">
+                                                        <div class="partner_logo"> <img src="images/partner/partner-04.png" alt=""/> </div>
+                                                </div>
+                                                <div class="col-sm-3 col-xs-6">
+                                                        <div class="partner_logo"> <img src="images/partner/partner-05.png" alt=""/> </div>
+                                                </div>
+                                                <div class="col-sm-3 col-xs-6">
+                                                        <div class="partner_logo"> <img src="images/partner/partner-06.png" alt=""/> </div>
+                                                </div>
+                                                <div class="col-sm-3 col-xs-6">
+                                                        <div class="partner_logo"> <img src="images/partner/partner-07.png" alt=""/> </div>
+                                                </div>
+                                                <div class="col-sm-3 col-xs-6">
+                                                        <div class="partner_logo"> <img src="images/partner/partner-08.png" alt=""/> </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                
+                                <div class="col-md-offset-2 col-md-8">
+                                        <h2 class="text-bold mt-80 mb-80">What they say about us</h2>
+                                   
+                                    <div class="testimonials">
+                                    <p>"They are great people, very servicial and nice. They make you feel like you are part of the family. I'm so grateful for the time I spent with them. I learned so many things. Also thanks to USH. The location and family was accurate and nice. I hope I can get back with you for new experiences."</p>
+                                        
+                                        <span>Mariana Z. form Mexico</span>
+                                        </div>
+                                </div>
+                        </div>
+                        </div>
+                </div>
+        </section>
+       
+        <section class="section_wrp section hide">
+                <div class="container ">
+                        <div class="row">
+                                <h2>Safe and Affordable Homestays</h2>
+                                <p>Find a home away from home in the most interesting cities in the United States</p>
+                                <a id="homestay-search-btn" class="big_btn" title="" href="">Find your homestay now</a>
+                                <div id="secondary-search">
+                                        <div class="main-search">
+                                                <form name="frmhomesearch" method="POST">
+                                                        <div class="main-search-full">
+                                                                <div class="destination-field left"> 
+                                                                        <!-- <input class="" data-label="Address, School, or City" id="destination" name="destination" placeholder="Select School" tabindex="1" type="text">	 -->
+                                                                        <select id="destination2" name="destination" tabindex="1">
+                                                                                <option value="" disabled selected>Select School</option>
+                                                                                <option value="ucla">UCLA</option>
+                                                                                <option value="uie">UC Irvine Extension</option>
+                                                                                <option value="occ">Santa Monica College</option>
+                                                                                <option value="asu">Arizona State University</option>
+                                                                                <option value="ube">UC Berkeley Extension</option>
+                                                                                <option value="ccsf">City College of San Francisco</option>
+                                                                                <option value="csulb">California State University, Long Beach</option>
+                                                                                <option value="csun">California State University, Northridge</option>
+                                                                                <option value="pcc">Pasadena City College</option>
+                                                                        </select>
+                                                                </div>
+                                                                <div class="move-out-field left position dateCont">
+                                                                        <input data-float-label="true" data-label="move Out" id="fromDatePicker2" name="move-in" placeholder="Move in - Move out" tabindex="23" type="text" readonly="true" autocomplete="false">
+                                                                </div>
+                                                                <div class="search left">
+                                                                        <input type="hidden" value="" id='latitude2'>
+                                                                        <input type="hidden" value="" id='longitude2'>
+                                                                        <button class="search-btn" type="submit" tabindex="4">Search</button>
+                                                                </div>
+                                                        </div>
+                                                </form>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <section class="section_wrp section_blue pb-150 pt-150">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-offset-2 col-md-8">
+                                        <h1>Find a home away form home in the most <span> interesting cities </span> in the united states</h1>
+                                        <a class="btn btn-white">VIEW HOMESTAYS</a> </div>
+                        </div>
+                        
+                </div>
+        </section>
+        <footer class="footer footer-blue">
+                <div class="container">
+                    
+                    <hr/>
+                        <div class="footer-bg1">
+                                <div class="row">
+                                        <div class="col-sm-3 col-xs-12"> <img class="footer-logo" src="images/logo.svg" alt="" />
+                                                <p class="p-address">H.S. Match
+                                                        424 Kelton Ave., Suite 508. Los Angeles, California CA 90024</p>
+                                        </div>
+                                        <div class="col-sm-3 col-xs-6 tablet_margin">
+                                                <nav class="footer-nav">
+                                                        <h6>Company</h6>
+                                                        <ul>
+                                                                <li><a href="#"> About </a></li>
+                                                                <li><a href="#">Why Homestay Match </a></li>
+                                                                <li><a href="#">Experience Homestay</a></li>
+                                                                <li><a href="#">Contact</a></li>
+                                                                <li><a href="#">FAQ</a></li>
+                                                                <li><a href="#">Partners</a></li>
+                                                                <li> <a href="#">Terms & Conditions </a></li>
+                                                                <li><a href="#">Privacy Policy</a></li>
+                                                                <li><a href="#"> Cancellation & Refund Policy</a></li>
+                                                        </ul>
+                                                </nav>
+                                        </div>
+                                        <div class="col-sm-3 col-xs-6 tablet_margin">
+                                                <nav class="footer-nav">
+                                                        <h6>Hosting</h6>
+                                                        <ul>
+                                                                <li><a href="#">Become a Host</a></li>
+                                                                <li><a href="#">The Ideal Host</a></li>
+                                                                <li><a href="#">Refer a friend</a></li>
+                                                        </ul>
+                                                </nav>
+                                        </div>
+                                        <div class="col-sm-3 col-xs-12 tablet_margin">
+                                            
+                                            <ul class="list-social-icons">
+                                            <li><a href="javascipt:"><i class="fa fa-facebook fa-fw"></i></a></li>
+                                                <li><a href="javascipt:"><i class="fa fa-twitter fa-fw"></i></a></li>
+                                                <li><a href="javascipt:"><i class="fa fa-google-plus fa-fw"></i></a></li>
+                                                <li><a href="javascipt:"><i class="fa fa-instagram fa-fw"></i></a></li>
+                                                 <li><a href="javascipt:"><i class="fa fa-pinterest fa-fw"></i></a></li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                            <p class="p-address mb-20 mt-20">LLC.&copy; 2017. All Rights Reserved.</p>
+                                            
+                                            
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </footer>
+</div>
+<div class="ontop"></div>
+<!-- **************************************************************************  --> 
+<!-- **************    Popup Group DIV: SIGNUP STEPS  *************************  --> 
+<!-- **************************************************************************  -->
+<div id="popup-group" class="popup-wrapper">
+        <div class="popup-inner-wrapper"> 
+                <!-- Student Signup -->
+                <div id="student-reg" class="popup-content">
+                        <div class="sign-header">Student Sign Up<a href="javascript:void(0);" class="pop-close popupclose">X</a></div>
+                        <form name="frmstudentreg">
+                                <div class="row-popup">
+                                        <h3 class="form_step_head">Sign Up Details</h3>
+                                        <div class="row">
+                                                <div class="col-sm-6">
+                                                        <div class="position"> <span class="required">
+                                                                <div class="radio_chk_group marBottom20">
+                                                                        <div class="grp_val">
+                                                                                <div class="radio-text">
+                                                                                        <input id="student" type="radio" name="student" required="true" value="student" tabindex="1"/>
+                                                                                        <label for="student"><span></span>I am Student</label>
+                                                                                        <input id="professional" type="radio" name="student" required="true" value="professional" tabindex="2"/>
+                                                                                        <label for="professional"><span></span>I am Professional</label>
+                                                                                </div>
+                                                                                <div class="clerfix"></div>
+                                                                                <p> <span class="error-info hint--bottom-left hint--error" aria-label="Please select Student/Professional."></span> </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                                </span> </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                        <div class="position">
+                                                                <div class="required marBottom20">
+                                                                        <p> <span class="drop-info error-info hint--bottom-left hint--error" aria-label="Select hear about us"></span> </p>
+                                                                        <div class="dropdown drop-2">
+                                                                                <select id="hear_about_us" name="hear_about_us" tabindex="3">
+                                                                                        <option value="">How did you hear about us?</option>
+                                                                                </select>
+                                                                                <p id="hear_about_us_value" style="display:none;"><strong></strong></p>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-sm-6">
+                                                        <div class="position"><span class="required">
+                                                                <input class="text-field marBottom20" type="text" name="first_name" id="first_name" placeholder="First Name" tabindex="4" select-on-focus>
+                                                                <p> <span class="error-info hint--bottom-left hint--error" aria-label="First name cannot be blank."></span> </p>
+                                                                <p> <span class="error-info hint--bottom-left hint--error" aria-label="First name can be upto 20 characters."></span> </p>
+                                                                </span></div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                        <div class="position"> <span class="required">
+                                                                <input class="text-field marBottom20" type="text" name="last_name" id="last_name" placeholder="Family Name" tabindex="5">
+                                                                <p> <span class="error-info hint--bottom-left hint--error" aria-label="Family name cannot be blank."></span> </p>
+                                                                <p> <span class="error-info hint--bottom-left hint--error" aria-label="Family name can be upto 20 characters."></span> </p>
+                                                                </span> </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-sm-6">
+                                                        <div class="position"> <span class="required">
+                                                                <input class="text-field marBottom20" type="text" name="date_of_birth" id="date_of_birth" placeholder="Date of Birth" tabindex="6" autocomplete="false" readonly>
+                                                                <p> <span class="error-info hint--top-left hint--error" aria-label="Date cannot be blank."></span> </p>
+                                                                </span> </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                        <div class="position"> <span class="required">
+                                                                <input class="text-field marBottom20" type="email" name="email" id="email" placeholder="Email Address" tabindex="7" >
+                                                                <p> <span class="error-info hint--top-left hint--error" aria-label="Email Address cannot be blank"></span> </p>
+                                                                <p> <span class="error-info hint--top-left hint--error" aria-label="Invalid email address."></span> </p>
+                                                                <p> <span class="error-info hint--top-left hint--error" aria-label="Email already taken"></span> </p>
+                                                                </span> </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-sm-6">
+                                                        <div class="position"> <span class="required">
+                                                                <input type="password" class="text-field marBottom20" id="password" name="password" placeholder="Password" tabindex="8" required>
+                                                                <p> <span class="error-info hint--top-left hint--error" aria-label="Password cannot be blank."></span> </p>
+                                                                <p> <span class="error-info hint--top-left hint--error" aria-label="Invalid Password."></span> </p>
+                                                                <p> <span class="error-info hint--top-right hint--error" aria-label="Must contain one lower &amp; uppercase letter, and one non-alpha character (a number or a symbol)"></span> </p>
+                                                                <p> <span class="error-info hint--top-right hint--error" aria-label="Password must have minimum 8 characters."></span> </p>
+                                                                <p> <span class="error-info hint--top-left hint--error" aria-label="Password must have maximum 20 characters."></span> </p>
+                                                                </span> </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                        <div class="position"> <span class="required">
+                                                                <input class="text-field marBottom20" type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required compare-to="password" class="form-control" tabindex="9"/>
+                                                                <p> <span class="error-info hint--top-left hint--error" aria-label="Confirm Password cannot be blank"></span> </p>
+                                                                <p> <span class="error-info hint--top-left hint--error" aria-label="Confirm Password does not match with Password"></span> </p>
+                                                                </span> </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </form>
+                        <div class="row-popup">
+                                <div class="row">
+                                        <div class="col-sm-12">
+                                                <div class="or-text"><span>OR</span></div>
+                                                <div class="or_option">
+                                                        <div class="register-text">Autofill details with
+                                                                <div class="signupwith_icons"> <a href="javascript:void(0);" class="fb">Facebook</a> <a href="javascript:void(0);" class="tw">Twitter</a> <a href="javascript:void(0);" class="gp">Google+</a> <a href="javascript:void(0);" class="li">LinkedIN</a> </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="clear row-popup">
+                                <div class="button_bar"> <a href="javascript:void(0);">
+                                        <button class="student-previous-main preview-btn left" type="button" tabindex="10"></button>
+                                        </a> <span class="step_name" style="line-height: 28px;">Sign Up Details</span>
+                                        <button class="student-next-step1 next-btn right" type="button"></button>
+                                </div>
+                        </div>
+                </div>
+                
+                <!-- Student Signup: STEP 1 -->
+                <div id="student-reg-step1" class="popup-content">
+                        <div class="sign-header">Student Sign Up <a href="javascript:void(0);" class="pop-close popupclose">X</a>
+                                <div class="step-position">
+                                        <button class="btn-step active" type="button">1</button>
+                                        <button class="btn-step" type="button" disabled="disabled">2</button>
+                                        <button class="btn-step" type="button" disabled="disabled">3</button>
+                                </div>
+                        </div>
+                        <form name="frmstudentregstep1">
+                                <div class="row-popup">
+                                        <h3 class="form_step_head">Personal Details</h3>
+                                        <div class="row">
+                                                <div class="col-sm-6">
+                                                        <div class="position">
+                                                                <div class="dropdown marBottom20 drop-2 born-city">
+                                                                        <div class="dropdown drop-2">
+                                                                                <select id="born_city" name="born_city" tabindex="3">
+                                                                                        <option value="">Where were you born?</option>
+                                                                                </select>
+                                                                                <p id="born_city_value" style="display:none;"><strong></strong></p>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                        <div class="position">
+                                                                <div class="dropdown marBottom20 drop-2 city">
+                                                                        <select id="city" name="city" tabindex="6">
+                                                                                <option value="">Where do you live now?</option>
+                                                                        </select>
+                                                                        <p id="city_value" style="display:none;"><strong></strong></p>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-sm-6">
+                                                        <div class="radio_chk_group marBottom20">
+                                                                <div class="grp_lbl left">Gender</div>
+                                                                <div class="grp_val right">
+                                                                        <div class="radio-text">
+                                                                                <input id="gender-male" type="radio" name="gender" value="1" tabindex="4" />
+                                                                                <label for="gender-male"><span></span>Male</label>
+                                                                                <input id="gender-female" type="radio" name="gender" value="2" tabindex="5"/>
+                                                                                <label for="gender-female"><span></span>Female</label>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                        <div class="position">
+                                                                <div class="dropdown marBottom20 drop-2 country-code">
+                                                                        <div class="dropdown drop-2">
+                                                                                <select id="selectedCountryCode" name="selectedCountryCode" tabindex="1">
+                                                                                        <option value="">Mobile</option>
+                                                                                </select>
+                                                                                <p id="select_country_code_value" style="display:none;"><strong></strong></p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="mobile-number">
+                                                                        <input id="mobile_number" class="text-field marBottom20" type="text" name="mobile_number" placeholder="000-0000-000"  tabindex="2" select-on-focus>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-sm-6">
+                                                        <div class="radio_chk_group marBottom20">
+                                                                <div class="grp_lbl left">Do You Smoke?</div>
+                                                                <div class="grp_val right">
+                                                                        <div class="radio-text">
+                                                                                <input id="smoke-yes" type="radio" name="smoke" tabindex="7" value="1"/>
+                                                                                <label for="smoke-yes"><span></span>Yes</label>
+                                                                                <input id="smoke-no" type="radio" name="smoke" tabindex="8" value="0" />
+                                                                                <label for="smoke-no"><span></span>No</label>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                        <div class="position">
+                                                                <input class="text-field marBottom20" type="text" id="hobbies" name="hobbies" placeholder="What are your personal hobbies?" tabindex="9" value="">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </form>
+                        <div class="clear row-popup">
+                                <div class="button_bar"> <a href="javascript:void(0);">
+                                        <button class="student-previous-main preview-btn left" type="button" tabindex="10"></button>
+                                        </a> <span class="step_count">Step <em class="step_num">1</em></span> <span class="step_name">Personal Details</span> <a href="javascript:void(0);" tabindex="11">
+                                        <button class="student-next-step2 next-btn right" type="button"></button>
+                                        </a> </div>
+                        </div>
+                </div>
+                
+                <!-- Student Sighup: STEP 2 -->
+                <div id="student-reg-step2" class="popup-content">
+                        <div class="sign-header">Student Sign Up <a href="javascript:void(0);" class="pop-close popupclose">X</a>
+                                <div class="step-position">
+                                        <button class="btn-step" type="button">1</button>
+                                        <button class="btn-step active" type="button">2</button>
+                                        <button class="btn-step" type="button" disabled="disabled">3</button>
+                                </div>
+                        </div>
+                        <!--<div class="text-title">Your Preferences</div>-->
+                        <form name="frmstudentregstep2">
+                                <div class="row-popup">
+                                        <h3 class="form_step_head">Your Preferences</h3>
+                                        <div class="row">
+                                                <div class="col-sm-12">
+                                                        <div class="radio_chk_group marBottom20">
+                                                                <div class="row">
+                                                                        <div class="col-xs-6">
+                                                                                <div class="grp_lbl left">Room Type</div>
+                                                                        </div>
+                                                                        <div class="col-xs-6">
+                                                                                <div class="grp_val left">
+                                                                                        <input id="gender-private" type="radio" name="roomtype" value="private" select-on-focus tabindex="1"/>
+                                                                                        <label for="gender-private"><span></span>Private</label>
+                                                                                        <input id="shared" type="radio" name="roomtype" value="shared" tabindex="2"/>
+                                                                                        <label for="shared"><span></span>Shared</label>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="sharedRoom">
+                                                <div class="row">
+                                                        <div class="col-sm-6">
+                                                                <div class="row">
+                                                                        <div class="col-sm-4">
+                                                                                <div class="font14">Choose Bed</div>
+                                                                        </div>
+                                                                        <div class="col-sm-8">
+                                                                                <div class="">
+                                                                                        <div class="radio-text width40 pull-left">
+                                                                                                <input id="shared-one" type="radio" name="shared" value="shared-one" tabindex="3"/>
+                                                                                                <label for="shared-one" class="mar-none"><span></span><img src="images/icon-double-beds.png" alt=""/></label>
+                                                                                        </div>
+                                                                                        <div class="radio-text padBottom20 pull-left">
+                                                                                                <input id="shared-two" type="radio" name="shared" value="shared-two" tabindex="4"/>
+                                                                                                <label for="shared-two"><span></span><img src="images/xshared-2.png.pagespeed.ic.9jEdqyFwKU.png" alt=""/></label>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                                <div class="">
+                                                                        <input class="text-field marBottom30" type="text" name="guestName" placeholder="Guest Name" tabindex="5">
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-sm-12">
+                                                        <div class="radio_chk_group marBottom20">
+                                                                <div class="row">
+                                                                        <div class="col-sm-6 col-xs-12">
+                                                                                <div class="grp_lbl left">Meal Plan</div>
+                                                                        </div>
+                                                                        <div class="col-sm-6 col-xs-12">
+                                                                                <div class="grp_val ">
+                                                                                        <div class="checkbox clsmealplan">
+                                                                                                <input type="checkbox" id="" tabindex="6">
+                                                                                                <label for=""></label>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-sm-12">
+                                                        <div class="radio_chk_group marBottom20">
+                                                                <div class="row">
+                                                                        <div class="col-xs-6">
+                                                                                <div class="grp_lbl left">Do you require a private bathroom?</div>
+                                                                        </div>
+                                                                        <div class="col-xs-6">
+                                                                                <div class="grp_val left">
+                                                                                        <input id="bathroom-yes" type="radio" name="bathroom" value="1" tabindex="7"/>
+                                                                                        <label for="bathroom-yes"><span></span>Yes</label>
+                                                                                        <input id="bathroom-no" type="radio" name="bathroom" value="0" tabindex="8"/>
+                                                                                        <label for="bathroom-no"><span></span>No</label>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-sm-12">
+                                                        <div class="radio_chk_group marBottom20">
+                                                                <div class="row">
+                                                                        <div class="col-xs-6">
+                                                                                <div class="grp_lbl left">Consider a host with children under 15 years? </div>
+                                                                        </div>
+                                                                        <div class="col-xs-6">
+                                                                                <div class="grp_val left">
+                                                                                        <input id="children-yes" type="radio" name="children"value="1" tabindex="9"/>
+                                                                                        <label for="children-yes"><span></span>Yes</label>
+                                                                                        <input id="children-no" type="radio" name="children" value="0" tabindex="10"/>
+                                                                                        <label for="children-no"><span></span>No</label>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-sm-12">
+                                                        <div class="radio_chk_group marBottom20">
+                                                                <div class="row">
+                                                                        <div class="col-xs-6">
+                                                                                <div class="grp_lbl left">Consider host with Pets? </div>
+                                                                        </div>
+                                                                        <div class="col-xs-6">
+                                                                                <div class="grp_val left">
+                                                                                        <input id="host-pets-yes" type="radio" name="host-pets" value="1" tabindex="11"/>
+                                                                                        <label for="host-pets-yes"><span></span>Yes</label>
+                                                                                        <input id="host-pets-no" type="radio" name="host-pets" value="0" tabindex="12" />
+                                                                                        <label for="host-pets-no"><span></span>No</label>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="row exp_panel petdiv">
+                                                                        <div class="col-sm-12">
+                                                                                <div class="topbdr extbdr"></div>
+                                                                                <div class="checkbox checkbox_inline"> <span class="chk_wrp">
+                                                                                        <input type="checkbox" id="host-pets-dog" name="host-pets-both" value="dog" tabindex="13"/>
+                                                                                        <label for="host-pets-dog">Dog</label>
+                                                                                        </span> <span class="chk_wrp">
+                                                                                        <input type="checkbox" id="host-pets-cat" name="host-pets-both" value="cat" tabindex="14"/>
+                                                                                        <label for="host-pets-cat">Cat</label>
+                                                                                        </span> <span class="chk_wrp">
+                                                                                        <input type="checkbox" id="host-pets-either" name="host-pets-both" value="both" tabindex="15"/>
+                                                                                        <label for="host-pets-either">Either is Ok</label>
+                                                                                        </span> </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </form>
+                        <div class="clear row-popup">
+                                <div class="button_bar"> <a href="javascript:void(0);">
+                                        <button class="student-next-step1 preview-btn left" type="button" tabindex="16"></button>
+                                        </a> <span class="step_count">Step <em class="step_num">2</em></span> <span class="step_name">Your Preferences </span> <a href="javascript:void(0);" tabindex="17">
+                                        <button class="student-next-step3 next-btn right" type="button"></button>
+                                        </a> </div>
+                        </div>
+                </div>
+        </div>
+        
+        <!-- Student Sighup: STEP 2 -->
+        <div id="student-reg-step3" class="popup-content">
+                <div class="sign-header">Student Sign Up <a href="javascript:;" class="pop-close popupclose">X</a>
+                        <div class="step-position">
+                                <button class="btn-step" type="button">1</button>
+                                <button class="btn-step" type="button">2</button>
+                                <button class="btn-step active" type="button">3</button>
+                        </div>
+                </div>
+                <form name="frmstudentregstep2">
+                        <div class="row-popup">
+                                <h3 class="form_step_head">Final Questions</h3>
+                                <div class="row">
+                                        <div class="col-md-6">
+                                                <div class="position">
+                                                        <div class="radio-title marBottom15">How well do you speak English?</div>
+                                                        <div class="dropdown marBottom40 drop-2">
+                                                                <select name="speak_english" id="speak_english" tabindex="1">
+                                                                        <option value="">Select</option>
+                                                                        <option value="Beginner">Beginner</option>
+                                                                        <option value="Intermediate">Intermediate</option>
+                                                                        <option value="Advanced">Advanced</option>
+                                                                </select>
+                                                                <p id="speak_english_value" style="display:none;"><strong>Beginner</strong></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6"> </div>
+                                </div>
+                        </div>
+                        <div class="row-popup">
+                                <div class="row">
+                                        <div class="col-md-6">
+                                                <div class="radio_chk_group marBottom20">
+                                                        <div class="radio-title marBottom20">Do you have special diet? </div>
+                                                        <div class="radio-text width40 left">
+                                                                <input id="diet-yes" type="radio" name="diet" value="1" tabindex="2"/>
+                                                                <label for="diet-yes"><span></span>Yes</label>
+                                                        </div>
+                                                        <div class="radio-text ">
+                                                                <input id="diet-no" type="radio" name="diet" value="0" tabindex="3"/>
+                                                                <label for="diet-no"><span></span>No</label>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="marBottom20">
+                                                        <textarea class="textarea-field textarea-field-step3" name="special_diet_desc" id="special_diet_desc" rows="4" placeholder="Enter special diet" select-on-focus tabindex="4"></textarea>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row-popup">
+                                <div class="row">
+                                        <div class="col-md-6">
+                                                <div class="radio_chk_group marBottom20">
+                                                        <div class="radio-title marBottom20">Do you have allergies?</div>
+                                                        <div class="radio-text width40 left">
+                                                                <input id="allergies-yes" type="radio" name="allergies" value="1" tabindex="5"/>
+                                                                <label for="allergies-yes"><span></span>Yes</label>
+                                                        </div>
+                                                        <div class="radio-text ">
+                                                                <input id="allergies-no" type="radio" name="allergies" value="0" tabindex="6"/>
+                                                                <label for="allergies-no"><span></span>No</label>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="marBottom20">
+                                                        <textarea class="textarea-field textarea-field-step3" name="allergies_desc" id="allergies_desc" rows="5" placeholder="Enter allergies" tabindex="7"></textarea>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row-popup">
+                                <div class="row">
+                                        <div class="col-md-6">
+                                                <div class="radio_chk_group marBottom20">
+                                                        <div class="radio-title marBottom20">Are you taking medication?</div>
+                                                        <div class="radio-text width40 left">
+                                                                <input id="medication-yes" type="radio" name="medication" value="1" tabindex="8"/>
+                                                                <label for="medication-yes"><span></span>Yes</label>
+                                                        </div>
+                                                        <div class="radio-text ">
+                                                                <input id="medication-no" type="radio" name="medication" value="0" tabindex="9"/>
+                                                                <label for="medication-no"><span></span>No</label>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="marBottom20">
+                                                        <textarea class="textarea-field textarea-field-step3" name="taking_medicine_desc" id="taking_medicine_desc" rows="5" placeholder="Enter medication" tabindex="10"></textarea>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </form>
+                <div class="clear row-popup">
+                        <div class="button_bar"> <a href="javascript:void(0);" tabindex="11">
+                                <button class="student-next-step2 preview-btn left" type="button"></button>
+                                </a> 
+                                <!--  <span class="step_count">AGREE </span>--> 
+                                <!--  <span class="step_name">Terms &amp; Conditions</span>--> 
+                                
+                                <span class="step_count">Step 3</span> <span class="step_name">Final Questions</span> <a href="javascript:void(0);" tabindex="12">
+                                <button class="student-next-step3 next-btn right" type="button"></button>
+                                </a> </div>
+                </div>
+        </div>
+</div>
+<!-- Popup Group DIV end //--> 
+
+<!--  JAVASCRIPT  --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery-ui.min.js"></script> 
+<script src="js/jquery.ui.touch-punch.min.js"></script> 
+<script src="js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects --> 
+<script src="js/owl.carousel.min.js"></script> <!--  slider carousel --> 
+<script src="js/custom.js"></script> 
+<script src="js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  --> 
+<script src="js/daterangepicker.js"></script> <!--  date picker  --> 
+<script src="js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
+<script src="js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   --> 
+<script>
+
+	$(function(){
+		/***************    SIGNIN iframe  *****************/
+		//show the signin iframe
+		var frame_loaded = 0;
+		$("#signin").click(function(){
+			$("#signinBox").show();
+			if (frame_loaded == 0) {
+				$("#user-signup-popup").attr('src',"app/student/template/signin_iframe.html");
+				frame_loaded = 1;
+			}
+		});
+		//hide the signin iframe clicking outside
+		$('body').click(function(evt){    
+			if(!$(evt.target).is('#signin')) {
+				$("#signinBox").hide();
+			}
+		});
+		/*******************  END  **********************/
+		
+		//***********   SIGNUP POPUP GROUP   ************/
+		//open popup signup menu link
+		$("#signup").click(function () {
+			pop('popup-group');
+			$("#student-reg").show();
+		});
+		//close popup X btn
+		$(".pop-close").click(function () {
+			hide('popup-group');
+		});
+		//popup steps navigation
+		$(".preview-btn, .next-btn").click(function () {
+			$("#student-reg").hide();
+			$("#student-reg-step1").hide();
+			$("#student-reg-step2").hide();
+			$("#student-reg-step3").hide();
+		});
+		$(".student-previous-main").click(function () {
+			$("#student-reg").show();
+		});
+		$(".student-next-step1").click(function () {
+			$("#student-reg-step1").show();
+		});
+		$(".student-next-step2").click(function () {
+			$("#student-reg-step2").show();
+		});
+		$(".student-next-step3").click(function () {
+			$("#student-reg-step3").show();
+		});
+		//*****************  END  ***********************/
+	});
+</script> 
+<!-- Google language translation --> 
+<script type="text/javascript">
+var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+function googleTranslateElementInit(){
+	if (duplicate_google_translate_counter == 0) {
+		new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+	}
+	duplicate_google_translate_counter++;
+}
+</script> 
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
+<!-- Calendar section  --> 
+<script type="text/javascript">
+	//********  Date picker initialization   *********//
+	$(function(){
+		$('#homestay-search-btn').click(function(){
+			$('#homestay-search-btn').hide();
+			$('#secondary-search').show();
+			return false;
+		});
+		var today=new Date();
+		var firstDay=new Date(today.getFullYear(),today.getMonth(),1);$('#fromDatePicker').daterangepicker({"autoApply":true,"alwaysShowCalendars":true,"minDate":firstDay,"dateFormat":"mmm d yyyy","autoUpdateInput":false,"autoApply":true,"stepMonths":false,"minDate":today,"locale":{"format":"MMM D YYYY","separator":" - ",},isInvalidDate:function(date){return false;}},function(start,end,label){$('#fromDatePicker').val(start.format('MMM D YYYY')+' - '+end.format('MMM D YYYY'));});$("#date_of_birth").datepicker({dateFormat:'mm-dd-yy'});$("#date_of_birth2").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth1").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth2").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth3").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth4").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth5").datepicker({dateFormat:'mm-dd-yy'});});$(document).ready(function(e){$('.daterangepicker').hide();$('.daterangepicker .table-condensed td').each(function(){alert($(this).attr('class'));});$('#destination').focusin(function(){});$('#destination').focusout(function(){});$('#fromDatePicker').focusin(function(){});$('#fromDatePicker').focusout(function(){});$('#toDatePicker').focusin(function(){});$('#toDatePicker').focusout(function(){});setTimeout(function(){var ssWinScroll=getCurrentScroll();if(ssWinScroll>=100){$('.h_new').addClass('fixed');}else{$('.h_new').removeClass('fixed');}},400);
+	
+	var today2=new Date();var firstDay2=new Date(today2.getFullYear(),today2.getMonth(),1);$('#fromDatePicker2').daterangepicker({"autoApply":true,"alwaysShowCalendars":true,"minDate":firstDay2,"dateFormat":"mmm d yyyy","autoUpdateInput":false,"autoApply":true,"stepMonths":false,"minDate":today2,"locale":{"format":"MMM D YYYY","separator":" - ",},isInvalidDate:function(date){return false;}},function(start,end,label){$('#fromDatePicker2').val(start.format('MMM D YYYY')+' - '+end.format('MMM D YYYY'));});$("#date_of_birth").datepicker({dateFormat:'mm-dd-yy'});$("#date_of_birth2").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth1").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth2").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth3").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth4").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth5").datepicker({dateFormat:'mm-dd-yy'});});$(document).ready(function(e){$('.daterangepicker').hide();$('.daterangepicker .table-condensed td').each(function(){alert($(this).attr('class'));});$('#destination2').focusin(function(){});$('#destination2').focusout(function(){});$('#fromDatePicker2').focusin(function(){});$('#fromDatePicker2').focusout(function(){});$('#toDatePicker2').focusin(function(){});$('#toDatePicker2').focusout(function(){});setTimeout(function(){var ssWinScroll=getCurrentScroll();if(ssWinScroll>=100){$('.h_new').addClass('fixed');}else{$('.h_new').removeClass('fixed');}},400);
+	});
+</script>
+</body>
+</html>

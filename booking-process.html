@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>Universal Student Housing | Host List</title>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="css/selectric.css" />
+
+<!--  jQuery plugin to customize HTML selects -->
+
+<link rel="stylesheet" type="text/css" href="css/hint.min.css" />
+
+<!-- tooltip library -->
+
+<link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+
+<!-- daterange calendar -->
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+<!-- bootstrap library -->
+
+<link rel="stylesheet" type="text/css" href="css/sumoselect.min.css" />
+
+<!-- swiper slider library -->
+
+<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+
+<!--  Single/Multi Select plugin  -->
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+</head>
+    
+    <body data-spy="scroll" data-target=".scrollspy">
+<header class="top fixed">
+        <div class="container"> <a class="logo" href="/"><img src="images/logo.svg" alt="" class="img-responsive"/></a>
+                <nav class="mainmenu">
+                        <ul>
+                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
+                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
+                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a> </li>
+                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
+                                <li>
+                                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                                </li>
+                        </ul>
+                </nav>
+                <div class="nav-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
+        </div>
+</header>
+<!-- Main Top Image -->
+<div class="container">
+        <div class="row"> 
+                <!--   Right Side  -->
+                <div class="col-md-8" >
+                        <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                        <div class="panel panel-default panel-signup panel-booking mt-100 mb-200">
+                                                <div class="panel-body booking">
+                                                        <ul class="nav nav-tabs process-model process-3 more-icon-preocess" role="tablist">
+                                                                <li role="presentation" class="active"><a href="#GuestDetails"  aria-controls="GuestDetails" role="tab" data-toggle="tab"><i class="" aria-hidden="true">1</i>
+                                                                        <p>Guest Details</p>
+                                                                        </a></li>
+                                                                <li role="presentation"><a href="#HouseRules"  aria-controls="HouseRules" role="tab" data-toggle=""><i>2</i>
+                                                                        <p>House Rules</p>
+                                                                        </a></li>
+                                                                <li role="presentation"><a href="#PaymentDetails"  aria-controls="PaymentDetails" role="tab" data-toggle=""><i>3</i>
+                                                                        <p>Payment Details</p>
+                                                                        </a></li>
+                                                                <!--<li role="presentation" class="hide"><a href="#Preferences"  aria-controls="Preferences" role="tab" data-toggle="tab"><i>4</i>
+                                                                        <p>Preferences</p>
+                                                                        </a></li>-->
+                                                        </ul>
+                                                        <!-- end design process steps--> 
+                                                        <!-- Tab panes -->
+                                                        <div class="tab-content">
+                                                                <div role="tabpanel" class="tab-pane fade in active" id="GuestDetails">
+                                                                        <div class="design-process-content">
+                                                                                <div class="row">
+                                                                                        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                                                                                                <h1 class="full-width text-center text-lg">Great!</h1>
+                                                                                                <h2 class="text-md blue">Your request has successfully been received.</h2>
+                                                                                                <p class="fullwidth mb-30">Please go through these quick steps to complete your request. You will be charged only if the host accepts it.</p>
+                                                                                                <div id="guest1" class="fullwidth mb-30">
+                                                                                                        <h3 class="text-md mt-10 pull-left">Guest 1</h3>
+                                                                                                        <ul class="list-ms pull-right">
+                                                                                                                <li><span> <img src="images/male.svg" alt="" style="width: 15px;" /></span>Male</li>
+                                                                                                                <li><span> <img src="images/smoker.svg" alt="s" style="width: 21px;" ></span>Smoker</li>
+                                                                                                        </ul>
+                                                                                                        <div class="clearfix mb-10"></div>
+                                                                                                        <input type="text" class="form-control mb-20" placeholder="Email Address" />
+                                                                                                        <input type="text" class="form-control mb-20" placeholder="First Name" />
+                                                                                                        <input type="text" class="form-control mb-20" placeholder="Last Name" />
+                                                                                                        <select class="form-control mb-20">
+                                                                                                                <option>Nationality</option>
+                                                                                                                <option>Male</option>
+                                                                                                                <option>Female</option>
+                                                                                                        </select>
+                                                                                                        <div class="form-group">
+                                                                                                                <label for="exampleInputEmail1">Date of Birth:</label>
+                                                                                                                <div class="row">
+                                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                                <select class="form-control mini mb-20">
+                                                                                                                                        <option>Month</option>
+                                                                                                                                </select>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                                <select class="form-control mini mb-20">
+                                                                                                                                        <option>Day</option>
+                                                                                                                                </select>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                                <select class="form-control mini mb-20">
+                                                                                                                                        <option>Year</option>
+                                                                                                                                </select>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div id="guest2" class="fullwidth mb-30">
+                                                                                                        <h3 class="text-md mt-10 pull-left">Guest 2</h3>
+                                                                                                        <ul class="list-ms pull-right">
+                                                                                                                <li><span> <img src="images/female.svg" alt="" style="width: 15px;"/></span>Female</li>
+                                                                                                                <li><span> <img src="images/smoker.svg" alt="s"  style="width: 21px;"></span>Smoker</li>
+                                                                                                        </ul>
+                                                                                                        <div class="clearfix mb-10"></div>
+                                                                                                        <input type="text" class="form-control mb-20" placeholder="First Name" />
+                                                                                                        <input type="text" class="form-control mb-20" placeholder="Last Name" />
+                                                                                                        <select class="form-control mb-20">
+                                                                                                                <option>Nationality</option>
+                                                                                                                <option>Male</option>
+                                                                                                                <option>Female</option>
+                                                                                                        </select>
+                                                                                                        <div class="form-group">
+                                                                                                                <label for="exampleInputEmail1">Date of Birth:</label>
+                                                                                                                <div class="row">
+                                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                                <select class="form-control mini mb-20">
+                                                                                                                                        <option>Month</option>
+                                                                                                                                </select>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                                <select class="form-control mini mb-20">
+                                                                                                                                        <option>Day</option>
+                                                                                                                                </select>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                                <select class="form-control mini mb-20">
+                                                                                                                                        <option>Year</option>
+                                                                                                                                </select>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div  class="fullwidth mb-30">
+                                                                                                        <h3 class="text-md mt-10 pull-left">Special Requirements</h3>
+                                                                                                        <div class="clearfix mb-10"></div>
+                                                                                                        <textarea class="form-control" rows="5" cols="5" placeholder="Please tell us if you or your friend have any special requirements or conditions that you want to communicate with the host (e.g. special diet, allergies, medication etc)."></textarea>
+                                                                                                </div>
+                                                                                                <a href="#HouseRules" aria-controls="HouseRules" role="tab" data-toggle="tab" class="btn btn-full btn-primary btn-table scroll-back" aria-expanded="true">CONFIRM & CONTINUE </a> </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div role="tabpanel" class="tab-pane fade" id="HouseRules">
+                                                                        <div class="design-process-content">
+                                                                                <div class="row">
+                                                                                        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                                                                                                <h3 class="text-md mt-0 mb-30 pull-left">Please take a look at Mike's house rules:</h3>
+                                                                                                <ul class="list-check clearfix">
+                                                                                                        <li> No smoking </li>
+                                                                                                        <li> Smoking outside allowed</li>
+                                                                                                        <li> No parties or events</li>
+                                                                                                        <li> No overnight guests</li>
+                                                                                                        <li> No guests without host permission</li>
+                                                                                                        <li> No alcohol or drugs</li>
+                                                                                                        <li> No pets</li>
+                                                                                                        <li> No food and beverages inside the bedroom </li>
+                                                                                                </ul>
+                                                                                                <h3 class="text-md mb-20 mt-20"> Additional rules </h3>
+                                                                                                <p>Here's the short text from the host, maximum 240 characters. Some rules or indications that the student needs to respect and agree with. Some random text now to check the length. This text is now around 240 characters (slightly less).</p>
+                                                                                                <a href="#PaymentDetails" aria-controls="PaymentDetails" role="tab" data-toggle="tab" class="btn btn-full btn-primary btn-table scroll-back" >AGREE & CONTINUE </a> </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div role="tabpanel" class="tab-pane fade" id="PaymentDetails">
+                                                                        <div class="design-process-content">
+                                                                                <div class="row">
+                                                                                        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                                                                                                <h2 class="text-md blue">Almost done!</h2>
+                                                                                                <p class="fullwidth mb-30">Remember, your credit card will <span class="bold">not</span> be charged until your requested homestay is confirmed by the host.</p>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="exampleInputEmail1">Please enter the payment details:</label>
+                                                                                                        <div class="row row-slider mb-30">
+                                                                                                            
+                                                                                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                                                        <input type="text" class="form-control mb-10" placeholder="Name on Card" />
+                                                                                                                </div>
+                                                                                                            
+                                                                                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                                                        <input type="text" class="form-control mb-10" placeholder="Card Number" />
+                                                                                                                </div>
+                                                                                                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                   
+                                                                                                                    
+                                                                                                                     <input type="text" class="form-control mb-10" placeholder="Expiration (MM/YY)" />
+                                                                                                                       
+                                                                                                                </div>
+                                                                                                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                    
+                                                                                                                    <div class="fullwidth pr">
+                                                                                                                     <input type="text" class="form-control mb-10" placeholder="CVV" />
+                                                                                                                        <a href="javascript:" class="btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a>
+                                                                                                                    </div>
+                                                                                                                     
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                     <div class="row row-slider mb-20">
+                                                                                                            
+                                                                                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                                                        <input type="text" class="form-control mb-10" placeholder="Billing Address" />
+                                                                                                                </div>
+                                                                                                            
+                                                                                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                                                        <input type="text" class="form-control mb-10" placeholder="Billing City" />
+                                                                                                                </div>
+                                                                                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                                                   
+                                                                                                                    
+                                                                                                                     <input type="text" class="form-control mb-10" placeholder="Billing Postal Code" />
+                                                                                                                       
+                                                                                                                </div>
+                                                                                                                
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <p>Here's all the important info about the cancellation policy, terms and conditions, correctness of personal details etc.</p>
+                                                                                                <a href="#Complete" aria-controls="Complete" role="tab" data-toggle="tab" class="btn btn-full btn-primary btn-table scroll-back mb-10" >REQUEST HOMESTAY </a>
+                                                                                                <p class="text-smal text-copyright">By requesting to book, you agree to Homestay Match <a href="javascript:">terms of service</a> and <a href="javascript:">cancellation</a> policy.</p>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div role="tabpanel" class="tab-pane fade" id="Complete">
+                                                                        <div class="design-process-content">
+                                                                                <div class="row">
+                                                                                        <div class="col-md-offset-2 col-sm-offset-2  col-sm-8 col-md-8">
+                                                                                                <h1 class="full-width text-center text-lg">Great!</h1>
+                                                                                                <h2 class="text-md blue">Your request has successfully been received.</h2>
+                                                                                                <p> We have sent a confirmation email to guest@gmail.com. </p>
+                                                                                                <p>Within 48 hours you will receive a new email that will notify you if your request has been accepted. </p>
+                                                                                                <h3 class="text-md mt-30 mb-30 ">Before you go...</h3>
+                                                                                                
+                                                                                            <div class="form-group">
+                                                                                                        <label for="exampleInputEmail1">In which country do you currently live?</label>
+                                                                                                        <select class="form-control  mb-10">
+                                                                                                                <option></option>
+                                                                                                        </select>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="exampleInputEmail1">How well do you speak English?</label>
+                                                                                                        <select class="form-control  mb-10">
+                                                                                                                <option></option>
+                                                                                                        </select>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="exampleInputEmail1">How did you hear about us?</label>
+                                                                                                        <select class="form-control  mb-10">
+                                                                                                                <option></option>
+                                                                                                        </select>
+                                                                                                </div>
+                                                                                                <div class="clearfix"></div>
+                                                                                                <h2 class="text-md blue mt-20">Thank You!</h2>
+                                                                                                <a href="host-signup-complete.html"  class="btn btn-full btn-primary btn-table  btn-primary-line" >BACK TO HOMEPAGE </a> </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                
+                <!--  Left Side: Form  -->
+                <div class="col-md-4 hidden-sm hidden-xs scrollspy" >
+                        <div id="booking-summary" class="" data-spy="affix">
+                                <div> <img alt="Summary" class="img-responsive" src="images/img1.jpg" /> </div>
+                                <div class="summary-box-content">
+                                        <h2>Homestay Summary</h2>
+                                        <table class="price-table mb-0">
+                                                <tbody>
+                                                        <tr>
+                                                                <td>Shared Room (2 Guests)</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td colspan="2">Jan 15 2018  to  Feb 15 2018</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td colspan="2">Room + Breakfast & Dinner <a title="more info" data-toggle="modal" data-target="#rbmodal"><img class="firstQ" alt="more info" src="images/info.svg"/></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td><span class="blue">$33</span> x 28 days</td>
+                                                                <td class="blue">$200</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Booking Fee<a title="more info" data-toggle="modal" data-target="#bfModal"><img class="firstQ" alt="more info" src="images/info.svg"/></a></td>
+                                                                <td class="blue">$300</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Processing Fee<a title="more info" data-toggle="modal" data-target="#pfModal"><img class="firstQ" alt="more info" src="images/info.svg"/></a></td>
+                                                                <td class="blue">$300</td>
+                                                        </tr>
+                                                </tbody>
+                                        </table>
+                                </div>
+                                <div class="total-box">
+                                        <table class="price-table price-table-white mt-0">
+                                                <tbody>
+                                                        <tr>
+                                                                <td>Total</td>
+                                                                <td class="blue">$1024</td>
+                                                        </tr>
+                                                </tbody>
+                                        </table>
+                                        <p>Credit card is not charged until the host confirms the homestay. After confirmation, you are entitled to a partial refund. <a href="javascript:">More info</a></p>
+                                </div>
+                        </div>
+                </div>
+                <!-- Modal Popup Booking Fee  -->
+                <div class="modal fade ushPopup" id="bfModal" role="dialog">
+                        <div class="modal-dialog"> 
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                        <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title blue"><strong>Booking Fee</strong></h4>
+                                        </div>
+                                        <div id="modalRequest" class="modal-body"> </div>
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <!-- Modal Popup Processing Fee  -->
+                
+                <div class="modal fade ushPopup" id="pfModal" role="dialog">
+                        <div class="modal-dialog"> 
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                        <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title blue"><strong>Processing Fee</strong></h4>
+                                        </div>
+                                        <div id="modalRequest" class="modal-body"> </div>
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="modal fade ushPopup" id="rbmodal" role="dialog">
+                        <div class="modal-dialog"> 
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                        <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title blue"><strong>Room + Breakfast & Dinner</strong></h4>
+                                        </div>
+                                        <div id="modalRequest" class="modal-body"> </div>
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>
+<!--  Footer  -->
+
+<div class="otherContainer">
+        <div class="buttonContainer">
+                <button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+        </div>
+</div>
+<div class="ontop"></div>
+<!-- Popup Group DIV -->
+<div id="popup-group" class="popup-wrapper"></div>
+<!-- Popup Group DIV end //--> 
+
+<!--  JAVASCRIPT  --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery-ui.min.js"></script> 
+<script src="js/jquery.ui.touch-punch.min.js"></script> 
+<script src="js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects --> 
+<script src="js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   --> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/custom.js"></script> 
+<script src="js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  --> 
+<script src="js/daterangepicker.js"></script> <!--  date picker  --> 
+<script src="js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
+
+<!-- Google language translation --> 
+<script type="text/javascript">
+           		var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+            	function googleTranslateElementInit(){
+					if (duplicate_google_translate_counter == 0) {
+						new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+					}
+					duplicate_google_translate_counter++;
+				}
+            </script> 
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
+<!-- Calendar section  --> 
+<script type="text/javascript">
+                //********  Date picker initialization   *********//
+                $(function(){
+					//******   Scrolling FORM   ********/
+						$(window).on('beforeunload', function(){
+						  $(window).scrollTop(0);
+						});
+						$('#booking-summary').affix({
+							offset: {
+								//top: 0,
+								top: $('#booking-summary').offset().top - 138,
+								bottom: $('#footer').outerHeight(true) + 65
+							}
+						});
+
+					/*****************   DROP DOWN POPULATION  *****************/
+					$( "#nationality-field" ).load( "inc_files/nationality.html #nationality" );
+					$( "#country-field" ).load( "inc_files/nationality.html #country" );
+					
+					//************  FORM STEPS SECTION  ************************/
+					var currentTab = 0; // Current tab is set to be the first tab (0)
+					showTab(currentTab); // Display the current tab
+					// display the specified tab of the form
+					function showTab(n) {
+						//show the tab
+					  	var x = $(".booking-tab").eq(n);
+					  	x.css("display","block");
+					  	//dispable/enable the breadcrumb steps
+					  	$("#step-1").prop("disabled",true);
+					  	$("#step-2").prop("disabled",true);
+					  	$("#step-3").prop("disabled",true);
+						if (n==1) {
+						   $("#step-1").prop("disabled",false);
+					  	}
+					  	if (n==2) {
+						  $("#step-1").prop("disabled",false);
+						  $("#step-2").prop("disabled",false);
+					  	}
+					  	// displays the correct step indicator:
+					  	fixStepIndicator(n)
+					}
+					//next tab button
+					$('.nextBtn').click(function() {
+					  //finds the next step attibute -> 1
+					  var n = parseInt($(this).attr("next"));
+					  // tab to display
+					  var x = $(".booking-tab");
+					  // Exit the function if any field in the current tab is invalid:
+					  if (n == 1 && !validateForm()) {
+						  $(window).scrollTop(0);
+						  return false; 
+					  }
+					  // Hide the current tab:
+					  x.eq(currentTab).css("display","none");
+					  // Increase or decrease the current tab by 1:
+					  currentTab = currentTab + n;
+					  // if you have reached the end of the form... :
+					  if (currentTab >= x.length) {
+						//...the form gets submitted:
+						$("#booking-form").submit();
+						return false;
+					  }
+					  // Otherwise, display the correct tab:
+					  showTab(currentTab);
+					  $(window).scrollTop(0);
+					  return false; 
+					});
+					//Breadcrumb function
+					$('.step').click(function() {
+						var n = parseInt($(this).attr("tabstep"));
+					  // This function will figure out which tab to display
+					  var x = $(".booking-tab").eq(currentTab);
+					  // Hide the current tab:
+					  x.css("display","none");
+					  currentTab = n;
+					  // Otherwise, display the correct tab:
+					  showTab(n);
+					  return false; 
+					});
+					//Validation rules
+					function validateForm() {
+					  // This function deals with validation of the form fields
+					  var x, inputElements, selectElements, i, valid = true;
+					  var x = $(".booking-tab");
+					  //current tab INPUT list
+					  inputElements = $(".booking-tab:eq(" + currentTab + ") input");
+					  // A loop that checks every input
+					  inputElements.each(function(index) {
+						// If a field is empty
+						if ($(this).val() == "") {
+						  // add an "invalid" class to the field:
+						  $(this).addClass("invalid");
+						  // and set the current valid status to false:
+						  valid = false;
+						}
+					  });
+					  selectElements = $(".booking-tab:eq(" + currentTab + ") select");
+					  // A loop that checks every input
+					  selectElements.each(function(index) {
+						// If a field is empty
+						if ($(this).val() === null) {
+						  // add an "invalid" class to the field:
+						  $(this).addClass("invalid");
+						  // and set the current valid status to false:
+						  valid = false;
+						}
+					  });
+					  // If the valid status is true, mark the step as finished and valid
+					  if (valid) {
+						$(".step").eq(currentTab).addClass("finish");
+					  }
+					  return valid; // return the valid status
+					}
+					
+					function fixStepIndicator(n) {
+					  // This function removes the "active" class of all steps...
+					  var i, x = $(".step");
+					  for (i = 0; i < x.length; i++) {
+						x.eq(i).removeClass("active");
+					  }
+					  //... and adds the "active" class to the current step:
+					  x.eq(n).addClass("active");
+					}
+					//submit survay and go back to home page
+					$("#submitSurvay").click(function() {
+						//redirect to home page
+						$(location).attr('href','index.html');
+					});
+					//select change --> background color
+					$(".booking-tab").on( "change", "select", function() {
+						$(this).removeClass("invalid");
+					});
+				});
+    // script for tab steps
+    $('.process-model a').on('shown.bs.tab', function (e) {
+  	    var href = $(e.target).attr('href');
+        var $curr = $(".process-model  a[href='" + href + "']").parent();
+        $("html, body").animate({ scrollTop: 0 }, 0);
+		$curr.addClass("active");
+		$curr.prevAll().removeClass("active");
+		$curr.removeClass("visited");
+		$curr.prevAll().addClass("visited");
+		$curr.nextAll().removeClass("visited");
+    });
+	$('.btn[data-toggle="tab"]').on('shown.bs.tab',function (e) {
+		 var href = $(e.target).attr('href');
+		 var $currParent = $(".process-model  a[href='" + href + "']").parent();
+		 var $currLink = $(".process-model  a[href='" + href + "']");
+		 $("html, body").animate({ scrollTop: 0 }, 0);
+		 $currLink.attr("data-toggle", "tab"); //add the data-toggle tab to activate the link
+       	 //to deal with the style
+		 //$currParent.addClass("visited");
+		 $currParent.addClass("active");
+         $currParent.prevAll().addClass("visited"); 
+		 $currParent.prevAll().removeClass("active");
+	});
+            </script>
+</body>
+</html>

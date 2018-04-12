@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<title>Universal Student Housing | Student Dashboard</title>
+<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/selectric.css" />
+<!--  jQuery plugin to customize HTML selects -->
+<link rel="stylesheet" type="text/css" href="../css/hint.min.css" />
+<!-- tooltip library -->
+<link rel="stylesheet" type="text/css" href="../plugins/datepicker/bootstrap-datepicker3.css" />
+<!-- daterange calendar -->
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+<!-- bootstrap library -->
+<link rel="stylesheet" type="text/css" href="../css/sumoselect.min.css" />
+<!--  Single/Multi Select plugin  -->
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/custom.css" />
+<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+<!--  Single/Ion Range Slider  -->
+<link rel="stylesheet" type="text/css" href="../plugins/ionslider/css/ion.rangeSlider.css" />
+<link rel="stylesheet" type="text/css" href="../plugins/ionslider/css/ion.rangeSlider.skinFlat.css" />
+<!--  DropZone  -->
+
+<link rel="stylesheet" type="text/css" href="../plugins/dropzone/css/basic.min.css" />
+<link rel="stylesheet" type="text/css" href="../plugins/dropzone/css/dropzone.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+</head>
+<body>
+<header class="top fixed">
+        <div class="container"> <a class="logo" href="/"><img src="../images/logo.svg" alt="" class="img-responsive"/></a>
+                <nav class="mainmenu">
+                        <ul>
+                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
+                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
+                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a> </li>
+                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
+                                <li>
+                                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                                </li>
+                        </ul>
+                </nav>
+                <div class="nav-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
+        </div>
+</header>
+<!-- Main Top Image -->
+<div class="container top-margin">
+        <div class="row row-dashboard"> 
+                <!--   Right Menu  -->
+                <div class="col-md-2 col-sm-3">
+                        <ul class="list-dashboard">
+                                <li><a href="dashboard.html">Dashboard</a></li>
+                                <li ><a href="host-details.html">Host Details</a></li>
+                                <li><a href="home-details.html">Home Details</a></li>
+                                <li class="active"><a href="bedroom.html">Bedrooms</a></li>
+                                <li><a href="messsages.html">Messages <span class="label label-danger">23</span></a></li>
+                                <li><a href="payment-tax.html">Payment & Taxes</a></li>
+                        </ul>
+                </div>
+                <!--  Main content  -->
+                <div class="col-md-10 col-sm-9">
+                        <section class="dashboard-content">
+                                <div class="row">
+                                        <div class="col-md-9 col-xs-12">
+                                               <div class="tabbing">
+                                                        
+                                                    <h3 class="mb-10 visible-xs">Blue Bedroom</h3>
+                                                        <!-- Nav tabs -->
+                                                       <ul class="tabNav">
+                                                                <li><a href="#Features">Features</a></li>
+                                                                <li><a href="#Photos">Photos</a></li>
+                                                                <li><a href="#Calendar">Calendar</a></li>
+                                                                <li><a href="#Reviews">Reviews</a></li>
+                                                        </ul>
+                                                        
+                                                        <!-- Tab panes -->
+                                                         <div class="tabContainer">
+                                                                <div   class="tabContent" id="Features">
+                                                                        <div class="row">
+                                                                        		<div class="col-md-12 hidden-xs hidden-md hidden-lg">
+                                                                                    <a class="btn btn-sm btn-primary mt-0 btn-block">See Profile Page of Blue Bedroom</a>
+                                                                            	</div>
+                                                                                <div class="col-md-12">
+                                                                                        <div class="form-horizontal form-dashboard">
+                                                                                                <div class="form-group">
+                                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Room Occupancy</label>
+                                                                                                        <div class="col-sm-9">
+                                                                                                                <select class="form-control mb-10">
+                                                                                                                        <option value=" ">&nbsp;</option>
+                                                                                                                        <option value="Private Room">Private Room</option>
+                                                                                                                        <option value="Shared Room">Shared Room</option>
+                                                                                                                        <option value="Either is OK">Either is OK</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Room Name</label>
+                                                                                                        <div class="col-sm-9">
+                                                                                                                <div class="fullwidth pr">
+                                                                                                                        <input type="text" class="form-control mb-10" id="Last" placeholder="E.g. Blue Room, Eagle Room">
+                                                                                                                       </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Room Description <a href="javascript:" class="visible-xs btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a></label>
+                                                                                                        <div class="col-sm-9">
+                                                                                                                <div class="fullwidth pr">
+                                                                                                                     <a href="javascript:" class="btn-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> 
+                                                                                                                        <textarea class="form-control mb-10" cols="5" rows="7" placeholder="Describe your bedroom and make it attractive for potential students. Here's an example: Bright and lovely student bedroom available in a 5-bedroom, 3-bathroom house. Lots of closet space, comfortable bed, and a quiet study area."></textarea>
+                                                                                                                        <span class="text-counter pa">250/250</span> </div>
+                                                                                                                <div class="clearfix"></div>
+                                                                                                                <div class="alert alert-info mb-20"> Click on the info icon <i class="fa fa-info-circle fa-fw fa-red"></i> for more examples.</div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Room Location</label>
+                                                                                                        <div class="col-sm-9">
+                                                                                                                <select class="form-control mb-10">
+                                                                                                                        <option value=" ">&nbsp;</option>
+                                                                                                                        <option value="Bedroom in Main Room">Bedroom in Main Room</option>
+                                                                                                                        <option value="Guest House">Guest House</option>
+                                                                                                                        <option value="In-law Suite">In-law Suite</option>
+                                                                                                                        <option value="Garage">Garage</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                            <div class="">    
+                                                                                            <h1 class="mb-30 mt-30 pull-left">Room Pricing <a href="javascript:" class="visible-xs btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a></h1>
+                                                                                                
+                                                                                                <div class="clearfix"></div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">&nbsp;</label>
+                                                                                                        <div class="col-sm-9">
+                                                                                                                <input id="range_33" />
+                                                                                                            <a href="javascript:" class="btn-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a>
+                                                                                                                <p> $700 is the recommended base price for a 4-week period (Private occupancy, Room Only). You can modify the base price with the slider above. Other price combinations vary accordingly.</p>
+                                                                                                                <table class="table table-sm mb-0">
+                                                                                                                        <thead>
+                                                                                                                                <tr>
+                                                                                                                                        <th>Meal Plan Options</th>
+                                                                                                                                        <th class="center blue">Private <br/>
+                                                                                                                                                <small class="black">28 days</small></th>
+                                                                                                                                        <th class="center blue">Shared<br/>
+                                                                                                                                                <small class="black">28 days</small></th>
+                                                                                                                                </tr>
+                                                                                                                        </thead>
+                                                                                                                        <tbody>
+                                                                                                                                <tr>
+                                                                                                                                        <td>Room only</td>
+                                                                                                                                        <td class="center"><strong>$700</strong></td>
+                                                                                                                                        <td class="center"><strong>$750</strong></td>
+                                                                                                                                </tr>
+                                                                                                                                <tr>
+                                                                                                                                        <td>Room with Breakfast</td>
+                                                                                                                                        <td class="center"><strong>$812</strong></td>
+                                                                                                                                        <td class="center"><strong>$870</strong></td>
+                                                                                                                                </tr>
+                                                                                                                                <tr>
+                                                                                                                                        <td>Room with Breakfast and Dinner</td>
+                                                                                                                                        <td class="center"><strong>$1,008</strong></td>
+                                                                                                                                        <td class="center"><strong>$1,080</strong></td>
+                                                                                                                                </tr>
+                                                                                                                        </tbody>
+                                                                                                                </table>
+                                                                                                                <p class="text-danger mt-5">Note: Above rates are net to host after fees.</p>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <h1 class="mb-40">Room Amenities</h1>
+                                                                                                <div class="clearfix"></div>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Bed Type</label>
+                                                                                                        <div class="col-sm-9">
+                                                                                                                <select class="form-control mb-10">
+                                                                                                                        <option value=" ">&nbsp;</option>
+                                                                                                                        <option value="Single">Single</option>
+                                                                                                                        <option value="Double">Double</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Desk/s</label>
+                                                                                                        <div class="col-sm-9">
+                                                                                                                <select class="form-control mb-10">
+                                                                                                                        <option value=" ">&nbsp;</option>
+                                                                                                                        <option value="None">None</option>
+                                                                                                                        <option value="1 Desk">1 Desk</option>
+                                                                                                                        <option value="2 Desks">2 Desks</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Others</label>
+                                                                                                        <div class="col-sm-9">
+                                                                                                                <div class="row">
+                                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                                        <input id="Private" type="checkbox" checked="">
+                                                                                                                                        <label for="Private"> Private Bathroom </label>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                                        <input id="Basic" type="checkbox" checked="">
+                                                                                                                                        <label for="Basic"> Basic Cable TV in bedroom </label>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                                        <input id="Closet" type="checkbox">
+                                                                                                                                        <label for="Closet"> Closet space </label>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                                        <input id="Dresser" type="checkbox">
+                                                                                                                                        <label for="Dresser">Dresser </label>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                                        <input id="Lock" type="checkbox">
+                                                                                                                                        <label for="Lock"> Door Lock </label>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <h1 class="mb-40">Length of Stay</h1>
+                                                                                                <div class="clearfix"></div>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Minimum Length of Stay</label>
+                                                                                                        <div class="col-sm-9">
+                                                                                                                <select class="form-control mb-10">
+                                                                                                                        <option value=" ">&nbsp;</option>
+                                                                                                                        <option value="No minimum">No minimum</option>
+                                                                                                                        <option value="14 days">14 days</option>
+                                                                                                                        <option value="30 days">30 days</option>
+                                                                                                                        <option value="60 days">60 days</option>
+                                                                                                                        <option value="90 days">90 days</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Maximum Length of Stay</label>
+                                                                                                        <div class="col-sm-9">
+                                                                                                                <select class="form-control mb-10">
+                                                                                                                        <option value=" ">&nbsp;</option>
+                                                                                                                        <option value="35 days">35 days</option>
+                                                                                                                        <option value="60 days">60 days</option>
+                                                                                                                        <option value="90 days">90 days</option>
+                                                                                                                        <option value="120 days">120 days</option>
+                                                                                                                        <option value="No maximum">No maximum</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                        <div class="col-sm-offset-3 col-sm-9">
+                                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
+                                                                                                                <div class="clearfix"></div>
+                                                                                                                <div class="hidden-xs">
+                                                                                                                    <a href="javasccript:" nextPage="Photos" class="back-panel"> <img src="../images/back-link.svg">
+                                                                                                                    <div class="clearfix"></div>
+                                                                                                                    <h2>Next</h2>
+                                                                                                                    <span>(Photos)</span> </a> 
+                                                                                                             	</div>
+                                                                                                            </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div   class="tabContent" id="Photos">
+                                                                        <div class="btn-tabs"> 
+                                                                                
+                                                                                <!-- Nav tabs -->
+                                                                                <ul class="nav nav-tabs pull-left" role="tablist">
+                                                                                        <li role="presentation" class="active"><a href="#MyPhoto" aria-controls="MyPhoto" role="tab" data-toggle="tab">My Photos</a></li>
+                                                                                        <li role="presentation"><a href="#AmbassadorPhotos" aria-controls="AmbassadorPhotos" role="tab" data-toggle="tab">Ambassador’s Photos</a></li>
+                                                                                </ul>
+                                                                                <a href="javascript:" class="btn btn-link btn-link-info"><i class="fa fa-info-circle fa-fw fa-red"></i></a> 
+                                                                                
+                                                                                <!-- Tab panes -->
+                                                                                <div class="tab-content">
+                                                                                        <div   class="tab-pane active" id="MyPhoto">
+                                                                                                <div id="dropzone">
+                                                                                                        <form action="/upload" class="dropzone needsclick" id="demo-upload">
+                                                                                                                <div class="dz-message needsclick"> Drop files here or click to upload.<br />
+                                                                                                                        <span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span> </div>
+                                                                                                        </form>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div   class="tab-pane" id="AmbassadorPhotos">
+                                                                                                <div class="row">
+                                                                                                        <div class="col-md-6 col-sm-6"> <a class="panel-listing panel-dashboard" href="bedroom-details.html"> <img src="../images/search1.jpg" class="img-responsive img-full" alt="">
+                                                                                                                <div class="listing-footer">
+                                                                                                                        <h1>Bedroom</h1>
+                                                                                                                        <div class="visible-switch"> <small>Visible</small>
+                                                                                                                                <label class="switch">
+                                                                                                                                        <input type="checkbox" checked>
+                                                                                                                                        <span class="slider round"></span> </label>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                                </a> </div>
+                                                                                                        <div class="col-md-6 col-sm-6"> <a class="panel-listing panel-dashboard" href="bedroom-details.html"> <img src="../images/search2.jpg" class="img-responsive img-full" alt="">
+                                                                                                                <div class="listing-footer">
+                                                                                                                        <h1>Kitchen</h1>
+                                                                                                                        <div class="visible-switch"> <small>Visible</small>
+                                                                                                                                <label class="switch">
+                                                                                                                                        <input type="checkbox" checked>
+                                                                                                                                        <span class="slider round"></span> </label>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                                </a> </div>
+                                                                                                        <div class="col-md-6 col-sm-6"> <a class="panel-listing panel-dashboard" href="bedroom-details.html"> <img src="../images/search3.jpg" class="img-responsive img-full" alt="">
+                                                                                                                <div class="listing-footer">
+                                                                                                                        <h1>Bedroom</h1>
+                                                                                                                        <div class="visible-switch"> <small>Visible</small>
+                                                                                                                                <label class="switch">
+                                                                                                                                        <input type="checkbox" checked>
+                                                                                                                                        <span class="slider round"></span> </label>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                                </a> </div>
+                                                                                                        <div class="col-md-6 col-sm-6"> <a class="panel-listing panel-dashboard" href="bedroom-details.html"> <img src="../images/search4.jpg" class="img-responsive img-full" alt="">
+                                                                                                                <div class="listing-footer">
+                                                                                                                        <h1>Kitchen</h1>
+                                                                                                                        <div class="visible-switch"> <small>Visible</small>
+                                                                                                                                <label class="switch">
+                                                                                                                                        <input type="checkbox" checked>
+                                                                                                                                        <span class="slider round"></span> </label>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                                </a> </div>
+                                                                                                        <div class="col-md-6 col-sm-6"> <a class="panel-listing panel-dashboard" href="bedroom-details.html"> <img src="../images/search5.jpg" class="img-responsive img-full" alt="">
+                                                                                                                <div class="listing-footer">
+                                                                                                                        <h1>Kitchen</h1>
+                                                                                                                        <div class="visible-switch"> <small>Visible</small>
+                                                                                                                                <label class="switch">
+                                                                                                                                        <input type="checkbox" checked>
+                                                                                                                                        <span class="slider round"></span> </label>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                                </a> </div>
+                                                                                                        <div class="col-md-6 col-sm-6"> <a class="panel-listing panel-dashboard" href="bedroom-details.html"> <img src="../images/search6.jpg" class="img-responsive img-full" alt="">
+                                                                                                                <div class="listing-footer">
+                                                                                                                        <h1>Kitchen</h1>
+                                                                                                                        <div class="visible-switch"> <small>Visible</small>
+                                                                                                                                <label class="switch">
+                                                                                                                                        <input type="checkbox" checked>
+                                                                                                                                        <span class="slider round"></span> </label>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                                </a> </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="clearfix"></div>
+                                                                                <div class="hidden-xs">
+                                                                                    <a href="javasccript:" nextPage="Calendar" class="back-panel"> <img src="../images/back-link.svg">
+                                                                                    <div class="clearfix"></div>
+                                                                                    <h2>Next</h2>
+                                                                                    <span>(Calendar)</span> </a> 
+                                                                                </div>
+                                                                          </div>
+                                                                </div>
+                                                                <div   class="tabContent" id="Calendar">
+                                                                        <div class="row">
+                                                                                <div class="col-md-4 col-sm-4">
+                                                                                        <ul class="list-legends">
+                                                                                                <li class="lb">Jun-seo</li>
+                                                                                                <li class="g">Luke</li>
+                                                                                                <li class="r">Not Available</li>
+                                                                                        </ul>
+                                                                                </div>
+                                                                                <div class="col-lg-8 col-md-12">
+                                                                                        <div class="pull-right mt-40"> <a href="javascript:" class="btn btn-link btn-link-info"><i class="fa fa-info-circle fa-fw fa-red"></i></a> <a href="" class="btn btn-danger btn-danger-line btn-sm">Update Availability</a> <a href="" class="btn btn-primary btn-primary-line btn-sm">Check Following 6 months</a> </div>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="clearfix"></div>
+                                                                        <div class="row mt-30">
+                                                                                <div class="col-md-6">
+                                                                                        <div class="panel-date">
+                                                                                                <h2>February 2018</h2>
+                                                                                                <div id="inline-datepicker1">
+                                                                                                        <div></div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                        <div class="panel-date">
+                                                                                                <h2>March 2018</h2>
+                                                                                                <div id="inline-datepicker2">
+                                                                                                        <div></div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                        <div class="panel-date">
+                                                                                                <h2>April 2018</h2>
+                                                                                                <div id="inline-datepicker3">
+                                                                                                        <div></div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                        <div class="panel-date">
+                                                                                                <h2>May 2018</h2>
+                                                                                                <div id="inline-datepicker4">
+                                                                                                        <div></div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="hidden-xs">
+                                                                            <a href="javasccript:" nextPage="Reviews" class="back-panel"> <img src="../images/back-link.svg">
+                                                                            <div class="clearfix"></div>
+                                                                            <h2>Next</h2>
+                                                                            <span>(Reviews)</span> </a> 
+                                                                        </div>
+                                                                   </div>
+                                                                <div  class="tabContent" id="Reviews">
+                                                                        <div class="media media-reviews">
+                                                                                <div class="media-left"> <img class="media-object img-circle" src="../images/avatar1.png" alt="..."> </div>
+                                                                                <div class="media-body">
+                                                                                        <h4 class="media-heading">Sara</h4>
+                                                                                        <span>November 2017</span>
+                                                                                        <p>Mike and Lisa were outstanding hosts. They were attentive to our every need. The house is a gem! We woke up every morning to an incredible sunrise and magnificent views. This is a very special place.</p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="media media-reviews">
+                                                                                <div class="media-left"> <img class="media-object img-circle" src="../images/jullia.jpeg" alt="..."> </div>
+                                                                                <div class="media-body">
+                                                                                        <h4 class="media-heading">Jun-seo</h4>
+                                                                                        <span>September 2017</span>
+                                                                                        <p>Mike and Lisa were outstanding hosts. They were attentive to our every need. The house is a gem! We woke up every morning to an incredible sunrise and magnificent views. This is a very special place.</p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="media media-reviews">
+                                                                                <div class="media-left"> <img class="media-object img-circle" src="../images/jullia.jpeg" alt="..."> </div>
+                                                                                <div class="media-body">
+                                                                                        <h4 class="media-heading">Jun-seo</h4>
+                                                                                        <span>September 2017</span>
+                                                                                        <p>Mike and Lisa were outstanding hosts. They were attentive to our every need. The house is a gem! We woke up every morning to an incredible sunrise and magnificent views. This is a very special place.</p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="media media-reviews">
+                                                                                <div class="media-left"> <img class="media-object img-circle" src="../images/jullia.jpeg" alt="..."> </div>
+                                                                                <div class="media-body">
+                                                                                        <h4 class="media-heading">Jun-seo</h4>
+                                                                                        <span>September 2017</span>
+                                                                                        <p>Mike and Lisa were outstanding hosts. They were attentive to our every need. The house is a gem! We woke up every morning to an incredible sunrise and magnificent views. This is a very special place.</p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <nav class="nav-pagination d-table">
+                                                                                <ul class="pagination  mt-20 mb-0">
+                                                                                        <li class="disabled"><a href="#" aria-label="Previous"><i class="fa fa-angle-left fa-fw"></i></a></li>
+                                                                                        <li class="active"><a href="#">1 </a></li>
+                                                                                        <li><a href="#">2 </a></li>
+                                                                                        <li><a href="#">3 </a></li>
+                                                                                        <li><a href="#" aria-label="Previous"><i class="fa fa-angle-right fa-fw"></i></a></li>
+                                                                                </ul>
+                                                                        </nav>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-3 col-xs-12 hidden-sm">
+                                            <h3 class="mb-10 hidden-xs">Blue Bedroom</h3>
+                                                <img src="../images/search1.jpg" class="img-responsive hidden-xs img-full img-rounded" alt="">
+                                            <div class="clearfix"></div>
+                                            <a class="btn btn-sm btn-primary mt-10 btn-block">See Profile page</a>
+                                    </div>
+                                </div>
+                        </section>
+                </div>
+        </div>
+</div>
+<!--  Footer  -->
+
+<div class="otherContainer">
+        <div class="buttonContainer">
+                <button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+        </div>
+</div>
+<div class="ontop"></div>
+<!-- Popup Group DIV -->
+<div id="popup-group" class="popup-wrapper"></div>
+<!-- Popup Group DIV end //--> 
+
+<!--  JAVASCRIPT  --> 
+<script src="../js/jquery.min.js"></script> 
+<script src="../js/jquery-ui.min.js"></script> 
+<script src="../js/jquery.ui.touch-punch.min.js"></script> 
+<script src="../js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects --> 
+<script src="../js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   --> 
+<script src="../js/bootstrap.min.js"></script> 
+<!--<script src="../js/custom.js"></script> --><script src="../js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  --> 
+<script src="../js/daterangepicker.js"></script> <!--  date picker  --> 
+<script src="../js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
+<script src="../js/jquery.knob.js"></script> <!--  Pie Chart  --> 
+<script src="../plugins/ionslider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script> <!--  Range Slider  --> 
+
+<script src="../plugins/datepicker/bootstrap-datepicker.min.js"></script> <!--  Range Slider  --> 
+<script src="../plugins/responsivetabs/jquery.bootstrap-responsive-tabs.min.js"></script> 
+
+<script src="../plugins/dropzone/js/dropzone.js"></script> 
+<!-- Google language translation --> 
+<script type="text/javascript">
+           		var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+            	function googleTranslateElementInit(){
+					if (duplicate_google_translate_counter == 0) {
+						new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+					}
+					duplicate_google_translate_counter++;
+				}
+            </script> 
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+<script type="text/javascript">
+ $(document).ready(function() {
+     
+     $('#inline-datepicker1 div').datepicker({
+});
+     
+      $('#inline-datepicker2 div').datepicker({
+});
+     
+     
+      $('#inline-datepicker3 div').datepicker({
+});
+     
+      $('#inline-datepicker4 div').datepicker({
+});
+     
+     $("#range_33").ionRangeSlider({
+		min: 400,
+		//step: 200,
+		max: 1000,
+		from: 700
+   
+         //prefix: "$"
+});
+        /* create jQuery knob with .dial class */
+        $(".dial").knob({
+            'readOnly': true
+        });
+
+       
+        animateChart('chart_anim_3', 0, 40);
+
+        /* Update circle value when input.animate changes */
+        $("input.dial").change(function () {
+            $(this).parent().siblings(".circle").find(".pie_value").text($(this).val() + "%");
+        })
+
+        /* Animate chart from start_val to end_val */
+        function animateChart (chart_id, start_val, end_val) {
+            $({chart_value: start_val}).animate({chart_value: end_val}, {
+                duration: 1000, // 1 second animation
+                easing: 'swing',
+                step: function () {
+                    $('#' + chart_id).val(Math.ceil(this.chart_value)).trigger('change');
+                },
+                complete: function () {
+                    /* complete */
+                    console.log('complete');
+                }
+            });
+        };
+     
+      $('.tabbing').mTab({
+		 navigation: ".tabNav"
+		,container: ".tabContainer"
+		,activeTab: 1
+		,activeClass: "active"
+		,scrollOffset: true
+		,accordScreen: 767
+		,toggleClose: true
+		,animation: false
+		,openWithUrl: true
+		,callbackonclick:  function() {  }
+		,callback: function() {  }
+	});
+	
+	//close by default all the accordion menu at a mobile level 
+	if ($(window).width() < 768) {
+    	$('.mResAccordAnchor').removeClass('active');
+		$('.mTabContent').removeClass('mTabActive');
+	}
+	//Next button
+	$('.back-panel').click(function(){
+		var nextPage = ($(this).attr('nextPage'));
+		//disable current tab and content
+		$('.mResTabNavTab').removeClass('active');
+		$('.mTabContent').removeClass('mTabActive');
+		//acrive new tab and conten
+		$('a[href="#' + nextPage + '"]').parent().addClass('active');
+		$('#' + nextPage).addClass('mTabActive');
+		$('#' + nextPage).removeClass('defaultState');
+		$(window).scrollTop(0);
+	});
+});
+</script>
+</body>
+</html>

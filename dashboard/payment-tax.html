@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<title>Universal Student Housing | Student Dashboard</title>
+<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/selectric.css" />
+<!--  jQuery plugin to customize HTML selects -->
+<link rel="stylesheet" type="text/css" href="../css/hint.min.css" />
+<!-- tooltip library -->
+<link rel="stylesheet" type="text/css" href="../css/daterangepicker.css" />
+<!-- daterange calendar -->
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+<!-- bootstrap library -->
+<link rel="stylesheet" type="text/css" href="../css/sumoselect.min.css" />
+<!--  Single/Multi Select plugin  -->
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/custom.css" />
+<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+</head>
+<body>
+<header class="top fixed">
+        <div class="container"> <a class="logo" href="/"><img src="../images/logo.svg" alt="" class="img-responsive"/></a>
+                <nav class="mainmenu">
+                        <ul>
+                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
+                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
+                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a> </li>
+                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
+                                <li>
+                                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                                </li>
+                        </ul>
+                </nav>
+                <div class="nav-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
+        </div>
+</header>
+<!-- Main Top Image -->
+<div class="container top-margin">
+        <div class="row row-dashboard"> 
+                <!--   Right Menu  -->
+                <div class="col-md-2 col-sm-3">
+                        <ul class="list-dashboard">
+                                <li><a href="dashboard.html">Dashboard</a></li>
+                                <li><a href="host-details.html">Host Details</a></li>
+                                <li><a href="home-details.html">Home Details</a></li>
+                                <li><a href="bedroom.html">Bedrooms</a></li>
+                                <li><a href="messsages.html">Messages <span class="label label-danger">23</span></a></li>
+                                <li class="active"><a href="javascript:">Payment & Taxes</a></li>
+                        </ul>
+                </div>
+                <!--  Main content  -->
+                <div class="col-md-10 col-sm-9">
+                        <section class="dashboard-content">
+                                <div class="tabbing">
+                                        <ul class="tabNav">
+                                                <li><a href="#PayoutInformation">Payout Information</a></li>
+                                                <li><a href="#Payments">Payments</a></li>
+                                                <li><a href="#TaxPayerInformation">Tax Payer Information</a></li>
+                                        </ul>
+                                        
+                                        <!-- Tab panes -->
+                                        <div class="tabContainer">
+                                                <div  class="tabContent" id="PayoutInformation">
+                                                        <div class="row">
+                                                                <div class="col-md-9">
+                                                                        <div class="form-horizontal form-dashboard">
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Preferred Method of Payment</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="fullwidth pr">
+                                                                                                        <select class="form-control mb-10">
+                                                                                                                <option value=" ">&nbsp;</option>
+                                                                                                                <option value="Check">Check</option>
+                                                                                                                <option value="Bank Deposit">Bank Deposit</option>
+                                                                                                        </select>
+                                                                                                         </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Bank Name</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="text" class="form-control mb-10" id="" placeholder="Name of the Bank">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Name on the Account</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="text" class="form-control mb-10" id="" placeholder="e.g. John Smith">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Routing Number</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="fullwidth pr">
+                                                                                                        <input type="text" class="form-control mb-10" id="" placeholder="e.g. 122105278">
+                                                                                                        <!-- <a href="javascript:" class="btn-what" >What is this?</a> -->
+                                                                                                       <a href="javascript:" class="hidden-xs btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a>
+                                                                                               	</div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Account Number</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="fullwidth pr">
+                                                                                                        <input type="text" class="form-control mb-10" id="" placeholder="e.g. 6724301068">
+                                                                                                        <a href="javascript:" class="hidden-xs btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a>
+                                                                                            <div class="clearfix"></div>
+                                                                                                    
+                                                                                                    <img src="../images/routing-number-check.png" class="img-responsive img-full"/>
+                                                                                            
+                                                                                            </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <div class="col-sm-offset-3 col-sm-9">
+                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
+                                                                                                <div class="clearfix"></div>
+                                                                                                <div class="hidden-xs">
+                                                                                                    <a href="javasccript:" nextPage="Payments" class="back-panel"> <img src="../images/back-link.svg"/>
+                                                                                                    <div class="clearfix"></div>
+                                                                                                    <h2>Next</h2>
+                                                                                                    <span>(Payments)</span> </a> 
+                                                                                                </div>
+                                                                                          </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="tabContent" id="Payments">
+                                                        <h1>Pending Payments</h1>
+                                                        <div class="table-responsive">
+                                                                <table class="table table-blocks">
+                                                                        <thead>
+                                                                                <tr>
+                                                                                        <th>Due Date</th>
+                                                                                        <th>Reference #</th>
+                                                                                        <th>Amount</th>
+                                                                                        <th>Description</th>
+                                                                                        <th>Status</th>
+                                                                                </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                                <tr>
+                                                                                        <td>28 February 2018</td>
+                                                                                        <td>123456</td>
+                                                                                        <td>$310</td>
+                                                                                        <td>Desccription of the payment here</td>
+                                                                                        <td class="pending">Pending</td>
+                                                                                </tr>
+                                                                        </tbody>
+                                                                </table>
+                                                        </div>
+                                                        <h1>Payment History</h1>
+                                                        <div class="table-responsive">
+                                                                <table class="table table-blocks">
+                                                                        <thead>
+                                                                                <tr>
+                                                                                        <th>Due Date</th>
+                                                                                        <th>Reference #</th>
+                                                                                        <th>Amount</th>
+                                                                                        <th>Description</th>
+                                                                                        <th>Status</th>
+                                                                                </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                                <tr>
+                                                                                        <td>28 February 2018</td>
+                                                                                        <td>123456</td>
+                                                                                        <td>$310</td>
+                                                                                        <td>Desccription of the payment here</td>
+                                                                                        <td class="confirm">Pending</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                        <td>28 February 2018</td>
+                                                                                        <td>123456</td>
+                                                                                        <td>$310</td>
+                                                                                        <td>Desccription of the payment here</td>
+                                                                                        <td class="confirm">Pending</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                        <td>28 February 2018</td>
+                                                                                        <td>123456</td>
+                                                                                        <td>$310</td>
+                                                                                        <td>Desccription of the payment here</td>
+                                                                                        <td class="confirm">Pending</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                        <td>28 February 2018</td>
+                                                                                        <td>123456</td>
+                                                                                        <td>$310</td>
+                                                                                        <td>Desccription of the payment here</td>
+                                                                                        <td class="confirm">Pending</td>
+                                                                                </tr>
+                                                                        </tbody>
+                                                                </table>
+                                                        </div>
+                                                        <div class="hidden-xs">
+                                                            <a href="javasccript:" nextPage="TaxPayerInformation" class="back-panel"> <img src="../images/back-link.svg"/>
+                                                            <div class="clearfix"></div>
+                                                            <h2>Next</h2>
+                                                            <span>(Tax Payer Information)</span> </a> 
+                                                       </div>
+                                                </div>
+                                                <div class="tabContent" id="TaxPayerInformation">
+                                                        <h1>W-9 Information</h1>
+                                                        <div class="row">
+                                                                <div class="col-md-9">
+                                                                        <div class="form-horizontal form-dashboard">
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Name (as shown on your income tax return)</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="text" class="form-control mb-10" id="" placeholder="e.g. John Smith">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Business name / disregarded entity name</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="e.g. Business name example here">
+                                                                                                <p class="text-danger">Optional. Enter only if different from above.</p>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Tax classification</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="fullwidth pr">
+                                                                                                        <select class="form-control mb-10">
+                                                                                                                <option value=" ">&nbsp;</option>
+                                                                                                                <option value="Option 1">Option 1</option>
+                                                                                                                <option value="Option 2">Option 2</option>
+                                                                                                                <option value="Option 3">Option 3</option>
+                                                                                                        </select>
+                                                                                                        <a href="javascript:" class="hidden-xs btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a> 
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Exempt payee code (if any)</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="fullwidth pr">
+                                                                                                        <input type="text" class="form-control mb-10" id="" placeholder="e.g. ABCDE">
+                                                                                                        <a href="javascript:" class="hidden-xs btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a> 
+                                                                                               </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="inputPassword3" class="col-sm-3 control-label">Exemption from FATCA reporting code (if any)</label>
+                                                                                    <div class="col-sm-9">
+                                                                                        <div class="fullwidth pr">
+                                                                                                <input type="text" class="form-control mb-10" id="" placeholder="e.g. ABCDE">
+                                                                                                <a href="javascript:" class="hidden-xs btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a> 
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                 	<label for="inputPassword3" class="col-sm-3 control-label">Address</label>
+                                                                                	<div class="col-sm-9">
+                                                                                    	<div class="fullwidth pr">
+                                                                                            <input type="text" class="form-control mb-5" id="" placeholder="Number, street, and apt. or suite no.">
+                                                                                            <input type="text" class="form-control mb-5" id="" placeholder="City">
+                                                                                            <div class="row row-slider mb-20">
+                                                                                                <div class="col-md-6">
+                                                                                                        <input type="text" class="form-control mb-5" id="" placeholder="State">
+                                                                                                </div>
+                                                                                                <div class="col-md-6">
+                                                                                                        <input type="text" class="form-control mb-5" id="" placeholder="ZIP code">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- <a href="javascript:" class="btn-what" >Instructions</a> </div> -->
+                                                                                            <a href="javascript:" class="hidden-xs btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a>
+                                                                                        </div>
+                                                                                	</div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                	<label for="inputPassword3" class="col-sm-3 control-label">Taxpayer Identification Number (TIN)</label>
+                                                                                 	<div class="col-sm-9">
+                                                                                    	<div class="fullwidth pr">
+                                                                                         	<div class="row row-slider mb-0">
+                                                                                            	<div class="col-md-6">
+                                                                                                    <select class="form-control mb-5">
+                                                                                                            <option value=" ">&nbsp;</option>
+                                                                                                            <option value="Social security number">Social security number</option>
+                                                                                                            <option value="Employer identification number">Employer identification number</option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                        		<div class="col-md-6">
+                                                                                               		<input type="text" class="form-control mb-5" id="" placeholder="Enter number here">
+                                                                                                </div>
+                                                                                       		</div>
+                                                                                      		<a href="javascript:" class="hidden-xs btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a> 
+                                                                                		</div>
+                                                                                   		<p class="text-danger">Type and Number must match the name given.</p>
+                                                                          			</div>
+                                                                                </div>
+                                                                                <h1>Terms</h1>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">&nbsp;</label>
+                                                                                        <div class="col-sm-9"> <strong>Under penalties of perjury, I certify that:</strong>
+                                                                                                <p>1. The number shown on this form is my correct taxpayer identification number(or i am waiting for a number to be issued to me); and <br/>
+                                                                                                        2. I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have note been notified by the Internal Revenue Service(IRS) that I am subject to backup withholding as a result of failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding; and <br/>
+                                                                                                        3. I am a U.S. citizen or other U.S. person; and <br/>
+                                                                                                        4. The FATCA code(s) entered on this form (if any) indicating that I am exempt from FATCA reporting is correct.
+                                                                                                        
+                                                                                                        The Internal Revenue Service does not require your consent to any provision of this document other than the certifications required to avoid backup withholding.</p>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <h1>Signature</h1>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Signature</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="e.g. John Smith">
+                                                                                                <p class="text-danger mb-5">Typing your name acts as your signature.</p>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Sign date</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="e.g. 06/30/2015">
+                                                                                                <p class="text-danger mb-5">Use mm/dd/yyyy format.</p>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <div class="col-sm-offset-3 col-sm-9">
+                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
+                                                                                                <div class="clearfix"></div>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+                </div>
+        </div>
+</div>
+<!--  Footer  -->
+
+<div class="otherContainer">
+        <div class="buttonContainer">
+                <button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+        </div>
+</div>
+<div class="ontop"></div>
+<!-- Popup Group DIV -->
+<div id="popup-group" class="popup-wrapper"></div>
+<!-- Popup Group DIV end //--> 
+
+<!--  JAVASCRIPT  --> 
+<script src="../js/jquery.min.js"></script> 
+<script src="../js/jquery-ui.min.js"></script> 
+<script src="../js/jquery.ui.touch-punch.min.js"></script> 
+<script src="../js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects --> 
+<script src="../js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   --> 
+<script src="../js/bootstrap.min.js"></script> 
+<!--<script src="../js/custom.js"></script> --><script src="../js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  --> 
+<script src="../js/daterangepicker.js"></script> <!--  date picker  --> 
+<script src="../js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
+<script src="../js/jquery.knob.js"></script> <!--  plugin to provide customisable notifications  --> 
+<script src="../plugins/responsivetabs/jquery.bootstrap-responsive-tabs.min.js"></script> 
+<!-- Google language translation --> 
+<script type="text/javascript">
+           		var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+            	function googleTranslateElementInit(){
+					if (duplicate_google_translate_counter == 0) {
+						new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+					}
+					duplicate_google_translate_counter++;
+				}
+            </script> 
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+<script type="text/javascript">
+ $(document).ready(function() {
+        /* create jQuery knob with .dial class */
+        $(".dial").knob({
+            'readOnly': true
+        });
+
+       
+        animateChart('chart_anim_3', 0, 40);
+
+        /* Update circle value when input.animate changes */
+        $("input.dial").change(function () {
+            $(this).parent().siblings(".circle").find(".pie_value").text($(this).val() + "%");
+        })
+
+        /* Animate chart from start_val to end_val */
+        function animateChart (chart_id, start_val, end_val) {
+            $({chart_value: start_val}).animate({chart_value: end_val}, {
+                duration: 1000, // 1 second animation
+                easing: 'swing',
+                step: function () {
+                    $('#' + chart_id).val(Math.ceil(this.chart_value)).trigger('change');
+                },
+                complete: function () {
+                    /* complete */
+                    console.log('complete');
+                }
+            });
+        };
+     
+      $('.tabbing').mTab({
+		 navigation: ".tabNav"
+		,container: ".tabContainer"
+		,activeTab: 1
+		,activeClass: "active"
+		,scrollOffset: true
+		,accordScreen: 767
+		,toggleClose: true
+		,animation: false
+		,openWithUrl: true
+		,callbackonclick:  function() {  }
+		,callback: function() {  }
+	});
+	
+	//close by default all the accordion menu at a mobile level 
+	if ($(window).width() < 768) {
+    	$('.mResAccordAnchor').removeClass('active');
+		$('.mTabContent').removeClass('mTabActive');
+	}
+	//Next button
+	$('.back-panel').click(function(){
+		var nextPage = ($(this).attr('nextPage'));
+		//disable current tab and content
+		$('.mResTabNavTab').removeClass('active');
+		$('.mTabContent').removeClass('mTabActive');
+		//acrive new tab and conten
+		$('a[href="#' + nextPage + '"]').parent().addClass('active');
+		$('#' + nextPage).addClass('mTabActive');
+		$('#' + nextPage).removeClass('defaultState');
+		$(window).scrollTop(0);
+	});
+	
+	
+});
+</script>
+</body>
+</html>

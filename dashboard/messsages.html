@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<title>Universal Student Housing | Student Dashboard</title>
+<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/selectric.css" />
+<!--  jQuery plugin to customize HTML selects -->
+<link rel="stylesheet" type="text/css" href="../css/hint.min.css" />
+<!-- tooltip library -->
+<link rel="stylesheet" type="text/css" href="../css/daterangepicker.css" />
+<!-- daterange calendar -->
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+<!-- bootstrap library -->
+<link rel="stylesheet" type="text/css" href="../css/sumoselect.min.css" />
+<!--  Single/Multi Select plugin  -->
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/custom.css" />
+<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+</head>
+<body>
+<header class="top fixed">
+        <div class="container"> <a class="logo" href="/"><img src="../images/logo.svg" alt="" class="img-responsive"/></a>
+                <nav class="mainmenu">
+                        <ul>
+                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
+                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
+                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a> </li>
+                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
+                                <li>
+                                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                                </li>
+                        </ul>
+                </nav>
+                <div class="nav-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
+        </div>
+</header>
+<!-- Main Top Image -->
+<div class="container top-margin">
+ <div class="row row-dashboard"> 
+        <!--   Right Menu  -->
+        <div class="col-md-2 col-sm-3">
+                <ul class="list-dashboard">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="host-details.html">Host Details</a></li>
+                        <li><a href="home-details.html">Home Details</a></li>
+                        <li><a href="bedroom.html">Bedrooms</a></li>
+                        <li class="active"><a href="messsages.html">Messages <span class="label label-danger">23</span></a></li>
+                        <li><a href="payment-tax.html">Payment & Taxes</a></li>
+                </ul>
+        </div>
+        <!--  Main content  -->
+        <div class="col-md-10 col-sm-9">
+                <section class="dashboard-content">
+                        <h1 class="mb-10">Messages</h1>
+                        <a class="media media-messages" href="messsage-detail.html">
+                                <div class="media-left media-middle">  <img class="media-object img-circle" src="../images/ava1.jpg" alt="...">  </div>
+                                <div class="media-body">
+                                        <div class="col-md-6">
+                                                <p>Conversation with Homestay Match</p>
+                                                <span>November 2017, Blue Bedroom</span> </div>
+                                        <div class="col-md-6">
+                                                <p class="mt-15 unread">Hi Mike, yes you should join this space its very comfortable...</p>
+                                        </div>
+                                </div>
+                        </a>
+                    
+                    <a class="media media-messages" href="messsage-detail.html">
+                                <div class="media-left media-middle">  <img class="media-object img-circle" src="../images/ava2.jpg" alt="...">  </div>
+                                <div class="media-body">
+                                        <div class="col-md-6">
+                                                <p>Conversation with Homestay Match</p>
+                                                <span>November 2017, Blue Bedroom</span> </div>
+                                        <div class="col-md-6">
+                                                <p class="mt-15">Hi Mike, yes you should join this space its very comfortable...</p>
+                                        </div>
+                                </div>
+                        </a>
+                    
+                    
+                     <a class="media media-messages" href="messsage-detail.html">
+                                <div class="media-left media-middle">  <img class="media-object img-circle" src="../images/ava3.jpg" alt="...">  </div>
+                                <div class="media-body">
+                                        <div class="col-md-6">
+                                                <p>Conversation with Homestay Match</p>
+                                                <span>November 2017, Blue Bedroom</span> </div>
+                                        <div class="col-md-6">
+                                                <p class="mt-15">Hi Mike, yes you should join this space its very comfortable...</p>
+                                        </div>
+                                </div>
+                        </a>
+                    
+                    
+                    
+                     <a class="media media-messages" href="messsage-detail.html">
+                                <div class="media-left media-middle">  <img class="media-object img-circle" src="../images/ava4.jpg" alt="...">  </div>
+                                <div class="media-body">
+                                        <div class="col-md-6">
+                                                <p>Conversation with Homestay Match</p>
+                                                <span>November 2017, Blue Bedroom</span> </div>
+                                        <div class="col-md-6">
+                                                <p class="mt-15">Hi Mike, yes you should join this space its very comfortable...</p>
+                                        </div>
+                                </div>
+                        </a>
+                    
+                    
+                    
+                     <a class="media media-messages" href="messsage-detail.html">
+                                <div class="media-left media-middle">  <img class="media-object img-circle" src="../images/ava5.jpg" alt="...">  </div>
+                                <div class="media-body">
+                                        <div class="col-md-6">
+                                                <p>Conversation with Homestay Match</p>
+                                                <span>November 2017, Blue Bedroom</span> </div>
+                                        <div class="col-md-6">
+                                                <p class="mt-15">Hi Mike, yes you should join this space its very comfortable...</p>
+                                        </div>
+                                </div>
+                        </a>
+                    
+                    
+                     <a class="media media-messages" href="messsage-detail.html">
+                                <div class="media-left media-middle">  <img class="media-object img-circle" src="../images/ava6.jpg" alt="...">  </div>
+                                <div class="media-body">
+                                        <div class="col-md-6">
+                                                <p>Conversation with Homestay Match</p>
+                                                <span>November 2017, Blue Bedroom</span> </div>
+                                        <div class="col-md-6">
+                                                <p class="mt-15">Hi Mike, yes you should join this space its very comfortable...</p>
+                                        </div>
+                                </div>
+                        </a>
+                    
+                    
+                    <div class="clearfix"></div>
+                    
+                    <nav class="nav-pagination d-table">
+                                                                                <ul class="pagination  mt-20 mb-0">
+                                                                                        <li class="disabled"><a href="#" aria-label="Previous"><i class="fa fa-angle-left fa-fw"></i></a></li>
+                                                                                        <li class="active"><a href="#">1 </a></li>
+                                                                                        <li><a href="#">2 </a></li>
+                                                                                        <li><a href="#">3 </a></li>
+                                                                                        <li><a href="#" aria-label="Previous"><i class="fa fa-angle-right fa-fw"></i></a></li>
+                                                                                </ul>
+                                                                        </nav>
+                    
+                    
+                    
+                    
+                        <ol class="chat hide">
+                                <li class="other">
+                                        <div class="avatar"><img src="../images/avatar1.png" draggable="false"/></div>
+                                        <div class="msg">
+                                                <p>Hola!</p>
+                                                <p>Te vienes a cenar al centro? </p>
+                                                <time>20:17</time>
+                                        </div>
+                                </li>
+                                <li class="self">
+                                        <div class="avatar"><img src="../images/jullia.jpeg" draggable="false"/></div>
+                                        <div class="msg">
+                                                <p>Puff...</p>
+                                                <p>Aún estoy haciendo el contexto de Góngora... </p>
+                                                <p>Mejor otro día</p>
+                                                <time>20:18</time>
+                                        </div>
+                                </li>
+                                <li class="other">
+                                        <div class="avatar"><img src="../images/avatar1.png" draggable="false"/></div>
+                                        <div class="msg">
+                                                <p>Qué contexto de Góngora? </p>
+                                                <time>20:18</time>
+                                        </div>
+                                </li>
+                                <li class="self">
+                                        <div class="avatar"><img src="../images/jullia.jpeg" draggable="false"/></div>
+                                        <div class="msg">
+                                                <p>El que mandó Marialu</p>
+                                                <p>Es para mañana...</p>
+                                                <time>20:18</time>
+                                        </div>
+                                </li>
+                                <li class="self">
+                                        <div class="avatar"><img src="../images/jullia.jpeg" draggable="false"/></div>
+                                        <div class="msg">
+                                                <p>Te apetece jugar a Minecraft?</p>
+                                                <time>18:03</time>
+                                        </div>
+                                </li>
+                                <li class="other">
+                                        <div class="avatar"><img src="../images/avatar1.png" draggable="false"/></div>
+                                        <div class="msg">
+                                                <p>Venga va, hace ya mucho que no juego...</p>
+                                                <time>18:07</time>
+                                        </div>
+                                </li>
+                                <li class="self">
+                                        <div class="avatar"><img src="../images/jullia.jpeg" draggable="false"/></div>
+                                        <div class="msg">
+                                                <p>Ehh, me crashea el Launcher...
+                                                        <emoji class="cryalot"/>
+                                                </p>
+                                                <time>18:08</time>
+                                        </div>
+                                </li>
+                        </ol>
+                        <div class="fullwidth pr chat-textarea hide">
+                                <textarea class="form-control" placeholder="Type Your Message Here..."></textarea>
+                                <a href="javascript:" class="btn-send">send</a> </div>
+                </section>
+        </div>
+</div>
+    </div>
+<!--  Footer  -->
+
+<div class="otherContainer">
+        <div class="buttonContainer">
+                <button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+        </div>
+</div>
+<div class="ontop"></div>
+<!-- Popup Group DIV -->
+<div id="popup-group" class="popup-wrapper"></div>
+<!-- Popup Group DIV end //--> 
+
+<!--  JAVASCRIPT  --> 
+<script src="../js/jquery.min.js"></script> 
+<script src="../js/jquery-ui.min.js"></script> 
+<script src="../js/jquery.ui.touch-punch.min.js"></script> 
+<script src="../js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects --> 
+<script src="../js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   --> 
+<script src="../js/bootstrap.min.js"></script> 
+<!--<script src="../js/custom.js"></script> --><script src="../js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  --> 
+<script src="../js/daterangepicker.js"></script> <!--  date picker  --> 
+<script src="../js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
+<script src="../js/jquery.knob.js"></script> <!--  plugin to provide customisable notifications  --> 
+
+<!-- Google language translation --> 
+<script type="text/javascript">
+           		var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+            	function googleTranslateElementInit(){
+					if (duplicate_google_translate_counter == 0) {
+						new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+					}
+					duplicate_google_translate_counter++;
+				}
+            </script> 
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+<script type="text/javascript">
+ $(document).ready(function() {
+        /* create jQuery knob with .dial class */
+        $(".dial").knob({
+            'readOnly': true
+        });
+
+       
+        animateChart('chart_anim_3', 0, 40);
+
+        /* Update circle value when input.animate changes */
+        $("input.dial").change(function () {
+            $(this).parent().siblings(".circle").find(".pie_value").text($(this).val() + "%");
+        })
+
+        /* Animate chart from start_val to end_val */
+        function animateChart (chart_id, start_val, end_val) {
+            $({chart_value: start_val}).animate({chart_value: end_val}, {
+                duration: 1000, // 1 second animation
+                easing: 'swing',
+                step: function () {
+                    $('#' + chart_id).val(Math.ceil(this.chart_value)).trigger('change');
+                },
+                complete: function () {
+                    /* complete */
+                    console.log('complete');
+                }
+            });
+        };
+    });
+    </script>
+</body>
+</html>

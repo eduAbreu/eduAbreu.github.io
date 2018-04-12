@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<title>Universal Student Housing | Host List</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/selectric.css" /> <!--  jQuery plugin to customize HTML selects -->
+	<link rel="stylesheet" type="text/css" href="css/hint.min.css" /> <!-- tooltip library -->
+	<link rel="stylesheet" type="text/css" href="css/daterangepicker.css" /> <!-- daterange calendar -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> <!-- bootstrap library -->
+	<link rel="stylesheet" type="text/css" href="css/sumoselect.min.css" /><!--  Single/Multi Select plugin  -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/custom.css" />	
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body >
+	<header class="top fixed">
+		<div class="container">
+            <a class="logo" href="/"></a>
+            <nav class="mainmenu">
+                <ul>
+                    <li>
+                        <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a>
+                    </li>
+                    <li>
+                        <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a>
+                    </li>
+                    <li class="posRelative">
+                        <a id="signin" class="signin">Sign In</a>
+                        <div class="signInMenu">
+                            <div>
+                            	<a href="javascript:void(0);" class="pop-close-signin">X</a>
+                                <div id="signinBox" class="signin-toggle popup-content-signin"> 
+                                    <iframe id="user-signup-popup" frameborder="0" width="100%" height="100%" src="about:blank"></iframe>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="ontop showPopOver none"></div>
+                    </li> 
+                    <li>
+                        <a data-target="#" class="signin" href="/help.html">Help</a>
+                    </li>
+                    <li>
+                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="mobile-host">
+                <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a>
+            </div>
+		</div>
+	</header>
+	<!--</header>-->	
+	<div class="container-fluid">
+    	<div class="clearifx topMargin">
+        	<div class="row">
+				<div class="col-md-7 padding-0" >
+                <!-- Filters -->
+                	<div id="filters" class="clearfix">
+                    
+                    	<form name="form-filters" action="" method="post">
+                        	<select id="location" name="location" tabindex="1">
+                                <option value="UCLA">UCLA</option>
+                                <option value="NY Univeristy">New York</option>
+                                <option value="Boston">Boston</option>
+                            </select>
+                            <div class="SumoSelect">
+                            	<input type="text" id="fromDatePicker" class="" name="movein" placeholder="Move in - Move out" tabindex="2" >
+                           	</div>
+                            <select id="roomType" name="roomType" tabindex="3"> <!--  multiple  -->
+                                <option value="private">Private Room</option>
+                                <option value="shared">Shared Room</option>
+                            </select>
+                        </form>
+                    </div>
+             	<!-- Home List  -->
+                    <div id="home-list">
+                    	<div class="row">
+							<div class="col-sm-6 tile-margin" >
+                            <!-- Single Tile  -->
+                                <div class="home-tile">
+                                    <div id="home_1" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-81.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-84.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-82.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-85.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wishList">
+                                            <a href="#"><svg viewBox="0 0 32 32" role="presentation" class="like-svg"><path d="M23.993 2.75c-.296 0-.597.017-.898.051-1.14.131-2.288.513-3.408 1.136-1.23.682-2.41 1.621-3.688 2.936-1.28-1.316-2.458-2.254-3.687-2.937-1.12-.622-2.268-1.004-3.41-1.135a7.955 7.955 0 0 0-.896-.051C6.123 2.75.75 4.289.75 11.128c0 7.862 12.238 16.334 14.693 17.952a1.004 1.004 0 0 0 1.113 0c2.454-1.618 14.693-10.09 14.693-17.952 0-6.84-5.374-8.378-7.256-8.378"></path></svg></a>
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" data-target="#home_1" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" data-target="#home_1" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                    <!-- Host Info -->
+                                    <div class="infoContainer">
+                                  		<span class="host_user_pic"><img src="uploads/host/host-12.jpg" alt=""></span>
+                                  		<a href="#" class="">
+                                        	<div class="host_item_detail">
+                                           		<div class="host_aminity">
+                                                	<div class="width40"><h3 class="host_title">Kathy&nbsp;S.</h3></div>
+                                                 	<div class="by_fourwheeler width15"><span>14&nbsp;min</span></div>
+                                                   	<div class="by_twowheeler width15"><span>27&nbsp;min</span></div>
+                                                   	<div class="host_amount width20"><span>From</span>$&nbsp;110<span>Per&nbsp;Night</span></div>
+                                              	</div> 	
+                                     		</div>  			
+                                      	</a>
+                                    </div>
+                                </div>
+                         	</div>
+                            <div class="col-sm-6 tile-margin" >
+                                <div class="home-tile">
+                                    <div id="home_2" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-75.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-77.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-78.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-79.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wishList">
+                                            <a href="#"><svg viewBox="0 0 32 32" role="presentation" class="like-svg"><path d="M23.993 2.75c-.296 0-.597.017-.898.051-1.14.131-2.288.513-3.408 1.136-1.23.682-2.41 1.621-3.688 2.936-1.28-1.316-2.458-2.254-3.687-2.937-1.12-.622-2.268-1.004-3.41-1.135a7.955 7.955 0 0 0-.896-.051C6.123 2.75.75 4.289.75 11.128c0 7.862 12.238 16.334 14.693 17.952a1.004 1.004 0 0 0 1.113 0c2.454-1.618 14.693-10.09 14.693-17.952 0-6.84-5.374-8.378-7.256-8.378"></path></svg></a>
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" data-target="#home_2" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" data-target="#home_2" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                    <!-- Host Info -->
+                                    <div class="infoContainer">
+                                  		<span class="host_user_pic"><img src="uploads/host/host-27.jpg" alt=""></span>
+                                  		<a href="#" class="">
+                                        	<div class="host_item_detail">
+                                            	
+                                                
+                                           		<div class="host_aminity">
+                                                	<div class="width40"><h3 class="host_title">Roger&nbsp;M.</h3></div>
+                                                 	<div class="by_fourwheeler width15"><span>14&nbsp;min</span></div>
+                                                   	<div class="by_twowheeler width15"><span>27&nbsp;min</span></div>
+                                                   	<div class="host_amount width20"><span>From</span>$&nbsp;90<span>Per&nbsp;Night</span></div>
+                                              	</div> 	
+                                     		</div>  			
+                                      	</a>
+                                    </div>
+                                </div>
+                            </div>
+                   			<div class="col-sm-6 tile-margin" >
+                                <div class="home-tile">
+                                    <div id="home_3" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-71.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-72.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-73.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-74.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wishList">
+                                            <a href="#"><svg viewBox="0 0 32 32" role="presentation" class="like-svg"><path d="M23.993 2.75c-.296 0-.597.017-.898.051-1.14.131-2.288.513-3.408 1.136-1.23.682-2.41 1.621-3.688 2.936-1.28-1.316-2.458-2.254-3.687-2.937-1.12-.622-2.268-1.004-3.41-1.135a7.955 7.955 0 0 0-.896-.051C6.123 2.75.75 4.289.75 11.128c0 7.862 12.238 16.334 14.693 17.952a1.004 1.004 0 0 0 1.113 0c2.454-1.618 14.693-10.09 14.693-17.952 0-6.84-5.374-8.378-7.256-8.378"></path></svg></a>
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" data-target="#home_3" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" data-target="#home_3" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                    <!-- Host Info -->
+                                    <div class="infoContainer">
+                                  		<span class="host_user_pic"><img src="uploads/host/host-11.jpg" alt=""></span>
+                                  		<a href="#" class="">
+                                        	<div class="host_item_detail">
+                                            	
+                                                
+                                           		<div class="host_aminity">
+                                                	<div class="width40"><h3 class="host_title">Steve&nbsp;P.</h3></div>
+                                                 	<div class="by_fourwheeler width15"><span>14&nbsp;min</span></div>
+                                                   	<div class="by_twowheeler width15"><span>27&nbsp;min</span></div>
+                                                   	<div class="host_amount width20"><span>From</span>$&nbsp;150<span>Per&nbsp;Night</span></div>
+                                              	</div> 	
+                                     		</div>  			
+                                      	</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 tile-margin" >
+                                <div class="home-tile">
+                                    <div id="home_4" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-81.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-84.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-82.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-85.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wishList">
+                                            <a href="#"><svg viewBox="0 0 32 32" role="presentation" class="like-svg"><path d="M23.993 2.75c-.296 0-.597.017-.898.051-1.14.131-2.288.513-3.408 1.136-1.23.682-2.41 1.621-3.688 2.936-1.28-1.316-2.458-2.254-3.687-2.937-1.12-.622-2.268-1.004-3.41-1.135a7.955 7.955 0 0 0-.896-.051C6.123 2.75.75 4.289.75 11.128c0 7.862 12.238 16.334 14.693 17.952a1.004 1.004 0 0 0 1.113 0c2.454-1.618 14.693-10.09 14.693-17.952 0-6.84-5.374-8.378-7.256-8.378"></path></svg></a>
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" data-target="#home_4" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" data-target="#home_4" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                    <!-- Host Info -->
+                                    <div class="infoContainer">
+                                  		<span class="host_user_pic"><img src="uploads/host/host-12.jpg" alt=""></span>
+                                  		<a href="#" class="">
+                                        	<div class="host_item_detail">
+                                            	
+                                                
+                                           		<div class="host_aminity">
+                                                	<div class="width40"><h3 class="host_title">Susan&nbsp;N.</h3></div>
+                                                 	<div class="by_fourwheeler width15"><span>14&nbsp;min</span></div>
+                                                   	<div class="by_twowheeler width15"><span>27&nbsp;min</span></div>
+                                                   	<div class="host_amount width20"><span>From</span>$&nbsp;90<span>Per&nbsp;Night</span></div>
+                                              	</div> 	
+                                     		</div>  			
+                                      	</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 tile-margin" >
+                                <div class="home-tile">
+                                    <div id="home_5" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                           <div class="item active">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-75.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-77.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-78.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-79.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wishList">
+                                            <a href="#"><svg viewBox="0 0 32 32" role="presentation" class="like-svg"><path d="M23.993 2.75c-.296 0-.597.017-.898.051-1.14.131-2.288.513-3.408 1.136-1.23.682-2.41 1.621-3.688 2.936-1.28-1.316-2.458-2.254-3.687-2.937-1.12-.622-2.268-1.004-3.41-1.135a7.955 7.955 0 0 0-.896-.051C6.123 2.75.75 4.289.75 11.128c0 7.862 12.238 16.334 14.693 17.952a1.004 1.004 0 0 0 1.113 0c2.454-1.618 14.693-10.09 14.693-17.952 0-6.84-5.374-8.378-7.256-8.378"></path></svg></a>
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" data-target="#home_5" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" data-target="#home_5" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                    <!-- Host Info -->
+                                    <div class="infoContainer">
+                                  		<span class="host_user_pic"><img src="uploads/host/host-27.jpg" alt=""></span>
+                                  		<a href="#" class="">
+                                        	<div class="host_item_detail">
+                                            	
+                                                
+                                           		<div class="host_aminity">
+                                                	<div class="width40"><h3 class="host_title">Roger&nbsp;M.</h3></div>
+                                                 	<div class="by_fourwheeler width15"><span>14&nbsp;min</span></div>
+                                                   	<div class="by_twowheeler width15"><span>27&nbsp;min</span></div>
+                                                   	<div class="host_amount width20"><span>From</span>$&nbsp;90<span>Per&nbsp;Night</span></div>
+                                              	</div> 	
+                                     		</div>  			
+                                      	</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 tile-margin" >
+                                <div class="home-tile">
+                                    <div id="home_6" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-71.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-72.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-73.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-74.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wishList">
+                                            <a href="#"><svg viewBox="0 0 32 32" role="presentation" class="like-svg"><path d="M23.993 2.75c-.296 0-.597.017-.898.051-1.14.131-2.288.513-3.408 1.136-1.23.682-2.41 1.621-3.688 2.936-1.28-1.316-2.458-2.254-3.687-2.937-1.12-.622-2.268-1.004-3.41-1.135a7.955 7.955 0 0 0-.896-.051C6.123 2.75.75 4.289.75 11.128c0 7.862 12.238 16.334 14.693 17.952a1.004 1.004 0 0 0 1.113 0c2.454-1.618 14.693-10.09 14.693-17.952 0-6.84-5.374-8.378-7.256-8.378"></path></svg></a>
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" data-target="#home_6" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" data-target="#home_6" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                    <!-- Host Info -->
+                                    <div class="infoContainer">
+                                  		<span class="host_user_pic"><img src="uploads/host/host-11.jpg" alt=""></span>
+                                  		<a href="#" class="">
+                                        	<div class="host_item_detail">
+                                            	
+                                                
+                                           		<div class="host_aminity">
+                                                	<div class="width40"><h3 class="host_title">Martin&nbsp;L.</h3></div>
+                                                 	<div class="by_fourwheeler width15"><span>14&nbsp;min</span></div>
+                                                   	<div class="by_twowheeler width15"><span>27&nbsp;min</span></div>
+                                                   	<div class="host_amount width20"><span>From</span>$&nbsp;90<span>Per&nbsp;Night</span></div>
+                                              	</div> 	
+                                     		</div>  			
+                                      	</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 tile-margin" >
+                                <div class="home-tile">
+                                    <div id="home_7" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-81.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-84.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-82.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-85.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wishList">
+                                            <a href="#"><svg viewBox="0 0 32 32" role="presentation" class="like-svg"><path d="M23.993 2.75c-.296 0-.597.017-.898.051-1.14.131-2.288.513-3.408 1.136-1.23.682-2.41 1.621-3.688 2.936-1.28-1.316-2.458-2.254-3.687-2.937-1.12-.622-2.268-1.004-3.41-1.135a7.955 7.955 0 0 0-.896-.051C6.123 2.75.75 4.289.75 11.128c0 7.862 12.238 16.334 14.693 17.952a1.004 1.004 0 0 0 1.113 0c2.454-1.618 14.693-10.09 14.693-17.952 0-6.84-5.374-8.378-7.256-8.378"></path></svg></a>
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" data-target="#home_7" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" data-target="#home_7" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                    <!-- Host Info -->
+                                    <div class="infoContainer">
+                                  		<span class="host_user_pic"><img src="uploads/host/host-12.jpg" alt=""></span>
+                                  		<a href="#" class="">
+                                        	<div class="host_item_detail">
+                                            	
+                                                
+                                           		<div class="host_aminity">
+                                                	<div class="width40"><h3 class="host_title">Emma&nbsp;W.</h3></div>
+                                                 	<div class="by_fourwheeler width15"><span>14&nbsp;min</span></div>
+                                                   	<div class="by_twowheeler width15"><span>27&nbsp;min</span></div>
+                                                   	<div class="host_amount width20"><span>From</span>$&nbsp;90<span>Per&nbsp;Night</span></div>
+                                              	</div> 	
+                                     		</div>  			
+                                      	</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 tile-margin" >
+                                <div class="home-tile">
+                                    <div id="home_8" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-75.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-77.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-78.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="img-responsive" src="uploads/bedroom/bedroom-79.jpg" alt="...">
+                                                <div class="carousel-caption"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wishList">
+                                            <a href="#"><svg viewBox="0 0 32 32" role="presentation" class="like-svg"><path d="M23.993 2.75c-.296 0-.597.017-.898.051-1.14.131-2.288.513-3.408 1.136-1.23.682-2.41 1.621-3.688 2.936-1.28-1.316-2.458-2.254-3.687-2.937-1.12-.622-2.268-1.004-3.41-1.135a7.955 7.955 0 0 0-.896-.051C6.123 2.75.75 4.289.75 11.128c0 7.862 12.238 16.334 14.693 17.952a1.004 1.004 0 0 0 1.113 0c2.454-1.618 14.693-10.09 14.693-17.952 0-6.84-5.374-8.378-7.256-8.378"></path></svg></a>
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" data-target="#home_8" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" data-target="#home_8" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                    <!-- Host Info -->
+                                    <div class="infoContainer">
+                                  		<span class="host_user_pic"><img src="uploads/host/host-27.jpg" alt=""></span>
+                                  		<a href="#" class="">
+                                        	<div class="host_item_detail">
+                                            	
+                                                
+                                           		<div class="host_aminity">
+                                                	<div class="width40"><h3 class="host_title">Roger&nbsp;M.</h3></div>
+                                                 	<div class="by_fourwheeler width15"><span>14&nbsp;min</span></div>
+                                                   	<div class="by_twowheeler width15"><span>27&nbsp;min</span></div>
+                                                   	<div class="host_amount width20"><span>From</span>$&nbsp;90<span>Per&nbsp;Night</span></div>
+                                              	</div> 	
+                                     		</div>  			
+                                      	</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clsPaging">
+                            <div class="row">
+                            	<div class="col-sm-3 col-xs-8 mob-pad-10 pull-left"><div class="left rentals">1 – 6 of 14 Rentals</div></div>
+								<div class="col-sm-3 col-xs-4 mob-pad-10 pull-right"><div class="right viewAll"><a href="javascript:;" onclick="viewall()">View All</a></div></div>
+                                <div class="col-sm-6 col-xs-12"><div class="center">
+                                    <div class="pagination">
+                                        <span class="clsback clsback2"><a href="#" class="page-back"></a></span>
+                                        <span class="clsback clsback1"><a href="#" class="page-back"></a></span>
+                                        <span class="clsprev2"><a href="#" class="active">1</a></span>
+                                        <span class="clsprev1"><a href="#" class="" onclick="pagination(2)">2</a></span>
+                                        <span class="clscurr1"><a href="#" class="" onclick="pagination(3)">3</a></span>
+                                        <span class="clsnext1"></span>	
+                                        <span class="clsnext2"></span>	
+                                        <span class="clsnext clsnextFinal1"><a href="#" class="page-next" onclick="pagination(2)"></a></span>
+                                        <span class="clsnext clsnextFinal2"><a href="#" class="page-next" onclick="pagination(3)"></a></span>
+                                    </div>
+                                </div></div>
+                            </div>
+    					</div>
+          			</div>
+        	<footer class="footer">
+      		<div class="">
+            	<div class="footer-bg1">
+                	<div class="row">
+                      	<div class="col-sm-offset-2 col-sm-1 col-xs-12">
+                         	<img class="footer-logo" src="images/xfooter-logo.png.pagespeed.ic.QJYATsW6ya.png" alt="" />
+                       	</div>
+                  		<div class="col-sm-offset-1 col-sm-3 col-xs-12">
+                        	<nav class="footer-nav">
+                            	<h6>Company</h6>
+                            	<ul>
+                                	<li><a href="#">About Us</a></li>
+                                 	<li><a href="#">Contact</a></li>
+                                   	<li><a href="/help.html">Help</a></li>
+                                  	<li><a href="#">Partners</a></li>
+                                   	<li><a href="#">Terms & Conditions</a></li>
+                                  	<li><a href="#">Experience Homestay</a></li>
+                               	</ul>
+                          	</nav>
+                       	</div>
+                    	<div class="col-sm-3 col-xs-12">
+                       		<nav class="footer-nav">
+                         		<h6>Host</h6>
+                               	<ul>
+                                        	<li><a href="#">Become a host</a></li>
+                                          	<li><a href="#">Refer a friend</a></li>
+                                           	<li><a href="#">Why host with us</a></li>
+                                           	<li><a href="#">Ideal Hosting</a></li>
+                                        </ul>
+                                   </nav>
+                            	</div>
+                       		</div>
+                            <div id="social-footer" class="row">
+                             	<div class="col-xs-12 text-center">
+                                	<ul class="social-icon clearfix">
+                                            <li>
+                                                <a href="javascrip:void(0);">
+                                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                                        <g>
+                                                            <path id="google" fill="#5F6161" d="M17.321,23.314c-0.13-0.086-0.263-0.18-0.402-0.274c-0.405-0.124-0.835-0.189-1.276-0.194h-0.053
+                                                    c-2.025,0-3.801,1.225-3.801,2.624c0,1.523,1.522,2.712,3.463,2.712c2.561,0,3.859-0.885,3.859-2.625
+                                                    c0-0.164-0.019-0.335-0.06-0.507C18.877,24.376,18.257,23.955,17.321,23.314z" />
+                                                            <path id="google1" fill="#5F6161" d="M15.886,18.007c0.002,0,0.002,0,0.002,0c0.484,0,0.893-0.191,1.209-0.553
+                                                    c0.496-0.566,0.716-1.494,0.586-2.479c-0.23-1.761-1.489-3.227-2.803-3.265l-0.052-0.002c-0.465,0-0.88,0.192-1.195,0.553
+                                                    c-0.489,0.558-0.696,1.443-0.568,2.426c0.23,1.759,1.516,3.28,2.803,3.32H15.886L15.886,18.007z" />
+                                                            <path id="google2" fill="#5F6161" d="M20,0C8.972,0,0,8.972,0,20c0,11.027,8.972,20,20,20c11.027,0,20-8.973,20-20C40,8.972,31.029,0,20,0z
+                                                     M17.694,29.739c-0.756,0.218-1.573,0.329-2.431,0.329c-0.955,0-1.874-0.11-2.73-0.326c-1.657-0.418-2.882-1.211-3.454-2.232
+                                                    c-0.247-0.441-0.371-0.912-0.371-1.399c0-0.502,0.12-1.011,0.357-1.515c0.908-1.935,3.301-3.237,5.953-3.237
+                                                    c0.027,0,0.052,0,0.076,0c-0.215-0.379-0.319-0.773-0.319-1.186c0-0.205,0.027-0.415,0.082-0.628
+                                                    c-2.781-0.063-4.862-2.099-4.862-4.784c0-1.896,1.515-3.743,3.682-4.489c0.649-0.224,1.31-0.338,1.96-0.338h5.947
+                                                    c0.202,0,0.382,0.131,0.445,0.324c0.063,0.192-0.006,0.403-0.17,0.521l-1.33,0.963c-0.08,0.056-0.176,0.087-0.275,0.087h-0.476
+                                                    c0.615,0.737,0.975,1.788,0.975,2.969c0,1.303-0.659,2.534-1.859,3.473c-0.926,0.722-0.963,0.921-0.963,1.332
+                                                    c0.011,0.226,0.657,0.965,1.369,1.469c1.659,1.173,2.276,2.324,2.276,4.245C21.575,27.321,20.052,29.054,17.694,29.739z
+                                                     M31.125,19.538c0,0.258-0.21,0.467-0.467,0.467h-3.38v3.381c0,0.258-0.21,0.467-0.466,0.467H25.85
+                                                    c-0.259,0-0.469-0.209-0.469-0.467v-3.381h-3.377c-0.258,0-0.467-0.208-0.467-0.467v-0.961c0-0.258,0.209-0.469,0.467-0.469h3.377
+                                                    v-3.378c0-0.259,0.209-0.467,0.469-0.467h0.963c0.255,0,0.466,0.209,0.466,0.467v3.378h3.379c0.257,0,0.467,0.209,0.467,0.467
+                                                    L31.125,19.538L31.125,19.538z" />
+                                                        </g>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascrip:void(0);">
+                                                    <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                                        <path id="twitter" fill="#5F6161" d="M20,0C8.972,0,0,8.972,0,20c0,11.027,8.972,20,20,20c11.027,0,20-8.973,20-20C40,8.972,31.029,0,20,0z
+                                                 M28.922,15.423c0.009,0.198,0.014,0.398,0.014,0.598c0,6.083-4.629,13.095-13.098,13.095c-2.6,0-5.02-0.76-7.056-2.066
+                                                c0.36,0.043,0.727,0.064,1.098,0.064c2.157,0,4.142-0.736,5.717-1.971c-2.014-0.037-3.715-1.368-4.3-3.197
+                                                c0.28,0.053,0.57,0.083,0.865,0.083c0.42,0,0.827-0.055,1.213-0.16c-2.106-0.422-3.692-2.282-3.692-4.514
+                                                c0-0.019,0-0.039,0.001-0.058c0.62,0.344,1.33,0.552,2.084,0.575c-1.234-0.824-2.047-2.234-2.047-3.831
+                                                c0-0.844,0.226-1.635,0.623-2.315c2.269,2.786,5.663,4.618,9.488,4.811c-0.079-0.338-0.118-0.688-0.118-1.05
+                                                c0-2.542,2.061-4.603,4.602-4.603c1.324,0,2.519,0.559,3.36,1.453c1.05-0.206,2.033-0.588,2.924-1.117
+                                                c-0.346,1.075-1.074,1.977-2.027,2.547c0.932-0.111,1.821-0.358,2.644-0.724C30.603,13.964,29.822,14.776,28.922,15.423z" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascrip:void(0);">
+                                                    <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                                        <path id="facebook" fill="#5F6161" d="M20,0C8.972,0,0,8.972,0,20c0,11.027,8.972,20,20,20c11.027,0,20-8.973,20-20C40,8.972,31.029,0,20,0z
+                                                 M24.974,20.704H21.72c0,5.199,0,11.598,0,11.598h-4.822c0,0,0-6.337,0-11.598h-2.292v-4.099h2.292v-2.651
+                                                c0-1.899,0.902-4.866,4.866-4.866l3.573,0.014v3.979c0,0-2.171,0-2.593,0s-1.022,0.211-1.022,1.117v2.409h3.674L24.974,20.704z" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascrip:void(0);">
+                                                    <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                                        <path id="pinterest" fill="#5F6161" d="M20,0C8.955,0,0,8.954,0,20c0,8.189,4.925,15.225,11.972,18.318c-0.056-1.397-0.01-3.073,0.348-4.592
+                                                c0.384-1.624,2.574-10.898,2.574-10.898s-0.639-1.276-0.639-3.164c0-2.964,1.718-5.177,3.857-5.177c1.819,0,2.698,1.366,2.698,3.002
+                                                c0,1.829-1.166,4.564-1.766,7.098c-0.501,2.122,1.064,3.852,3.157,3.852c3.79,0,6.342-4.867,6.342-10.633
+                                                c0-4.383-2.952-7.664-8.322-7.664c-6.067,0-9.846,4.524-9.846,9.578c0,1.742,0.514,2.972,1.318,3.923
+                                                c0.37,0.437,0.422,0.613,0.288,1.114c-0.096,0.368-0.316,1.254-0.408,1.606c-0.133,0.506-0.544,0.688-1.001,0.5
+                                                c-2.794-1.141-4.096-4.2-4.096-7.64c0-5.681,4.792-12.494,14.294-12.494c7.636,0,12.661,5.525,12.661,11.457
+                                                c0,7.846-4.362,13.707-10.792,13.707c-2.159,0-4.19-1.167-4.886-2.493c0,0-1.161,4.608-1.407,5.498
+                                                c-0.424,1.542-1.254,3.084-2.013,4.284c1.8,0.531,3.7,0.82,5.669,0.82c11.045,0,20-8.954,20-20C40,8.954,31.045,0,20,0" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascrip:void(0);">
+                                                    <svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                                        <g>
+                                                            <path id="instagram" fill="#5F6161" d="M19.999,24.004c2.207,0,4.005-1.796,4.005-4.004c0-0.872-0.285-1.676-0.757-2.334
+                                                    c-0.727-1.009-1.91-1.67-3.246-1.67c-1.337,0-2.518,0.661-3.247,1.669c-0.474,0.657-0.756,1.462-0.757,2.334
+                                                    C15.995,22.207,17.792,24.004,19.999,24.004z" />
+                                                            <polygon fill="#5F6161" points="28.742,15.102 28.742,11.746 28.742,11.246 28.241,11.248 24.886,11.258 24.899,15.115 	" />
+                                                            <path id="instagram1" fill="#5F6161" d="M20,0C8.972,0,0,8.972,0,20c0,11.027,8.972,20,20,20c11.027,0,20-8.973,20-20C40,8.972,31.029,0,20,0z
+                                                     M31.374,17.666v9.313c0,2.426-1.972,4.397-4.396,4.397H13.022c-2.425,0-4.396-1.971-4.396-4.397v-9.313v-4.644
+                                                    c0-2.425,1.971-4.396,4.396-4.396h13.956c2.425,0,4.397,1.971,4.397,4.396V17.666z" />
+                                                            <path id="instagram2" fill="#5F6161" d="M26.222,20c0,3.429-2.791,6.222-6.222,6.222S13.779,23.429,13.779,20c0-0.825,0.164-1.614,0.458-2.334
+                                                    h-3.396v9.313c0,1.204,0.977,2.178,2.18,2.178h13.956c1.201,0,2.18-0.975,2.18-2.178v-9.313h-3.397
+                                                    C26.055,18.386,26.222,19.175,26.222,20z" />
+                                                        </g>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                   	</ul>
+                               	</div>
+                          	</div>
+                            <div class="row">
+                             	<div class="col-xs-12 text-center">
+                                    <p class="copyright">H.S. Match<br/>424 Kelton Ave., Suite 514. Los Angeles, California CA 90024</p>
+									<p class="copyright">LLC. © 2017. All Rights Reserved.</p>
+                                </div>
+                        	</div> 
+                        </div>
+                       </div>
+                    </footer>                     
+                </div>    
+                <!-- Map section -->
+              	<div id="Map" class="col-md-5 hidden-xs hidden-sm map-container padding-left-0" >
+               		<div id="map-host"></div>
+              	</div>
+           	</div>
+            </div>
+            </div>
+		
+
+			<div class="otherContainer">
+				<div class="buttonContainer">
+					<button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+				</div>
+			</div>
+
+		
+
+		<div class="ontop"></div>
+		<!-- Popup Group DIV -->
+		<div id="popup-group" class="popup-wrapper"></div>
+		<!-- Popup Group DIV end //-->
+
+		<!--  JAVASCRIPT  -->
+		<script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects -->
+        <script src="js/jquery.sumoselect.min.js"></script>  <!-- jQuery plugin for Single/Multi Select   -->
+        <script src="js/custom.js"></script>
+        <script src="js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  -->
+        <script src="js/daterangepicker.js"></script> <!--  date picker  -->
+        <script src="js/notify.min.js"></script> <!--  plugin to provide customisable notifications  -->
+        <script src="js/bootstrap.min.js"></script>
+      <!--  
+         <script src="js/infobox.js"></script>  -->
+
+		<!-- Google Map - list of destinations -->
+		<!-- <script src="https://maps.google.com/maps/api/js?libraries=placeses,geometry,places&key=AIzaSyCiMT2KwUzR_nC52PZUXLHITgAlTdIKkrE"></script>  -->
+       <script src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyAb63loxs1OJOsWwDOf-l9IVG_8oX0RsBs&amp;"></script>
+		<script src="js/CustomMarker.js"></script>
+            <script>
+        var map;
+        var myCenter = new google.maps.LatLng(34.025797, -118.455495);
+        function initialize() {
+            var mapOptions = {
+                zoom: 13,
+                center: myCenter,
+                panControl: false,
+                mapTypeControl: false,
+                streetViewControl: false,
+                scrollwheel: false,
+                //draggable: false,
+                zoomControlOptions: {
+                    style: google.maps.ZoomControlStyle.SMALL,
+                    position: google.maps.ControlPosition.LEFT_TOP
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById('map-host'), mapOptions);
+
+            var marker1 = new google.maps.Marker({
+                position: new google.maps.LatLng(34.059297, -118.445254),
+                icon: "images/school-marker.png",
+                title: "UCLA Extension"
+            });
+            marker1.setMap(map);
+
+			var marker2 = new MarkerWithLabel({
+			  map: map,
+			  //animation: google.maps.Animation.DROP,
+			  position: new google.maps.LatLng(34.069839, -118.463289),
+			  icon: "images/marker2.png",
+			  labelContent: "$120",
+			  labelAnchor: new google.maps.Point(35, 36),
+			  labelClass: "custom-marker", // your desired CSS class
+			  labelInBackground: true
+			});
+			
+			var marker3 = new MarkerWithLabel({
+			  map: map,
+			  //animation: google.maps.Animation.DROP,
+			  position: new google.maps.LatLng(34.017155, -118.473295),
+			  icon: "images/marker2.png",
+			  labelContent: "$120",
+			  labelAnchor: new google.maps.Point(35, 36),
+			  labelClass: "custom-marker", // your desired CSS class
+			  labelInBackground: true
+			});
+			
+			var marker4 = new MarkerWithLabel({
+			  map: map,
+			  //animation: google.maps.Animation.DROP,
+			  position: new google.maps.LatLng(34.071107, -118.445601),
+			  icon: "images/marker2.png",
+			  labelContent: "$80",
+			  labelAnchor: new google.maps.Point(35, 36),
+			  labelClass: "custom-marker", // your desired CSS class
+			  labelInBackground: true
+			});
+			
+			var infowindow1 = new google.maps.InfoWindow({ // Create a new InfoWindow
+  				content:"<strong>UCLA</strong> - a public research university in the Westwood district of <em>Los Angelesone</em>" // HTML contents of the InfoWindow
+  			});
+			google.maps.event.addListener(marker1, 'click', function() { // Add a Click Listener to our marker
+				infowindow1.open(map,marker1); // Open our InfoWindow
+			});
+			var infowindow2 = new google.maps.InfoWindow({ // Create a new InfoWindow
+  				content:"<strong>Host 1</strong>" // HTML contents of the InfoWindow
+  			});
+			google.maps.event.addListener(marker2, 'click', function() { // Add a Click Listener to our marker
+				infowindow2.open(map,marker2); // Open our InfoWindow
+			});
+			var infowindow3 = new google.maps.InfoWindow({ // Create a new InfoWindow
+  				content:"<strong>Host 2</strong>" // HTML contents of the InfoWindow
+  			});
+			google.maps.event.addListener(marker3, 'click', function() { // Add a Click Listener to our marker
+				infowindow3.open(map,marker3); // Open our InfoWindow
+			});
+			var infowindow4 = new google.maps.InfoWindow({ // Create a new InfoWindow
+  				content:"<strong>Host 3</strong>" // HTML contents of the InfoWindow
+  			});
+			google.maps.event.addListener(marker4, 'click', function() { // Add a Click Listener to our marker
+				infowindow4.open(map,marker4); // Open our InfoWindow
+			});
+			/*google.maps.event.addDomListener(window, 'resize', function() { map.setCenter(new google.maps.LatLng(34.059297, -118.445254)); }); // Keeps the Pin Central when resizing the browser on responsive sites
+
+            google.maps.event.addDomListener(window, 'resize', function () {
+                map.setCenter(myCenter);
+            });*/
+
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+            <script type="text/javascript">
+                $(function(){
+					//********  TILES CAROUSEL  *****//
+					$('.carousel').carousel({
+						interval: false
+					});
+					//********   FILTERS  **********//
+					$('#location').SumoSelect({
+						placeholder: 'Place'
+					});
+					$('#roomType').SumoSelect({ triggerChangeCombined: true, placeholder: "Room Type" });
+					/*var last_valid_selection = null;
+					$('#roomType').change(function (event) {
+						if ($(this).val().length > 2) {
+							alert('You can only choose 2!');
+							var $this = $(this);
+							$this[0].sumo.unSelectAll();
+							$.each(last_valid_selection, function (i, e) {
+								$this[0].sumo.selectItem($this.find('option[value="' + e + '"]').index());
+							});
+						} else {
+							last_valid_selection = $(this).val();
+						}
+					});*/
+				});
+            </script>
+
+            <!-- Google language translation -->		
+            <script type="text/javascript">
+            var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+            function googleTranslateElementInit(){
+                if (duplicate_google_translate_counter == 0) {
+                    new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+                }
+                duplicate_google_translate_counter++;
+            }
+            </script>
+            <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            
+            <!-- Calendar section  -->	
+            <script type="text/javascript">
+                //********  Date picker initialization   *********//
+                $(function(){var today=new Date();var firstDay=new Date(today.getFullYear(),today.getMonth(),1);$('#fromDatePicker').daterangepicker({"autoApply":true,"alwaysShowCalendars":true,"minDate":firstDay,"dateFormat":"mmm d yyyy","autoUpdateInput":false,"autoApply":true,"stepMonths":false,"minDate":today,"locale":{"format":"MMM D YYYY","separator":" - ",},isInvalidDate:function(date){return false;}},function(start,end,label){$('#fromDatePicker').val(start.format('MMM D YYYY')+' - '+end.format('MMM D YYYY'));});$("#date_of_birth").datepicker({dateFormat:'mm-dd-yy'});$("#date_of_birth2").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth1").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth2").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth3").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth4").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth5").datepicker({dateFormat:'mm-dd-yy'});});$(document).ready(function(e){$('.daterangepicker').hide();$('.daterangepicker .table-condensed td').each(function(){alert($(this).attr('class'));});$('#destination').focusin(function(){});$('#destination').focusout(function(){});$('#fromDatePicker').focusin(function(){});$('#fromDatePicker').focusout(function(){});$('#toDatePicker').focusin(function(){});$('#toDatePicker').focusout(function(){});setTimeout(function(){var ssWinScroll=getCurrentScroll();if(ssWinScroll>=100){$('.h_new').addClass('fixed');}else{$('.h_new').removeClass('fixed');}},400);});
+            </script>
+	</body>
+</html>

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<title>Universal Student Housing | Student Dashboard</title>
+<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/selectric.css" />
+<!--  jQuery plugin to customize HTML selects -->
+<link rel="stylesheet" type="text/css" href="../css/hint.min.css" />
+<!-- tooltip library -->
+<link rel="stylesheet" type="text/css" href="../css/daterangepicker.css" />
+<!-- daterange calendar -->
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+<!-- bootstrap library -->
+<link rel="stylesheet" type="text/css" href="../css/sumoselect.min.css" />
+<!--  Single/Multi Select plugin  -->
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/custom.css" />
+<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+</head>
+<body>
+<header class="top fixed">
+        <div class="container"> <a class="logo" href="/"><img src="../images/logo.svg" alt="" class="img-responsive"/></a>
+                <nav class="mainmenu">
+                        <ul>
+                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
+                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
+                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a> </li>
+                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
+                                <li>
+                                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                                </li>
+                        </ul>
+                </nav>
+                <div class="nav-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
+        </div>
+</header>
+<!-- Main Top Image -->
+<div class="container top-margin">
+        <div class="row row-dashboard"> 
+                <!--   Right Menu  -->
+                <div class="col-md-2 col-sm-3">
+                        <ul class="list-dashboard">
+                                <li><a href="dashboard.html">Dashboard</a></li>
+                                <li><a href="host-details.html">Host Details</a></li>
+                                <li class="active"><a href="home-details.html">Home Details</a></li>
+                                <li><a href="bedroom.html">Bedrooms</a></li>
+                                <li><a href="messsages.html">Messages <span class="label label-danger">23</span></a></li>
+                                <li><a href="payment-tax.html">Payment & Taxes</a></li>
+                        </ul>
+                </div>
+                <!--  Main content  -->
+                <div class="col-md-10 col-sm-9">
+                        <section class="dashboard-content homeDetails">
+                                <div class="tabbing">
+                                        <ul class="tabNav">
+                                                <li><a href="#Address" >Address</a></li>
+                                                <li><a href="#People" >People</a></li>
+                                                <li><a href="#HouseAmenities" >House Amenities</a></li>
+                                                <li><a href="#HouseRules" >House Rules</a></li>
+                                                <li><a href="#HostingPreferences">Hosting Preferences</a></li>
+                                        </ul>
+                                        
+                                        <!-- Tab panes -->
+                                        <div class="tabContainer">
+                                                <div class="tabContent active" id="Address">
+                                                        <div class="row">
+                                                                <div class="col-md-9">
+                                                                        <div class="form-horizontal form-dashboard">
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Home Type</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <select class="form-control mb-10">
+                                                                                                        <option>House</option>
+                                                                                                </select>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Address</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="405 Hilgard Avenue">
+                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="Apt, Suite, Bldg (optional)">
+                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="Los Angeles">
+                                                                                                <div class="row row-slider mb-20">
+                                                                                                        <div class="col-md-6">
+                                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="California">
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6">
+                                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="CA 90095">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Neighborhood Name <a href="javascript:" class="visible-xs btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a></label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="fullwidth pr">
+                                                                                                        <input type="email" class="form-control mb-10" id="" placeholder="e.g. Venice">
+                                                                                                        <a href="javascript:" class="btn-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Neighborhood Information</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="fullwidth pr">
+                                                                                                        <textarea class="form-control mb-10" cols="5" rows="7" placeholder="Briefly say something about your neighborhood and all it has to offer. Here's an example: Westwood is a vibrant neighborhood. There are many shops and restaurants nearby, and a nice park within walking distance where you can enjoy your time with a good book. Easy access to public transportation will take you anywhere you want to get." ></textarea>
+                                                                                                        <span class="text-counter pa">250/250</span></div>
+                                                                                                <div class="clearfix"></div>
+                                                                                                <div class="alert alert-info mb-20"> Click on the info icon <i class="fa fa-info-circle fa-fw fa-red"></i> for more examples.</div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <div class="col-sm-offset-3 col-sm-9">
+                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
+                                                                                                <div class="clearfix"></div>
+                                                                                                <div class="hidden-xs">
+                                                                                                    <a href="javascript:" nextPage="People" class="back-panel"> <img src="../images/back-link.svg"/>
+                                                                                                    <div class="clearfix"></div>
+                                                                                                    <h2>Next</h2>
+                                                                                                    <span>(People)</span> </a> 
+                                                                                                </div>
+                                                                                       	</div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div   class="tabContent" id="People">
+                                                        <div class="row">
+                                                               
+                                                                        <div class="form-horizontal form-dashboard">
+                                                                            
+                                                                             <div class="col-md-9">
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Number of people living in this home</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <select class="form-control mb-10">
+                                                                                                        <option>4</option>
+                                                                                                </select>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Any smokers in the household?</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <select class="form-control mb-10">
+                                                                                                        <option value="None">None</option>
+                                                                                                        <option value="Host or Spouse/Partner">Host or Spouse/Partner</option>
+                                                                                                        <option value="Both Host and Spouse/Partner">Both Host and Spouse/Partner</option>
+                                                                                                        <option value="Other">Other</option>
+                                                                                                </select>
+                                                                                        </div>
+                                                                                </div>
+                                                                            
+                                                                            </div>
+                                                                            <div class="clearfix"></div>
+                                                                             <h1 class="mb-30 mt-30 col-md-12">Spouse/Partner</h1>
+                                                                             <div class="clearfix"></div>
+                                                                            <div class="col-md-9">
+                                                                               
+                                                                                <div class="visible-xs visible-sm">
+                                                                                    <div class="panel panel-default panel-picture mb-15">
+                                                                                <div class="panel-body"> <a href="javascript:" class="panel-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/jullia.jpeg" class="img-circle img-responsive img-table" /> </div>
+                                                                        </div>
+                                                                        <a href="javascript:" class="btn-link btn-block">Edit Photo</a>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Spouse/Partner Profile</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="row row-slider mb-0">
+                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                <input type="email" class="form-control mb-10" id="" placeholder="Lisa">
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                <input type="email" class="form-control mb-10" id="" placeholder="Johnson">
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Female</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Date of Birth</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="row row-slider mb-0">
+                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Month</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Day</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Year</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <h1 class="mb-30 mt-30">Children</h1>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Children Profile (under 16)</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="row row-slider mb-0">
+                                                                                                        <div class="col-md-2 col-xs-2"> <span class="counter mb-10"><img src="../images/daugter.svg" class="img-responsive img-table" /></span> </div>
+                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Girl</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Year of Birth</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="row row-slider mb-0">
+                                                                                                        <div class="col-md-2 col-xs-2"> <span class="counter mb-10"><img src="../images/son.svg" class="img-responsive img-table" /></span> </div>
+                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Boy</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Year of Birth</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="row row-slider mb-10">
+                                                                                                        <div class="col-md-2 col-xs-2"> <a href="javascript:" class="counter mb-10">+</a> </div>
+                                                                                                        <div class="col-md-5 col-xs-5"> &nbsp; </div>
+                                                                                                        <div class="col-md-5 col-xs-5"> &nbsp; </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <h1 class="mb-30 mt-30">Pets</h1>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Pets Information</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="row row-slider mb-10">
+                                                                                                        <div class="col-md-2 col-xs-2"> <span class="counter mb-10"><img src="../images/dog.svg" class="img-responsive img-table" /></span> </div>
+                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Dog (Small)</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                                <input type="text" class="form-control" placeholder="Beagle"/>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="row row-slider mb-10">
+                                                                                                        <div class="col-md-2 col-xs-2"> <span class="counter mb-10"><img src="../images/cat.svg" class="img-responsive img-table" /></span> </div>
+                                                                                                        <div class="col-md-10 col-xs-10">
+                                                                                                                <select class="form-control  mb-10">
+                                                                                                                        <option>Cat</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="row row-slider mb-10">
+                                                                                                        <div class="col-md-2 col-xs-2"> <a href="javascript:" class="counter mb-10">+</a> </div>
+                                                                                                        <div class="col-md-5 col-xs-5"> &nbsp; </div>
+                                                                                                        <div class="col-md-5 col-xs-5"> &nbsp; </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                
+                                                                                <div class="form-group">
+                                                                                        <div class="col-sm-offset-3 col-sm-9">
+                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
+                                                                                                <div class="clearfix"></div>
+                                                                                                <div class="hidden-xs hidden-sm">
+                                                                                                    <a href="javasccript:" nextPage="HouseAmenities" class="back-panel"> <img src="../images/back-link.svg"/>
+                                                                                                    <div class="clearfix"></div>
+                                                                                                    <h2>Next</h2>
+                                                                                                    <span>(House Amenities)</span> </a>
+                                                                                                </div> 
+                                                                                       	</div>
+                                                                                </div>
+                                                                        </div>
+                                                                
+                                                                <div class="col-md-3 hidden-xs">
+                                                                        <div class="panel panel-default panel-picture mb-15">
+                                                                                <div class="panel-body"> <a href="javascript:" class="panel-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/jullia.jpeg" class="img-circle img-responsive img-table" /> </div>
+                                                                        </div>
+                                                                        <a href="javascript:" class="btn-link btn-block">Edit Photo</a> </div>
+                                                        </div>
+                                                </div>
+                                                    
+                                            </div>
+                                                <div   class="tabContent" id="HouseAmenities">
+                                                        <div class="row">
+                                                                <div class="col-md-9">
+                                                                        <div class="form-horizontal form-dashboard">
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 hidden-xs control-label">&nbsp;</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <p>Please select all the amenities that you offer:</p>
+                                                                                                <h3>Main</h3>
+                                                                                                <div class="row">
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="WiFi" type="checkbox" checked="">
+                                                                                                                        <label for="WiFi"> Wi-Fi </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="Washer" type="checkbox" checked="">
+                                                                                                                        <label for="Washer"> Washer </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="Dryer" type="checkbox" >
+                                                                                                                        <label for="Dryer"> Dryer </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="WasherInProperty" type="checkbox" >
+                                                                                                                        <label for="WasherInProperty"> Washer in property coin operated </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="AirConditioning" type="checkbox" >
+                                                                                                                        <label for="AirConditioning"> Air Conditioning </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="DryerInProperty" type="checkbox" >
+                                                                                                                        <label for="DryerInProperty"> Dryer in property coin operated </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="Heater" type="checkbox" >
+                                                                                                                        <label for="Heater"> Heater </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="clearfix"></div>
+                                                                                                <h3 class="mb-20 mt-20">Kitchen Access</h3>
+                                                                                                <div class="row">
+                                                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="Limited" type="checkbox" >
+                                                                                                                        <label for="Limited"> Limited  (e.g. microwave, kettle, toaster) </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="Full" type="checkbox" >
+                                                                                                                        <label for="Full"> Full (e.g. stove, oven) </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <h3 class="mb-20 mt-20">Facilities</h3>
+                                                                                                <div class="row">
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="Pool" type="checkbox" checked="">
+                                                                                                                        <label for="Pool"> Pool </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="StreetParking" type="checkbox" checked="">
+                                                                                                                        <label for="StreetParking"> Street Parking </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="Gym" type="checkbox" >
+                                                                                                                        <label for="Gym"> Gym </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="Parking" type="checkbox" >
+                                                                                                                        <label for="Parking"> Parking on premises </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <h3 class="mb-20 mt-20">Safety features</h3>
+                                                                                                <div class="row">
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="FireExtinguisher" type="checkbox" checked="">
+                                                                                                                        <label for="FireExtinguisher"> Fire Extinguisher </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="Carbon" type="checkbox" checked="">
+                                                                                                                        <label for="Carbon"> Carbon monoxide detector </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                                <div class="checkbox checkbox-primary">
+                                                                                                                        <input id="Smoke" type="checkbox" >
+                                                                                                                        <label for="Smoke"> Smoke detector </label>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group mt-30">
+                                                                                        <div class="col-sm-offset-3 col-sm-9">
+                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
+                                                                                                <div class="clearfix"></div>
+                                                                                                <div class="hidden-xs">
+                                                                                                    <a href="javasccript:" nextPage="HouseRules" class="back-panel"> <img src="../images/back-link.svg"/>
+                                                                                                    <div class="clearfix"></div>
+                                                                                                    <h2>Next</h2>
+                                                                                                    <span>(House Rules)</span></a>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div   class="tabContent" id="HouseRules">
+                                                        <div class="row">
+                                                                <div class="col-md-9">
+                                                                        <div class="form-horizontal form-dashboard">
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 hidden-xs control-label">&nbsp;</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <p>Please select all the rules that apply: <i class="fa fa-info-circle fa-fw fa-red"></i></p>
+                                                                                                <div class="checkbox checkbox-primary mb-20 mt-20">
+                                                                                                        <input id="Nosmoking" type="checkbox" checked="">
+                                                                                                        <label for="Nosmoking"> No smoking </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox checkbox-primary mb-20 mt-20">
+                                                                                                        <input id="smoking" type="checkbox" >
+                                                                                                        <label for="smoking"> Outside smoking allowed </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox checkbox-primary mb-20 mt-20">
+                                                                                                        <input id="events" type="checkbox" >
+                                                                                                        <label for="events"> No parties or events </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox checkbox-primary mb-20 mt-20">
+                                                                                                        <input id="guests" type="checkbox" >
+                                                                                                        <label for="guests"> No overnight guests </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox checkbox-primary mb-20 mt-20">
+                                                                                                        <input id="permission" type="checkbox" >
+                                                                                                        <label for="permission"> No guests without host's permission </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox checkbox-primary mb-20 mt-20">
+                                                                                                        <input id="alcohol" type="checkbox" >
+                                                                                                        <label for="alcohol"> No alcohol or drugs </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox checkbox-primary mb-20 mt-20">
+                                                                                                        <input id="pets" type="checkbox" checked="">
+                                                                                                        <label for="pets"> No pets </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox checkbox-primary mb-20 mt-20">
+                                                                                                        <input id="beverage" type="checkbox" checked="">
+                                                                                                        <label for="beverage"> No food and beverage inside the bedroom </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox checkbox-primary mb-20 mt-20">
+                                                                                                        <input id="organized" type="checkbox" >
+                                                                                                        <label for="organized"> Keep your room clean and organized </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox checkbox-primary mb-20 mt-20">
+                                                                                                        <input id="Clean" type="checkbox" >
+                                                                                                        <label for="Clean"> Clean after yourself </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox checkbox-primary mb-20 mt-20">
+                                                                                                        <input id="Curfew" type="checkbox" checked="">
+                                                                                                        <label for="Curfew">Curfew: ......... (taken from Survey) </label>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Additional Rules</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="fullwidth pr">
+                                                                                                        <textarea class="form-control mb-10" cols="5" rows="7" placeholder="Please write any additional rules you may want to add" ></textarea>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group mt-30">
+                                                                                        <div class="col-sm-offset-3 col-sm-9">
+                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
+                                                                                                <div class="clearfix"></div>
+                                                                                                <div class="hidden-xs">
+                                                                                                    <a href="javasccript:" nextPage="HostingPreferences" class="back-panel"> <img src="../images/back-link.svg"/>
+                                                                                                    <div class="clearfix"></div>
+                                                                                                    <h2>Next</h2>
+                                                                                                    <span>(Hosting Preferences)</span></a>
+                                                                                                </div>
+                                                                                    	</div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div   class="tabContent" id="HostingPreferences">
+                                                        <div class="row">
+                                                                <div class="col-md-9">
+                                                                        <div class="form-horizontal form-dashboard">
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Meal Plans offered (Select all that apply)</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="checkbox  checkbox-lg">
+                                                                                                        <input type="checkbox" class="styled" id="Room1" value="Room">
+                                                                                                        <label for="Room1">
+                                                                                                        <h2>Room with Breakfast and Dinner</h2>
+                                                                                                        <p>Dinner is usually prepared and served for the student. It should be the same portion of what you will be eating that night. If you are extremely busy, it is acceptable for you to prepare dinner for two days, which the student can reheat on the second day.</p>
+                                                                                                        </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox  checkbox-lg">
+                                                                                                        <input type="checkbox" class="styled" id="Breakfast" value="Breakfast">
+                                                                                                        <label for="Breakfast">
+                                                                                                        <h2>Room with Breakfast</h2>
+                                                                                                        <p>Typically continental, so you may not be there to prepare it in the morning, but you should have some food available. Typical breakfast foods include: toast, bread, cereals, pastry, fruit, milk, coffee, tea, juice, etc.</p>
+                                                                                                        </label>
+                                                                                                </div>
+                                                                                                <div class="checkbox  checkbox-lg">
+                                                                                                        <input type="checkbox" class="styled" id="only" value="only">
+                                                                                                        <label for="only">
+                                                                                                        <h2>Room only</h2>
+                                                                                                        <p>Student is expected to buy and prepare their own food. Student should have some kitchen access and be able to store some food in the fridge and cabinet.</p>
+                                                                                                        </label>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Student Gender Preference</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <select class="form-control mb-10">
+                                                                                                        <option value="Male">Male</option>
+                                                                                                        <option value="Female">Female</option>
+                                                                                                        <option selected="" value="Either gender is OK">Either gender is OK</option>
+                                                                                                </select>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Outdoor Smoker Acceptance</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <select class="form-control mb-10">
+                                                                                                        <option value="Outdoor smoker accepted">Outdoor smoker accepted</option>
+                                                                                                        <option selected="" value="Outdoor smoker not accepted">Outdoor smoker not accepted</option>
+                                                                                                </select>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group mt-30">
+                                                                                        <div class="col-sm-offset-3 col-sm-9">
+                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
+                                                                                                <div class="clearfix"></div>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+                </div>
+        </div>
+</div>
+<!--  Footer  -->
+
+<div class="otherContainer">
+        <div class="buttonContainer">
+                <button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+        </div>
+</div>
+<div class="ontop"></div>
+<!-- Popup Group DIV -->
+<div id="popup-group" class="popup-wrapper"></div>
+<!-- Popup Group DIV end //--> 
+
+<!--  JAVASCRIPT  --> 
+<script src="../js/jquery.min.js"></script> 
+<script src="../js/jquery-ui.min.js"></script> 
+<script src="../js/jquery.ui.touch-punch.min.js"></script> 
+<script src="../js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects --> 
+<script src="../js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   --> 
+<script src="../js/bootstrap.min.js"></script> 
+<!--<script src="../js/custom.js"></script> --><script src="../js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  --> 
+<script src="../js/daterangepicker.js"></script> <!--  date picker  --> 
+<script src="../js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
+<script src="../js/jquery.knob.js"></script> <!--  plugin to provide customisable notifications  --> 
+<script src="../plugins/responsivetabs/jquery.bootstrap-responsive-tabs.min.js"></script> 
+<!-- Google language translation --> 
+<script type="text/javascript">
+           		var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+            	function googleTranslateElementInit(){
+					if (duplicate_google_translate_counter == 0) {
+						new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+					}
+					duplicate_google_translate_counter++;
+				}
+            </script> 
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+<script type="text/javascript">
+ $(document).ready(function() {
+        /* create jQuery knob with .dial class */
+        $(".dial").knob({
+            'readOnly': true
+        });
+
+       
+        animateChart('chart_anim_3', 0, 40);
+
+        /* Update circle value when input.animate changes */
+        $("input.dial").change(function () {
+            $(this).parent().siblings(".circle").find(".pie_value").text($(this).val() + "%");
+        })
+
+        /* Animate chart from start_val to end_val */
+        function animateChart (chart_id, start_val, end_val) {
+            $({chart_value: start_val}).animate({chart_value: end_val}, {
+                duration: 1000, // 1 second animation
+                easing: 'swing',
+                step: function () {
+                    $('#' + chart_id).val(Math.ceil(this.chart_value)).trigger('change');
+                },
+                complete: function () {
+                    /* complete */
+                    console.log('complete');
+                }
+            });
+        };
+     
+     $('.tabbing').mTab({
+		 navigation: ".tabNav"
+		,container: ".tabContainer"
+		,activeTab: 1
+		,activeClass: "active"
+		,scrollOffset: true
+		,accordScreen: 767
+		,toggleClose: true
+		,animation: false
+		,openWithUrl: true
+		,callbackonclick:  function() {  }
+		,callback: function() {  }
+	});
+	//close by default all the accordion menu at a mobile level 
+	if ($(window).width() < 768) {
+    	$('.mResAccordAnchor').removeClass('active');
+		$('.mTabContent').removeClass('mTabActive');
+	}
+	//Next button
+	$('.back-panel').click(function(){
+		var nextPage = ($(this).attr('nextPage'));
+		//disable current tab and content
+		$('.mResTabNavTab').removeClass('active');
+		$('.mTabContent').removeClass('mTabActive');
+		//acrive new tab and conten
+		$('a[href="#' + nextPage + '"]').parent().addClass('active');
+		$('#' + nextPage).addClass('mTabActive');
+		$('#' + nextPage).removeClass('defaultState');
+		$(window).scrollTop(0);
+	});
+});
+</script>
+</body>
+</html>

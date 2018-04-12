@@ -1,0 +1,60 @@
+header.top {
+  position: absolute!important;
+  background-color: transparent;
+  padding-top: 20px;
+}
+
+.mainmenu > ul > li a {
+  text-transform: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.mainmenu > ul > li a.btn {
+  padding: 0px 40px;
+  border: 1px solid #fff!important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  transition: color 300ms ease, background-color 200ms ease;
+  margin: 0px;
+}
+
+.mainmenu > ul > li a.btn-login {
+  background-color: transparent;
+  color: #fff;
+}
+
+.mainmenu > ul > li a.btn-login:hover,
+.mainmenu > ul > li a.btn-login:focus {
+  background-color: #fff;
+  color: #1da0f3!important;
+}
+
+.mainmenu > ul > li a.btn-signup {
+  background-color: #fff;
+  color: #1da0f3;
+}
+
+.mainmenu > ul > li a.btn-signup:hover,
+.mainmenu > ul > li a.btn-signup:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+/**
+** MEDIA QUERIES
+**/
+
+@media only screen and (max-width: 992px) {
+  .mainmenu > ul > li a.btn {
+    border: none;
+    background-color: transparent;
+    color: #333;
+    padding: 0px;
+  }
+
+  .mainmenu > ul > li a.btn:hover,
+  .mainmenu > ul > li a.btn:focus {
+    color: #FB7677!important;
+  }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<title>Universal Student Housing | Student Dashboard</title>
+<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/selectric.css" />
+<!--  jQuery plugin to customize HTML selects -->
+<link rel="stylesheet" type="text/css" href="../css/hint.min.css" />
+<!-- tooltip library -->
+<link rel="stylesheet" type="text/css" href="../css/daterangepicker.css" />
+<!-- daterange calendar -->
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+<!-- bootstrap library -->
+<link rel="stylesheet" type="text/css" href="../css/sumoselect.min.css" />
+<!--  Single/Multi Select plugin  -->
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/custom.css" />
+<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+</head>
+<body>
+<header class="top fixed">
+        <div class="container"> <a class="logo" href="/"><img src="../images/logo.svg" alt="" class="img-responsive"/></a>
+                <nav class="mainmenu">
+                        <ul>
+                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
+                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
+                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a> </li>
+                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
+                                <li>
+                                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                                </li>
+                        </ul>
+                </nav>
+                <div class="nav-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
+        </div>
+</header>
+<!-- Main Top Image -->
+<div class="container top-margin">
+        <div class="row row-dashboard"> 
+                <!--   Right Menu  -->
+                <div class="col-md-2 col-sm-3">
+                        <ul class="list-dashboard">
+                                <li><a href="dashboard.html">Dashboard</a></li>
+                                <li ><a href="my-profile.html">My Profile</a></li>
+                                <li><a href="messsages.html">Messages <span class="label label-danger">23</span></a></li>
+                                <li class="active"><a href="payment-tax.html">Payments</a></li>
+                                <li><a href="AirportTransfer.html">Airport Transfer</a></li>
+                        </ul>
+                </div>
+                <!--  Main content  -->
+                <div class="col-md-10 col-sm-9">
+                        <section class="dashboard-content">
+                                
+                                        
+                                        
+                                        
+                                                
+                                                <div class="tabContent" id="Payments">
+                                                        <h1>Pending Payments</h1>
+                                                        <div class="table-responsive">
+                                                                <table class="table table-blocks">
+                                                                        <thead>
+                                                                                <tr>
+                                                                                        <th>Due Date</th>
+                                                                                        <th>Reference #</th>
+                                                                                        <th>Amount</th>
+                                                                                        <th>Description</th>
+                                                                                        <th>Status</th>
+                                                                                </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                                <tr>
+                                                                                        <td>28 February 2018</td>
+                                                                                        <td>123456</td>
+                                                                                        <td>$310</td>
+                                                                                        <td>Desccription of the payment here</td>
+                                                                                        <td class="pending">Pending</td>
+                                                                                </tr>
+                                                                        </tbody>
+                                                                </table>
+                                                        </div>
+                                                        <h1>Payment History</h1>
+                                                        <div class="table-responsive">
+                                                                <table class="table table-blocks">
+                                                                        <thead>
+                                                                                <tr>
+                                                                                        <th>Due Date</th>
+                                                                                        <th>Reference #</th>
+                                                                                        <th>Amount</th>
+                                                                                        <th>Description</th>
+                                                                                        <th>Status</th>
+                                                                                </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                                <tr>
+                                                                                        <td>28 February 2018</td>
+                                                                                        <td>123456</td>
+                                                                                        <td>$310</td>
+                                                                                        <td>Desccription of the payment here</td>
+                                                                                        <td class="confirm">Pending</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                        <td>28 February 2018</td>
+                                                                                        <td>123456</td>
+                                                                                        <td>$310</td>
+                                                                                        <td>Desccription of the payment here</td>
+                                                                                        <td class="confirm">Pending</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                        <td>28 February 2018</td>
+                                                                                        <td>123456</td>
+                                                                                        <td>$310</td>
+                                                                                        <td>Desccription of the payment here</td>
+                                                                                        <td class="confirm">Pending</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                        <td>28 February 2018</td>
+                                                                                        <td>123456</td>
+                                                                                        <td>$310</td>
+                                                                                        <td>Desccription of the payment here</td>
+                                                                                        <td class="confirm">Pending</td>
+                                                                                </tr>
+                                                                        </tbody>
+                                                                </table>
+                                                        </div>
+                                                       </div>
+                                                
+                                        
+                                
+                        </section>
+                </div>
+        </div>
+</div>
+<!--  Footer  -->
+
+<div class="otherContainer">
+        <div class="buttonContainer">
+                <button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+        </div>
+</div>
+<div class="ontop"></div>
+<!-- Popup Group DIV -->
+<div id="popup-group" class="popup-wrapper"></div>
+<!-- Popup Group DIV end //--> 
+
+<!--  JAVASCRIPT  --> 
+<script src="../js/jquery.min.js"></script> 
+<script src="../js/jquery-ui.min.js"></script> 
+<script src="../js/jquery.ui.touch-punch.min.js"></script> 
+<script src="../js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects --> 
+<script src="../js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   --> 
+<script src="../js/bootstrap.min.js"></script> 
+<!--<script src="../js/custom.js"></script> --><script src="../js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  --> 
+<script src="../js/daterangepicker.js"></script> <!--  date picker  --> 
+<script src="../js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
+<script src="../js/jquery.knob.js"></script> <!--  plugin to provide customisable notifications  --> 
+<script src="../plugins/responsivetabs/jquery.bootstrap-responsive-tabs.min.js"></script> 
+<!-- Google language translation --> 
+<script type="text/javascript">
+           		var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+            	function googleTranslateElementInit(){
+					if (duplicate_google_translate_counter == 0) {
+						new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+					}
+					duplicate_google_translate_counter++;
+				}
+            </script> 
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+<script type="text/javascript">
+ $(document).ready(function() {
+        /* create jQuery knob with .dial class */
+        $(".dial").knob({
+            'readOnly': true
+        });
+
+       
+        animateChart('chart_anim_3', 0, 40);
+
+        /* Update circle value when input.animate changes */
+        $("input.dial").change(function () {
+            $(this).parent().siblings(".circle").find(".pie_value").text($(this).val() + "%");
+        })
+
+        /* Animate chart from start_val to end_val */
+        function animateChart (chart_id, start_val, end_val) {
+            $({chart_value: start_val}).animate({chart_value: end_val}, {
+                duration: 1000, // 1 second animation
+                easing: 'swing',
+                step: function () {
+                    $('#' + chart_id).val(Math.ceil(this.chart_value)).trigger('change');
+                },
+                complete: function () {
+                    /* complete */
+                    console.log('complete');
+                }
+            });
+        };
+     
+      $('.tabbing').mTab({
+		 navigation: ".tabNav"
+		,container: ".tabContainer"
+		,activeTab: 1
+		,activeClass: "active"
+		,scrollOffset: true
+		,accordScreen: 767
+		,toggleClose: true
+		,animation: false
+		,openWithUrl: true
+		,callbackonclick:  function() {  }
+		,callback: function() {  }
+	});
+    });
+    </script>
+</body>
+</html>

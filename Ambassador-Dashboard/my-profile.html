@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>Universal Student Housing | Host List</title>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="css/selectric.css" />
+
+<!--  jQuery plugin to customize HTML selects -->
+
+<link rel="stylesheet" type="text/css" href="../css/hint.min.css" />
+
+<!-- tooltip library -->
+
+<link rel="stylesheet" type="text/css" href="../css/daterangepicker.css" />
+
+<!-- daterange calendar -->
+
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+
+<!-- bootstrap library -->
+
+<link rel="stylesheet" type="text/css" href="../css/sumoselect.min.css" />
+
+<!-- swiper slider library -->
+
+<link rel="stylesheet" type="text/css" href="../css/swiper.css" />
+
+<!--  Single/Multi Select plugin  -->
+
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/custom.css" />
+<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+</head>
+<body>
+<header class="top fixed">
+        <div class="container"> <a class="logo" href="/"><img src="../images/logo.svg" alt="" class="img-responsive"/></a>
+                <nav class="mainmenu">
+                        <ul>
+                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
+                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
+                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a> </li>
+                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
+                                <li>
+                                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                                </li>
+                        </ul>
+                </nav>
+                <div class="nav-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
+        </div>
+</header>
+<!-- Main Top Image -->
+<div class="container top-margin">
+        <div class="row row-dashboard"> 
+                <!--   Right Menu  -->
+                <div class="col-md-2 col-sm-3">
+                        <ul class="list-dashboard">
+                                <li><a href="dashboard.html">Dashboard</a></li>
+                                <li class="active"><a href="my-profile.html">Personal Details</a></li>
+                                <li><a href="payment-tax.html">Payments & Taxes</a></li>
+                        </ul>
+                </div>
+                <!--  Main content  -->
+                <div class="col-md-10 col-sm-9">
+                        <section class="dashboard-content">
+                                <div class="tabbing">
+                                        <ul class="tabNav">
+                                                <li class="active"><a href="#PersonalInformation">Personal Information</a></li>
+                                                <li class=""><a href="#NotificationSettings">Notification Settings</a></li>
+                                        </ul>
+                                        <div class="tabContainer">
+                                                <div class="tabContent" id="PersonalInformation">
+                                                        <div class="row">
+                                                                <div class="col-md-9">
+                                                                        <div class="form-horizontal form-dashboard">
+                                                                                <div class="visible-xs visible-sm">
+                                                                                        <div class="panel panel-default panel-picture mb-15">
+                                                                                                <div class="panel-body"> <a href="javascript:" class="panel-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/avatar1.png" class="img-circle img-responsive img-table"> </div>
+                                                                                        </div>
+                                                                                        <a href="javascript:" class="btn-link btn-block">Edit Photo</a> </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">First Name</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="text" class="form-control mb-10" id="First" value="Mike">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Last Name</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="text" class="form-control mb-10" id="Last" value="Lewis">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Gender</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <select class="form-control mb-10">
+                                                                                                        <option>Gender</option>
+                                                                                                        <option selected="">Male</option>
+                                                                                                        <option>Female</option>
+                                                                                                </select>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Date of Birth</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="row">
+                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Month</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Day</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                                <select class="form-control mini mb-10">
+                                                                                                                        <option>Year</option>
+                                                                                                                </select>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <h1>Contacts</h1>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Email Address</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="fullwidth pr">
+                                                                                                        <input type="email" class="form-control mb-10" id="" value="mike.lewis@gmail.com">
+                                                                                                        <a href="javascript:" class="pr-ab btn btn-success btn-xs btn-abs">Verified</a> </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Cell Phone Number <a href="javascript:" class="visible-xs btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a></label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <div class="fullwidth pr">
+                                                                                                        <input type="email" class="form-control mb-10" id="" placeholder="">
+                                                                                                        <a href="javascript:" class="pr-ab btn btn-danger btn-xs btn-abs">Verify</a> <a href="javascript:" class="btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a> </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <h1 class="fullwidth mt-40">Address</h1>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Home Type</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <select class="form-control mb-10">
+                                                                                                        <option selected="">House</option>
+                                                                                                </select>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Address</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="405 Hilgard Avenue">
+                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="Apt, Suite, Bldg (optional)">
+                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="Los Angeles">
+                                                                                                <div class="row row-slider mb-20">
+                                                                                                        <div class="col-md-6">
+                                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="California">
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6">
+                                                                                                                <input type="text" class="form-control mb-5" id="" placeholder="CA 90095">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <h1>Documents</h1>
+                                                                                <div class="form-group">
+                                                                                    
+                                                                                     <label for="inputEmail3" class="col-sm-3 control-label">Driving License</label>
+                                                                                     <div class="col-sm-9">
+                                                                                          <div class="fullwidth pr">
+                                                                                        <div class="input-group input-file" name="Fichier1">
+                                                                                                <input type="text" class="form-control" placeholder='Choose a file...' />
+                                                                                                <span class="input-group-btn">
+                                                                                                <button class="btn btn-default btn-choose" type="button"><i class="fa fa-upload fa-fw"></i> Upload</button>
+                                                                                                </span> </div>
+                                                                                              
+                                                                                              <a href="javascript:" class="btn-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a>
+                                                                                         </div>
+                                                                                         </div>
+                                                                                </div>
+                                                                            
+                                                                            
+                                                                            <div class="form-group">
+                                                                                    
+                                                                                     <label for="inputEmail3" class="col-sm-3 control-label">Car Insurance</label>
+                                                                                     <div class="col-sm-9">
+                                                                                         
+                                                                                        <div class="input-group input-file" name="Fichier1">
+                                                                                                <input type="text" class="form-control" placeholder='Choose a file...' />
+                                                                                                <span class="input-group-btn">
+                                                                                                <button class="btn btn-default btn-choose" type="button"><i class="fa fa-upload fa-fw"></i> Upload</button>
+                                                                                                </span> </div>
+                                                                                         </div>
+                                                                                </div>
+                                                                            
+                                                                            
+                                                                                <h1 class="fullwidth mt-40">Password</h1>
+                                                                                <div class="form-group">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Current Password</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="passsword" class="form-control mb-10" id="" placeholder="">
+                                                                                                <button type="submit" class="btn btn-block btn-default btn-grey">Change Password</button>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                        <div class="col-sm-offset-3 col-sm-9">
+                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-md-3 hidden-xs hidden-sm">
+                                                                        <div class="panel panel-default panel-picture mb-15">
+                                                                                <div class="panel-body"> <a href="javascript:" class="panel-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/avatar1.png" class="img-circle img-responsive img-table"> </div>
+                                                                        </div>
+                                                                        <a href="javascript:" class="btn-link btn-block">Edit Photo</a> </div>
+                                                        </div>
+                                                </div>
+                                            
+                                                <div class="tabContent" id="NotificationSettings">
+                                                        <table class="table table--db--st1">
+                                                                <thead>
+                                                                        <tr>
+                                                                                <th class="col-md-8">&nbsp;</th>
+                                                                                <th class="center">Email</th>
+                                                                                <th class="center">Text Message</th>
+                                                                        </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                        <tr>
+                                                                                <td colspan="3"><h1 class="mt-15 mb-15">Host Visits </h1></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>New host visit available</td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="request" type="checkbox" checked="">
+                                                                                                <label for="request"> </label>
+                                                                                        </div></td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="request2" type="checkbox" checked="">
+                                                                                                <label for="request2"> </label>
+                                                                                        </div></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>Host visit updates (changes, cancellations)</td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="extensions" type="checkbox" checked="">
+                                                                                                <label for="extensions"> </label>
+                                                                                        </div></td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="cancellations" type="checkbox" checked="">
+                                                                                                <label for="checcancellationskbox2"> </label>
+                                                                                        </div></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>Payment release</td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="movein" type="checkbox" checked="">
+                                                                                                <label for="movein"> </label>
+                                                                                        </div></td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="checkbox2" type="checkbox">
+                                                                                                <label for="checkbox2"> </label>
+                                                                                        </div></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td colspan="3"><h1 class="mt-15 mb-15">Communication </h1></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>Communication with Homestay Match (policy changes etc)</td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="Communication" type="checkbox" checked="">
+                                                                                                <label for="Communication"> </label>
+                                                                                        </div></td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="Communication2" type="checkbox">
+                                                                                                <label for="Communication2"> </label>
+                                                                                        </div></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td colspan="3"><h1 class="mt-15 mb-15">Reminders </h1></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>Host visit reminder (1 week before)</td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="Studentmove" type="checkbox" checked="">
+                                                                                                <label for="Studentmove"> </label>
+                                                                                        </div></td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="Studentmove2" type="checkbox">
+                                                                                                <label for="Studentmove2"> </label>
+                                                                                        </div></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td class="mt-15 mb-15">Host visit reminder (1 day before)</td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="Studentmove1" type="checkbox" checked="">
+                                                                                                <label for="Studentmove1"> </label>
+                                                                                        </div></td>
+                                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                                <input id="Studentmove3" type="checkbox" checked="">
+                                                                                                <label for="Studentmove3"> </label>
+                                                                                        </div></td>
+                                                                        </tr>
+                                                                </tbody>
+                                                        </table>
+                                                        <div class="form-horizontal mt-50">
+                                                                <div class="form-group">
+                                                                        <div class="col-sm-offset-3 col-sm-6">
+                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+                </div>
+        </div>
+</div>
+<!--  Footer  -->
+
+<div class="otherContainer">
+        <div class="buttonContainer">
+                <button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+        </div>
+</div>
+<div class="ontop"></div>
+<!-- Popup Group DIV -->
+<div id="popup-group" class="popup-wrapper"></div>
+<!-- Popup Group DIV end //--> 
+
+<!--  JAVASCRIPT  --> 
+<script src="../js/jquery.min.js"></script> 
+<script src="../js/jquery-ui.min.js"></script> 
+<script src="../js/jquery.ui.touch-punch.min.js"></script> 
+<script src="../js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects --> 
+<script src="../js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   --> 
+<script src="../js/bootstrap.min.js"></script> 
+<!--<script src="../js/custom.js"></script> --> 
+<script src="../js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  --> 
+<script src="../js/daterangepicker.js"></script> <!--  date picker  --> 
+<script src="../js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
+<script src="../js/jquery.knob.js"></script> <!--  plugin to provide customisable notifications  --> 
+
+<script src="../plugins/responsivetabs/jquery.bootstrap-responsive-tabs.min.js"></script> 
+
+<!-- Google language translation --> 
+<script type="text/javascript">
+           		var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+            	function googleTranslateElementInit(){
+					if (duplicate_google_translate_counter == 0) {
+						new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+					}
+					duplicate_google_translate_counter++;
+				}
+            </script> 
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+<script type="text/javascript">
+ $(document).ready(function() {
+        /* create jQuery knob with .dial class */
+        $(".dial").knob({
+            'readOnly': true
+        });
+
+       
+        animateChart('chart_anim_3', 0, 40);
+
+        /* Update circle value when input.animate changes */
+        $("input.dial").change(function () {
+            $(this).parent().siblings(".circle").find(".pie_value").text($(this).val() + "%");
+        })
+
+        /* Animate chart from start_val to end_val */
+        function animateChart (chart_id, start_val, end_val) {
+            $({chart_value: start_val}).animate({chart_value: end_val}, {
+                duration: 1000, // 1 second animation
+                easing: 'swing',
+                step: function () {
+                    $('#' + chart_id).val(Math.ceil(this.chart_value)).trigger('change');
+                },
+                complete: function () {
+                    /* complete */
+                    console.log('complete');
+                }
+            });
+        };
+     
+                  $('#show_NewPassword').hover(function functionName() {
+						//Change the attribute to text
+						$('#NewPassword').attr('type', 'text');
+						$('.glyphicon').removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close');
+					}, function () {
+						//Change the attribute back to password
+						$('#NewPassword').attr('type', 'password');
+						$('.glyphicon').removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open');
+					}
+				);
+     
+     
+                  $('#show_ConfirmNewPassword').hover(function functionName() {
+						//Change the attribute to text
+						$('#ConfirmNewPassword').attr('type', 'text');
+						$('.glyphicon').removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close');
+					}, function () {
+						//Change the attribute back to password
+						$('#ConfirmNewPassword').attr('type', 'password');
+						$('.glyphicon').removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open');
+					}
+				);
+     
+     
+     function bs_input_file() {
+	$(".input-file").before(
+		function() {
+			if ( ! $(this).prev().hasClass('input-ghost') ) {
+				var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
+				element.attr("name",$(this).attr("name"));
+				element.change(function(){
+					element.next(element).find('input').val((element.val()).split('\\').pop());
+				});
+				$(this).find("button.btn-choose").click(function(){
+					element.click();
+				});
+				$(this).find("button.btn-reset").click(function(){
+					element.val(null);
+					$(this).parents(".input-file").find('input').val('');
+				});
+				$(this).find('input').css("cursor","pointer");
+				$(this).find('input').mousedown(function() {
+					$(this).parents('.input-file').prev().click();
+					return false;
+				});
+				return element;
+			}
+		}
+	);
+}
+$(function() {
+	bs_input_file();
+});
+     
+    $('.tabbing').mTab({
+		 navigation: ".tabNav"
+		,container: ".tabContainer"
+		,activeTab: 1
+		,activeClass: "active"
+		,scrollOffset: true
+		,accordScreen: 767
+		,toggleClose: true
+		,animation: false
+		,openWithUrl: true
+		,callbackonclick:  function() {  }
+		,callback: function() {  }
+	});
+
+    });
+    </script>
+</body>
+</html>

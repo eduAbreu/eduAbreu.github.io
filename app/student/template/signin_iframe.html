@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../../../images/xfavicon.png.pagespeed.ic.-s7IhhQ2wr.png">
+	<title>Universal Student Housing | Home Page</title>
+	<link rel="stylesheet" type="text/css" href="../../../css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/selectric.css" /> <!--  jQuery plugin to customize HTML selects -->
+    <link rel="stylesheet" type="text/css" href="../../../css/hint.min.css" /> <!-- tooltip library -->
+    <link rel="stylesheet" type="text/css" href="../../../css/daterangepicker.css" /> <!-- daterange calendar -->
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css" /> <!-- bootstrap library -->
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/custom.css" />
+	
+    <style>.footer{position:absolute;bottom:0;width:100%}.chatting{bottom:50px}</style>
+</head>
+
+<body>
+	<!-- Sign in Popup -->
+	<div id="sign-in">
+        <div class="loaderdiv" style="display:none;"><img src="../../../images/loading.gif.pagespeed.ce.ClZxMHl9C-.gif" ></div>	    
+        <div class="signin-toggle popup-content-signin">
+            <!-- <a href="javascript:;" class="pop-close popupclose" ng-click="closelogin()">X</a> -->
+            <div class="signin-container">
+                <span style="text-align: center; width:100%; display:none;" class="clsMainError">
+                    <div class="error_container">
+                        <div class="error_container_inner">
+                        </div>
+                        <div class="error_message">
+                            <div class="clsMainErrorMessage font-14" style="margin-right: 4px;"></div>
+                        </div>
+                    </div>
+                </span>
+                <form name="frmsignin" id="frmsignin" method="POST" action="signin_iframe.html" novalidate>
+                    <input type="hidden" id="state" name="login[state]" value="{{state}}">
+                    <input type="hidden" id="client_token" ng-model="client_token" name="login[client_token]" value="{{client_token}}">
+                    
+                    <div class="position">            		
+                        <input class="signTexbox" type="textbox" name="email" id="email" placeholder="Email Address" tabindex="1">
+                        <p>
+                            <span class="error-info hint--top-left hint--error" aria-label="Email Address cannot be blank"></span>
+                        </p>
+                        <p>
+                            <span class="error-info hint--top-left hint--error" aria-label="Invalid email address."></span>
+                        </p>												
+                    </div>
+                    
+                    <div class="position"> 
+                        <input type="password" class="signTexbox" id="password" name="password" placeholder="Password" tabindex="8" >	
+                        <p>
+                            <span class="error-info hint--top-left hint--error" aria-label="Password cannot be blank."></span>
+                        </p>
+                        <p>
+                            <span class="error-info hint--top-left hint--error" aria-label="Password cannot be blank."></span>	
+                        </p>						
+                    </div>
+                    <div class="checkMe col-sm-6 col-xs-12 pad0">
+                        <input type="checkbox" id="Rememberme" name="login[Rememberme]" checked="checked"/>
+                        <label for="Rememberme">Remember Me</label>
+                    </div>                    
+                    <div class="checkMe col-sm-6 col-xs-12 pad0 forgotp" style="width: 50%"><a id="forgot-pwd" href="javascript:void(0);">Forgot Password?</a></div>
+                    <div class="sign-btn">
+                        <button class="btn" type="submit" formnovalidate>Sign In</button>        
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="position"> 
+                            <div class="dontAccount">
+                                <div class="col-sm-7 col-xs-12 pad0 dontAccounttxt" style="width:62%">Don’t have an account?</div>
+                                <div class="col-sm-5 col-xs-12 pad0 forgotp" style="width: 38%;"><a href="javascript:void(0);"><button class="dont-btn clssignup" type="button">Sign Up</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+	<!-- Sign in Popup end //-->
+	<!-- forgot password -->
+    <div id="sign-in-forgot-pwd" >
+        <div class="signin-toggle popup-content-signin">      
+            <div class="signin-container">
+                <div class="forgotpassword">Forget Password</div>
+                <hr>
+                <div class="forgotpassword-inner">Enter the email address associated with your account, and we'll email you a link to reset your password.</div>
+                <form name="frmforgotpassword" id="frmforgotpassword" method="POST" action="" class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern">
+                    <input type="hidden" id="state" name="login[state]" value="" autocomplete="off" class="ng-pristine ng-untouched ng-valid ng-empty">
+                    <input type="hidden" id="client_token" name="login[client_token]" value="" autocomplete="off" class="ng-pristine ng-untouched ng-valid ng-empty">
+                    <div class="position">                  
+                        <input class="signTexbox ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern" type="email" name="email" id="email" placeholder="Email Address" tabindex="1" >
+                        <p class="ng-hide">
+                            <span class="error-info hint--top-left hint--error" aria-label="Email Address cannot be blank"></span>
+                        </p>
+                        <p class="ng-hide">
+                            <span class="error-info hint--top-left hint--error" aria-label="Invalid email address."></span>
+                        </p>                                                
+                    </div>
+                    
+                    <div class="sign-btn">
+                        <button class="btn" type="submit">Send</button>
+                    </div>
+    
+                    <div class="dontAccount">
+                        <div class="col-sm-7 col-xs-12 pad0 dontAccounttxt"></div>
+                        <div class="col-sm-5 col-xs-12 pad0 forgotp"><a href="javascript:void(0);"><button id="back-sign-in" class="dont-btn signinlink" type="button" style="width: 100%">Back to Sign In</button></a></div>
+                    </div>
+    
+                    <div class="clear"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+<!--  JAVASCRIPT  -->
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/jquery-ui.min.js"></script>
+<script src="../../../js/jquery.ui.touch-punch.min.js"></script>
+<script src="../../../js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects -->
+<script>
+$(function() {
+	/******  Switch between sign-in page and forgot password page ****/
+	$('#forgot-pwd').click(function() {
+		$("#sign-in").hide();
+		$("#sign-in-forgot-pwd").show();
+	});
+	$('#back-sign-in').click(function() {
+		$("#sign-in").show();
+		$("#sign-in-forgot-pwd").hide();
+	});
+	/*****************************************************************/
+});
+</script>
+
+</body>
+
+</html>

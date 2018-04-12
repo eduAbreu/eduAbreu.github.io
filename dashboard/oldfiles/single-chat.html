@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+	<title>Universal Student Housing | Student Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/selectric.css" /> <!--  jQuery plugin to customize HTML selects -->
+	<link rel="stylesheet" type="text/css" href="../css/hint.min.css" /> <!-- tooltip library -->
+	<link rel="stylesheet" type="text/css" href="../css/daterangepicker.css" /> <!-- daterange calendar -->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" /> <!-- bootstrap library -->
+	<link rel="stylesheet" type="text/css" href="../css/sumoselect.min.css" /><!--  Single/Multi Select plugin  -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+</head>
+<body>
+	<header class="top fixed">
+		<div class="container">
+            <a class="logo" href="/"></a>
+            <nav class="mainmenu">
+                <ul>
+                    <li>
+                        <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a>
+                    </li>
+                    <li>
+                        <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a>
+                    </li>
+                    <li class="posRelative">
+                        <a id="signin" class="signin">Sign In</a>
+                        <div class="signInMenu">
+                            <div>
+                            	<a href="javascript:void(0);" class="pop-close-signin">X</a>
+                                <div id="signinBox" class="signin-toggle popup-content-signin"> 
+                                    <iframe id="user-signup-popup" frameborder="0" width="100%" height="100%" src="about:blank"></iframe>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="ontop showPopOver none"></div>
+                    </li> 
+                    <li>
+                        <a data-target="#" class="signin" href="/help.html">Help</a>
+                    </li>
+                    <li>
+                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="mobile-host">
+                <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a>
+            </div>
+		</div>
+	</header>
+	<!-- Main Top Image -->	
+	<div class="container top-margin">
+    	<div class="row">
+        	<!--   Right Menu  -->
+			<div class="col-md-2 col-sm-12">
+           		<a class="backToMessage" title="Messages" href="messages.html">&lt;&nbsp;All Messages</a>
+                <div class="host_profile-pic">
+             		<img class="img-circle" src="../uploads/host/host-27.jpg" alt="">
+              	</div>
+              	<div class="host_profile-info">
+                	<h3>Martin</h3>
+             	</div>	
+          	</div>
+         	<!--  Main content  -->
+         	<div class="col-md-10 col-sm-12">
+            	<div id="dashboard-content">
+              		<section class="dashboard-sections">
+						<form id="message-form" name="message-form" method="post" action="">
+                        	<div class="sentMsgBox clearfix">
+                            	<div class="img-sender pull-right">
+                                	<div class="chat-img">
+                                        <img class="img-circle" src="../uploads/host/host-11.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-box pull-right">
+                                	<textarea name="requirements"></textarea>
+                                    <input class="send-btn" type="submit" name="send-message" value="Send" />
+                                </div>
+                         	</div>
+                        </form>
+                        <div class="sentMsgBox clearfix">
+                        	<div class="img-sender pull-right">
+                             	<div class="chat-img">
+                                 	<img class="img-circle" src="../uploads/host/host-11.jpg" alt="">
+                            	</div>
+                         	</div>
+                         	<div class="text-box pull-right">
+                             	<div class="txtArea">
+                                    <p>Hi Mike, I forgot to ask you about [....].<br/>
+										Please let me know.<br/><br/>
+										Thanks,<br/>
+										Martin
+                                   </p>
+                            	</div>
+                             	<p class="dateTime lightBlueTxt">2 days ago</p>
+                           	</div>
+                      	</div>
+                        <div class="sentMsgBox clearfix">
+                        	<div class="img-sender pull-left">
+                             	<div class="chat-img">
+                                 	<img class="img-circle" src="../uploads/host/host-27.jpg" alt="">
+                            	</div>
+                         	</div>
+                         	<div class="text-box pull-left ">
+                             	<div class="txtArea lightBlueBack">
+                                    <p>Hi Martin, great to meet you.<br/>
+										I [....].<br/><br/>
+										Thanks,<br/>
+										Mike
+                                   </p>
+                            	</div>
+                             	<p class="dateTime">2 days ago</p>
+                           	</div>
+                      	</div>
+                        
+                     	<br/>
+                    </section>   
+            	</div>
+         	</div>
+       	</div>
+	</div> 
+    <!--  Footer  -->
+		<footer id="footer" class="footer">
+      		<div class="container">
+            	<div class="footer-bg1">
+                	<div class="row">
+                      	<div class="col-sm-offset-3 col-sm-2 col-xs-12">
+                         	<img class="footer-logo" src="../images/xfooter-logo.png.pagespeed.ic.QJYATsW6ya.png" alt="" />
+                       	</div>
+                  		<div class="col-sm-2 col-xs-12 tablet_margin">
+                        	<nav class="footer-nav">
+                            	<h6>Company</h6>
+                            	<ul>
+                                	<li><a href="#">About Us</a></li>
+                                 	<li><a href="#">Contact</a></li>
+                                   	<li><a href="/help.html">Help</a></li>
+                                  	<li><a href="#">Partners</a></li>
+                                   	<li><a href="#">Terms & Conditions</a></li>
+                                  	<li><a href="#">Experience Homestay</a></li>
+                               	</ul>
+                          	</nav>
+                       	</div>
+                    	<div class="col-sm-2 col-xs-12 tablet_margin">
+                       		<nav class="footer-nav">
+                         		<h6>Host</h6>
+                               	<ul>
+                                        	<li><a href="#">Become a host</a></li>
+                                          	<li><a href="#">Refer a friend</a></li>
+                                           	<li><a href="#">Why host with us</a></li>
+                                           	<li><a href="#">Ideal Hosting</a></li>
+                                        </ul>
+                                   </nav>
+                            	</div>
+                       		</div>
+                            <div id="social-footer" class="row">
+                             	<div class="col-xs-12 text-center">
+                                	<ul class="social-icon clearfix">
+                                            <li>
+                                                <a href="javascrip:void(0);">
+                                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                                        <g>
+                                                            <path id="google" fill="#B1B1B1" d="M17.321,23.314c-0.13-0.086-0.263-0.18-0.402-0.274c-0.405-0.124-0.835-0.189-1.276-0.194h-0.053
+                                                    c-2.025,0-3.801,1.225-3.801,2.624c0,1.523,1.522,2.712,3.463,2.712c2.561,0,3.859-0.885,3.859-2.625
+                                                    c0-0.164-0.019-0.335-0.06-0.507C18.877,24.376,18.257,23.955,17.321,23.314z" />
+                                                            <path id="google1" fill="#B1B1B1" d="M15.886,18.007c0.002,0,0.002,0,0.002,0c0.484,0,0.893-0.191,1.209-0.553
+                                                    c0.496-0.566,0.716-1.494,0.586-2.479c-0.23-1.761-1.489-3.227-2.803-3.265l-0.052-0.002c-0.465,0-0.88,0.192-1.195,0.553
+                                                    c-0.489,0.558-0.696,1.443-0.568,2.426c0.23,1.759,1.516,3.28,2.803,3.32H15.886L15.886,18.007z" />
+                                                            <path id="google2" fill="#B1B1B1" d="M20,0C8.972,0,0,8.972,0,20c0,11.027,8.972,20,20,20c11.027,0,20-8.973,20-20C40,8.972,31.029,0,20,0z
+                                                     M17.694,29.739c-0.756,0.218-1.573,0.329-2.431,0.329c-0.955,0-1.874-0.11-2.73-0.326c-1.657-0.418-2.882-1.211-3.454-2.232
+                                                    c-0.247-0.441-0.371-0.912-0.371-1.399c0-0.502,0.12-1.011,0.357-1.515c0.908-1.935,3.301-3.237,5.953-3.237
+                                                    c0.027,0,0.052,0,0.076,0c-0.215-0.379-0.319-0.773-0.319-1.186c0-0.205,0.027-0.415,0.082-0.628
+                                                    c-2.781-0.063-4.862-2.099-4.862-4.784c0-1.896,1.515-3.743,3.682-4.489c0.649-0.224,1.31-0.338,1.96-0.338h5.947
+                                                    c0.202,0,0.382,0.131,0.445,0.324c0.063,0.192-0.006,0.403-0.17,0.521l-1.33,0.963c-0.08,0.056-0.176,0.087-0.275,0.087h-0.476
+                                                    c0.615,0.737,0.975,1.788,0.975,2.969c0,1.303-0.659,2.534-1.859,3.473c-0.926,0.722-0.963,0.921-0.963,1.332
+                                                    c0.011,0.226,0.657,0.965,1.369,1.469c1.659,1.173,2.276,2.324,2.276,4.245C21.575,27.321,20.052,29.054,17.694,29.739z
+                                                     M31.125,19.538c0,0.258-0.21,0.467-0.467,0.467h-3.38v3.381c0,0.258-0.21,0.467-0.466,0.467H25.85
+                                                    c-0.259,0-0.469-0.209-0.469-0.467v-3.381h-3.377c-0.258,0-0.467-0.208-0.467-0.467v-0.961c0-0.258,0.209-0.469,0.467-0.469h3.377
+                                                    v-3.378c0-0.259,0.209-0.467,0.469-0.467h0.963c0.255,0,0.466,0.209,0.466,0.467v3.378h3.379c0.257,0,0.467,0.209,0.467,0.467
+                                                    L31.125,19.538L31.125,19.538z" />
+                                                        </g>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascrip:void(0);">
+                                                    <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                                        <path id="twitter" fill="#B1B1B1" d="M20,0C8.972,0,0,8.972,0,20c0,11.027,8.972,20,20,20c11.027,0,20-8.973,20-20C40,8.972,31.029,0,20,0z
+                                                 M28.922,15.423c0.009,0.198,0.014,0.398,0.014,0.598c0,6.083-4.629,13.095-13.098,13.095c-2.6,0-5.02-0.76-7.056-2.066
+                                                c0.36,0.043,0.727,0.064,1.098,0.064c2.157,0,4.142-0.736,5.717-1.971c-2.014-0.037-3.715-1.368-4.3-3.197
+                                                c0.28,0.053,0.57,0.083,0.865,0.083c0.42,0,0.827-0.055,1.213-0.16c-2.106-0.422-3.692-2.282-3.692-4.514
+                                                c0-0.019,0-0.039,0.001-0.058c0.62,0.344,1.33,0.552,2.084,0.575c-1.234-0.824-2.047-2.234-2.047-3.831
+                                                c0-0.844,0.226-1.635,0.623-2.315c2.269,2.786,5.663,4.618,9.488,4.811c-0.079-0.338-0.118-0.688-0.118-1.05
+                                                c0-2.542,2.061-4.603,4.602-4.603c1.324,0,2.519,0.559,3.36,1.453c1.05-0.206,2.033-0.588,2.924-1.117
+                                                c-0.346,1.075-1.074,1.977-2.027,2.547c0.932-0.111,1.821-0.358,2.644-0.724C30.603,13.964,29.822,14.776,28.922,15.423z" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascrip:void(0);">
+                                                    <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                                        <path id="facebook" fill="#B1B1B1" d="M20,0C8.972,0,0,8.972,0,20c0,11.027,8.972,20,20,20c11.027,0,20-8.973,20-20C40,8.972,31.029,0,20,0z
+                                                 M24.974,20.704H21.72c0,5.199,0,11.598,0,11.598h-4.822c0,0,0-6.337,0-11.598h-2.292v-4.099h2.292v-2.651
+                                                c0-1.899,0.902-4.866,4.866-4.866l3.573,0.014v3.979c0,0-2.171,0-2.593,0s-1.022,0.211-1.022,1.117v2.409h3.674L24.974,20.704z" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascrip:void(0);">
+                                                    <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                                        <path id="pinterest" fill="#B1B1B1" d="M20,0C8.955,0,0,8.954,0,20c0,8.189,4.925,15.225,11.972,18.318c-0.056-1.397-0.01-3.073,0.348-4.592
+                                                c0.384-1.624,2.574-10.898,2.574-10.898s-0.639-1.276-0.639-3.164c0-2.964,1.718-5.177,3.857-5.177c1.819,0,2.698,1.366,2.698,3.002
+                                                c0,1.829-1.166,4.564-1.766,7.098c-0.501,2.122,1.064,3.852,3.157,3.852c3.79,0,6.342-4.867,6.342-10.633
+                                                c0-4.383-2.952-7.664-8.322-7.664c-6.067,0-9.846,4.524-9.846,9.578c0,1.742,0.514,2.972,1.318,3.923
+                                                c0.37,0.437,0.422,0.613,0.288,1.114c-0.096,0.368-0.316,1.254-0.408,1.606c-0.133,0.506-0.544,0.688-1.001,0.5
+                                                c-2.794-1.141-4.096-4.2-4.096-7.64c0-5.681,4.792-12.494,14.294-12.494c7.636,0,12.661,5.525,12.661,11.457
+                                                c0,7.846-4.362,13.707-10.792,13.707c-2.159,0-4.19-1.167-4.886-2.493c0,0-1.161,4.608-1.407,5.498
+                                                c-0.424,1.542-1.254,3.084-2.013,4.284c1.8,0.531,3.7,0.82,5.669,0.82c11.045,0,20-8.954,20-20C40,8.954,31.045,0,20,0" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            	<a href="javascrip:void(0);" title="Instagram">
+                                                	 <svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 24 24">
+                                                     <path id="instagram" fill="#B1B1B1" d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z"/></svg>
+                                                    <!--[if lt IE 9]><em>Instagram</em><![endif]-->
+                                              	</a>
+                                            </li>
+                                   	</ul>
+                               	</div>
+                          	</div>
+                            <div class="row">
+                             	<div class="col-xs-12 text-center">
+                                    <p class="copyright">H.S. Match<br/>424 Kelton Ave., Suite 514. Los Angeles, California CA 90024</p>
+									<p class="copyright">LLC. © 2017. All Rights Reserved.</p>
+                                </div>
+                        	</div> 
+                        </div>
+                       </div>
+                    </footer>               
+                
+           	</div>
+            </div>
+            </div>
+		
+
+			<div class="otherContainer">
+				<div class="buttonContainer">
+					<button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+				</div>
+			</div>
+
+		
+
+		<div class="ontop"></div>
+		<!-- Popup Group DIV -->
+		<div id="popup-group" class="popup-wrapper"></div>
+		<!-- Popup Group DIV end //-->
+
+		<!--  JAVASCRIPT  -->
+		<script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/jquery.ui.touch-punch.min.js"></script>
+        <script src="../js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects -->
+        <script src="../js/jquery.sumoselect.min.js"></script>  <!-- jQuery plugin for Single/Multi Select   -->
+        <script src="../js/bootstrap.min.js"></script>
+		<script src="../js/custom.js"></script>
+        <script src="../js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  -->
+        <script src="../js/daterangepicker.js"></script> <!--  date picker  -->
+        <script src="../js/notify.min.js"></script> <!--  plugin to provide customisable notifications  -->  
+
+            <!-- Google language translation -->		
+            <script type="text/javascript">
+           		var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+            	function googleTranslateElementInit(){
+					if (duplicate_google_translate_counter == 0) {
+						new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+					}
+					duplicate_google_translate_counter++;
+				}
+            </script>
+            <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            
+            <!-- Calendar section  -->	
+            <script type="text/javascript">
+                //********  Date picker initialization   *********//
+                $(function(){
+					/*****************   DROP DOWN POPULATION  *****************/
+					//$( "#nationality-field" ).load( "inc_files/nationality.html #nationality" );
+					//$( "#country-field" ).load( "inc_files/nationality.html #country" );
+					
+					
+				});
+            </script>
+	</body>
+</html>
