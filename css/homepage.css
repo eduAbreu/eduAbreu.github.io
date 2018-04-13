@@ -84,6 +84,10 @@ h2.section-title {
   font-weight: 600;
 }
 
+.main-search-full {
+  padding: 0px;
+}
+
 /** SECTION INFO **/
 .section-info h2 {
   margin: 0px 0px 40px;
@@ -281,6 +285,7 @@ h2.section-title {
   border-radius: 5px;
   box-shadow: 0px 4px 13px rgba(71,86,106,0.12);
   padding: 30px;
+  width: 560px;
 }
 
 .section-testimonials .testimonials-name {
@@ -298,7 +303,7 @@ h2.section-title {
   line-height: 20px;
   color: #798DA9;
   text-align: left;
-  margin: 5px 0px;  
+  margin: 5px 0px;
 }
 
 .section-testimonials .testimonials-hosted_by {
@@ -317,6 +322,72 @@ h2.section-title {
   color: #798DA9;
   text-align: left;
   margin: 20px 0px 0px;
+}
+
+.section-testimonials .slick-slide:not(.slick-current) {
+  opacity: 0.6;
+}
+
+.section-testimonials .slick-slide:not(.slick-current) .testimonials-name {
+  font-size: 20px;
+}
+
+.section-testimonials .slick-slide:not(.slick-current) .testimonials-country {
+  font-size: 18px;
+  margin: 0px;
+}
+
+.section-testimonials .slick-slide:not(.slick-current) .testimonials-hosted_by {
+  font-size: 16px;
+}
+
+.section-testimonials .slick-slide:not(.slick-current) .testimonials-text {
+  font-size: 15px;
+}
+
+.section-testimonials .slick-slide:not(.slick-current) img {
+  width: 45px;
+  height: 45px;
+}
+
+.section-testimonials .slick-carousel {
+  padding: 0px 50px;
+}
+
+.section-testimonials .slick-track {
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.section-testimonials .slick-slide.slick-current {
+  z-index: 2;
+  position: relative;
+  margin: 0px -20px;
+}
+
+.section-testimonials .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: transparent;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+}
+
+.section-testimonials .slick-arrow.slick-prev {
+  left: 0;
+  background-image: url('../images/nextpage.png');
+  transform: rotate(180deg);
+}
+
+.section-testimonials .slick-arrow.slick-next {
+  right: 0;
+  background-image: url('../images/nextpage.png');
 }
 
 /** SECTION PARTNERSHIPS **/

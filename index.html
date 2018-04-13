@@ -16,6 +16,7 @@
 <!-- daterange calendar -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 <!-- bootstrap library -->
+<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 <link rel="stylesheet" type="text/css" href="css/sumoselect.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/custom.css" />
@@ -186,22 +187,69 @@
     <section class="section_wrp section-testimonials">
       <div class="container">
         <div class="row">
-          <div class="col-md-offset-2 col-md-8">
+          <div class="col-xs-12">
             <h2 class="section-title">What they say about us</h2>
-            <div class="testimonials">
-              <div class="d-flex align-items-center">
-                <img src="images/ava1.jpg" alt="" />
-                <div class="testimonials-person-details">
-                  <h3 class="testimonials-name">Mariana Zidanna</h3>
-                  <p class="testimonials-country">From Mexico</p>
-                  <p class="testimonials-hosted_by">Hosted by Cathy in San Frencisco Nov - Dec 2017</p>
+            <div class="slick-carousel">
+              <div class="testimonials">
+                <div class="d-flex align-items-center">
+                  <img src="images/ava1.jpg" alt="" />
+                  <div class="testimonials-person-details">
+                    <h3 class="testimonials-name">Mariana Zidanna</h3>
+                    <p class="testimonials-country">From Mexico</p>
+                    <p class="testimonials-hosted_by">Hosted by Cathy in San Frencisco Nov - Dec 2017</p>
+                  </div>
                 </div>
+                <p class="testimonials-text">
+                  "They are great people, very servicial and nice. They make you feel like you are part of the family.
+                  I'm so grateful for the time I spent with them. I learned so many things. Also thanks to USH.
+                  The location and family was accurate and nice. I hope I can get back with you for new experiences."
+                </p>
               </div>
-              <p class="testimonials-text">
-                "They are great people, very servicial and nice. They make you feel like you are part of the family.
-                I'm so grateful for the time I spent with them. I learned so many things. Also thanks to USH.
-                The location and family was accurate and nice. I hope I can get back with you for new experiences."
-              </p>
+              <div class="testimonials">
+                <div class="d-flex align-items-center">
+                  <img src="images/ava1.jpg" alt="" />
+                  <div class="testimonials-person-details">
+                    <h3 class="testimonials-name">Mariana Zidanna</h3>
+                    <p class="testimonials-country">From Mexico</p>
+                    <p class="testimonials-hosted_by">Hosted by Cathy in San Frencisco Nov - Dec 2017</p>
+                  </div>
+                </div>
+                <p class="testimonials-text">
+                  "They are great people, very servicial and nice. They make you feel like you are part of the family.
+                  I'm so grateful for the time I spent with them. I learned so many things. Also thanks to USH.
+                  The location and family was accurate and nice. I hope I can get back with you for new experiences."
+                </p>
+              </div>
+              <div class="testimonials">
+                <div class="d-flex align-items-center">
+                  <img src="images/ava1.jpg" alt="" />
+                  <div class="testimonials-person-details">
+                    <h3 class="testimonials-name">Mariana Zidanna</h3>
+                    <p class="testimonials-country">From Mexico</p>
+                    <p class="testimonials-hosted_by">Hosted by Cathy in San Frencisco Nov - Dec 2017</p>
+                  </div>
+                </div>
+                <p class="testimonials-text">
+                  "They are great people, very servicial and nice. They make you feel like you are part of the family.
+                  I'm so grateful for the time I spent with them. I learned so many things. Also thanks to USH.
+                  The location and family was accurate and nice. I hope I can get back with you for new experiences."
+                </p>
+              </div>
+              <div class="testimonials">
+                <div class="d-flex align-items-center">
+                  <img src="images/ava1.jpg" alt="" />
+                  <div class="testimonials-person-details">
+                    <h3 class="testimonials-name">Mariana Zidanna</h3>
+                    <p class="testimonials-country">From Mexico</p>
+                    <p class="testimonials-hosted_by">Hosted by Cathy in San Frencisco Nov - Dec 2017</p>
+                  </div>
+                </div>
+                <p class="testimonials-text">
+                  "They are great people, very servicial and nice. They make you feel like you are part of the family.
+                  I'm so grateful for the time I spent with them. I learned so many things. Also thanks to USH.
+                  The location and family was accurate and nice. I hope I can get back with you for new experiences."
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -313,6 +361,7 @@
 <script src="js/jquery.ui.touch-punch.min.js"></script>
 <script src="js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects -->
 <script src="js/owl.carousel.min.js"></script> <!--  slider carousel -->
+<script src="js/slick.min.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  -->
 <script src="js/daterangepicker.js"></script> <!--  date picker  -->
@@ -321,6 +370,51 @@
 <script>
 
 	$(function(){
+    /** TESTIMONIALS CAROUSEL **/
+    $('.slick-carousel').slick({
+      centerMode: true,
+      centerPadding: '0px',
+      slidesToShow: 3,
+      variableWidth: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+    $('.owl-carousel').owlCarousel({
+      center: true,
+      items: 3,
+      nav: true,
+      loop: true,
+      autoWidth: false,
+      responsiveClass:true,
+      margin: -40,
+      responsive: {
+        0:{
+            items: 1
+        },
+        600:{
+            items: 2
+        },
+        1000:{
+            items: 3
+        }
+    }
+    });
 		/***************    SIGNIN iframe  *****************/
 		//show the signin iframe
 		var frame_loaded = 0;
