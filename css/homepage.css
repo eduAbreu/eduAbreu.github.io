@@ -88,10 +88,13 @@ h2.section-title {
   padding: 0px;
 }
 
+.section-header #destination {
+  padding-right: 40px;
+  margin-right: 0px;
+}
+
 .section-header .dateCont input {
-  width: 300px;
-  padding-left: 50px;
-  background-position: 21px 14px, 97% 20px;
+  width: 270px;
 }
 
 /** SECTION INFO **/
