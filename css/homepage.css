@@ -391,7 +391,10 @@ h2.section-title {
 }
 
 /** SECTION PARTNERSHIPS **/
-
+.section-partnerships .partner_logo {
+  margin: 0px;
+  padding: 0px;
+}
 
 /** SECTION BLUE **/
 .section_blue {
