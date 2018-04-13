@@ -1,28 +1,28 @@
 /** FONTS **/
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('../fonts/ProximaNova-Bold');
+    src: url('../fonts/ProximaNova-Bold.ttf');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('../fonts/ProximaNova-Regular');
+    src: url('../fonts/ProximaNova-Regular.ttf');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('../fonts/ProximaNova-Medium');
+    src: url('../fonts/ProximaNova-Medium.ttf');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('../fonts/ProximaNova-SemiBold');
+    src: url('../fonts/ProximaNova-SemiBold.ttf');
     font-weight: 600;
     font-style: normal;
 }
@@ -86,6 +86,12 @@ h2.section-title {
 
 .main-search-full {
   padding: 0px;
+}
+
+.section-header .dateCont input {
+  width: 300px;
+  padding-left: 50px;
+  background-position: 21px 14px, 97% 20px;
 }
 
 /** SECTION INFO **/
@@ -241,15 +247,6 @@ h2.section-title {
   font-weight: 600;
   width: 35px;
   height: 35px;
-}
-
-.section-how-it-works #works {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .section-how-it-works .img-step-1 {
@@ -432,6 +429,7 @@ h2.section-title {
   background-image: url('../images/bubble_bg.svg');
   background-repeat: no-repeat;
   background-position: center 35%;
+  overflow-x: hidden;
 }
 
 /**
@@ -444,6 +442,14 @@ h2.section-title {
   }
   .section-info h2 {
     margin: 0px 0px 100px;
+  }
+  .section-how-it-works #works {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
