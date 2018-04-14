@@ -37,6 +37,7 @@ footer ul.list-social-icons {
 footer ul.list-social-icons li a {
   background-color: #666;
   border-color: #666;
+  -webkit-transition: background-color 300ms ease, color 300ms ease;
   transition: background-color 300ms ease, color 300ms ease;
 }
 
@@ -66,4 +67,33 @@ footer .p-address {
   font-weight: 400;
   line-height: 23px;
   opacity: 0.8;
+}
+
+
+footer ul.list-social-icons li {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-logo {
+    margin-bottom: 40px;
+  }
+
+  footer ul.list-social-icons {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  footer .tablet_margin:last-child {
+    margin-bottom: 0px;
+  }
+
+  footer .copyright {
+    margin-top: 0px;
+  }
 }

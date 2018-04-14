@@ -2581,15 +2581,15 @@ html .selectric .button:after {
 }
 /*.custom-marker:after {
     border-top: 40px solid #0099CC;
-    border-left: 20px solid transparent; 
-    border-right: 20px solid transparent; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
     bottom: 0px;
     content: '';
     position: absolute;
     left: 45%;
     margin-left: -15px;
 	margin-bottom: -20px;
-    width: 0; 
+    width: 0;
     height: 0;
 }*/
 .host-marker {
@@ -7264,8 +7264,7 @@ button.accordiontab:first-child {
     padding: 20px 20px;
     height: 120px;
 }
-.partner_logo_row .partner_logo img {
-}
+
 .gallery {
     margin-left: -15px;
     margin-right: -15px;
@@ -7364,9 +7363,6 @@ button.accordiontab:first-child {
 }
 .img-slider {
     height: 170px;
-}
-.partner_logo_row .partner_logo img {
-    width: 100%;
 }
 .header-bg {
     padding-bottom: 10vh;
@@ -8024,10 +8020,7 @@ button.accordiontab:first-child {
     max-width: 400px;
     height: 150px;
 }
-.partner_logo_row .partner_logo img {
-    max-width: 150px;
-    margin: 0 auto;
-}
+
 .tablet_margin {
     margin-bottom: 40px;
 }
@@ -8071,10 +8064,7 @@ button.accordiontab:first-child {
 .partner_logo_row .partner_logo {
     padding: 5px;
 }
-.partner_logo_row .partner_logo img {
-    width: auto;
-    margin: 0 auto;
-}
+
 .main-search-full {
     display: table;
 }
@@ -10814,7 +10804,7 @@ ul.list-social-icons li a:hover i {
     margin-bottom: 8px;
     font-weight: 600;
     color: #222;
-    
+
 }
 
 .payment-info .radio label
@@ -10857,7 +10847,7 @@ ul.list-colors li a img
            width: 20px;
     display: table;
     margin: 0 auto 5px;
-    
+
 }
 /*ul.list-colors li a:befores
 {
@@ -10870,7 +10860,7 @@ ul.list-colors li a img
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    
+
     position: relative;
 
 }

@@ -45,7 +45,7 @@ header.top {
 ** MEDIA QUERIES
 **/
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
   .mainmenu > ul > li a.btn {
     border: none;
     background-color: transparent;
