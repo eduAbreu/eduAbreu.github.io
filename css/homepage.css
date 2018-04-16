@@ -45,13 +45,13 @@ h2.section-title {
 .intro h1 {
   font-size: 43px;
   line-height: 60px;
-  margin: 0px 0px 10px;
+  margin: 0px;
 }
 
 .intro p {
   font-size: 20px;
   line-height: 30px;
-  margin: 0px 0px 35px;
+  margin: -5px 0px 35px;
   font-weight: 600;
 }
 
@@ -68,9 +68,14 @@ h2.section-title {
   margin-bottom: 0px;
 }
 
+.section-header .dateCont input {
+  cursor: default;
+}
+
 /** SECTION INFO **/
 .section-info h2 {
   margin: 0px 0px 40px;
+  text-transform: none;
 }
 
 .section-info .feature-block {
@@ -366,8 +371,12 @@ h2.section-title {
   padding: 0px;
 }
 
+.section-partnerships .section-title {
+  margin-bottom: 40px;
+}
+
 /** SECTION BLUE **/
-.section_blue {
+.section_blue.section_wrp {
   padding-top: 130px;
   padding-bottom: 180px;
   background-image: url("../images/section_blue_bg.png");
@@ -430,7 +439,7 @@ h2.section-title {
     margin: 0px 5px;
   }
   .section-info h2 {
-    margin: 0px 0px 100px;
+    margin: 0px 100px 100px;
   }
   .section-how-it-works #works {
     display: -webkit-box;
@@ -451,15 +460,11 @@ h2.section-title {
 
 @media only screen and (min-width: 1201px) {
   .section-info h2 {
-    margin: 0px 120px 160px;
+    margin: 0px 175px 160px;
   }
 
   .feature-block p {
     margin: 0px 10px;
-  }
-
-  .section-partnerships .section-title {
-    margin: 0 40px;
   }
 }
 
