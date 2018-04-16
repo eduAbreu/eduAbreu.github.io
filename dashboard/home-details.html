@@ -57,6 +57,7 @@
                                 <li><a href="bedroom.html">Bedrooms</a></li>
                                 <li><a href="messsages.html">Messages <span class="label label-danger">23</span></a></li>
                                 <li><a href="payment-tax.html">Payment & Taxes</a></li>
+                            <li><a href="javascript:">Logout</a></li>
                         </ul>
                 </div>
                 <!--  Main content  -->
@@ -69,6 +70,7 @@
                                                 <li><a href="#HouseAmenities" >House Amenities</a></li>
                                                 <li><a href="#HouseRules" >House Rules</a></li>
                                                 <li><a href="#HostingPreferences">Hosting Preferences</a></li>
+                                            
                                         </ul>
                                         
                                         <!-- Tab panes -->
@@ -121,15 +123,16 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                         <div class="col-sm-offset-3 col-sm-9">
-                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
-                                                                                                <div class="clearfix"></div>
-                                                                                                <div class="hidden-xs">
-                                                                                                    <a href="javascript:" nextPage="People" class="back-panel"> <img src="../images/back-link.svg"/>
-                                                                                                    <div class="clearfix"></div>
-                                                                                                    <h2>Next</h2>
-                                                                                                    <span>(People)</span> </a> 
+                                                                                                <div class="row">
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" class="btn btn-block btn-lgt">CANCEL</button>
                                                                                                 </div>
-                                                                                       	</div>
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" disabled class="btn btn-block">SAVE CHANGES</button>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                                
+                                                                                        </div>
                                                                                 </div>
                                                                         </div>
                                                                 </div>
@@ -137,10 +140,8 @@
                                                 </div>
                                                 <div   class="tabContent" id="People">
                                                         <div class="row">
-                                                               
-                                                                        <div class="form-horizontal form-dashboard">
-                                                                            
-                                                                             <div class="col-md-9">
+                                                                <div class="form-horizontal form-dashboard">
+                                                                        <div class="col-md-9">
                                                                                 <div class="form-group">
                                                                                         <label for="inputEmail3" class="col-sm-3 control-label">Number of people living in this home</label>
                                                                                         <div class="col-sm-9">
@@ -160,19 +161,17 @@
                                                                                                 </select>
                                                                                         </div>
                                                                                 </div>
-                                                                            
-                                                                            </div>
-                                                                            <div class="clearfix"></div>
-                                                                             <h1 class="mb-30 mt-30 col-md-12">Spouse/Partner</h1>
-                                                                             <div class="clearfix"></div>
-                                                                            <div class="col-md-9">
-                                                                               
-                                                                                <div class="visible-xs visible-sm">
-                                                                                    <div class="panel panel-default panel-picture mb-15">
-                                                                                <div class="panel-body"> <a href="javascript:" class="panel-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/jullia.jpeg" class="img-circle img-responsive img-table" /> </div>
                                                                         </div>
-                                                                        <a href="javascript:" class="btn-link btn-block">Edit Photo</a>
-                                                                                </div>
+                                                                        <div class="clearfix"></div>
+                                                                        <h1 class="mb-30 mt-30 col-md-9">Spouse/Partner  <a href="javascrip:" class="pull-right"><i class="fa fa-remove fa-fw"></i></a></h1>
+                                                                   
+                                                                        <div class="clearfix"></div>
+                                                                        <div class="col-md-9">
+                                                                                <div class="visible-xs visible-sm">
+                                                                                        <div class="panel panel-default panel-picture mb-15">
+                                                                                                <div class="panel-body"> <a href="javascript:" class="panel-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/jullia.jpeg" class="img-circle img-responsive img-table" /> </div>
+                                                                                        </div>
+                                                                                        <a href="javascript:" class="btn-link btn-block">Edit Photo</a> </div>
                                                                                 <div class="form-group">
                                                                                         <label for="inputPassword3" class="col-sm-3 control-label">Spouse/Partner Profile</label>
                                                                                         <div class="col-sm-9">
@@ -219,32 +218,34 @@
                                                                                         <div class="col-sm-9">
                                                                                                 <div class="row row-slider mb-0">
                                                                                                         <div class="col-md-2 col-xs-2"> <span class="counter mb-10"><img src="../images/daugter.svg" class="img-responsive img-table" /></span> </div>
-                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                        <div class="col-md-4 col-xs-4">
                                                                                                                 <select class="form-control mini mb-10">
                                                                                                                         <option>Girl</option>
                                                                                                                 </select>
                                                                                                         </div>
-                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                         <div class="col-md-4 col-xs-4">
                                                                                                                 <select class="form-control mini mb-10">
                                                                                                                         <option>Year of Birth</option>
                                                                                                                 </select>
                                                                                                         </div>
+                                                                                                     <div class="col-md-2 col-xs-2"> <a href="javascript:" class="counter remove mb-10"><i class="fa fa-remove fa-fw"></i></a> </div>
                                                                                                 </div>
                                                                                                 <div class="row row-slider mb-0">
                                                                                                         <div class="col-md-2 col-xs-2"> <span class="counter mb-10"><img src="../images/son.svg" class="img-responsive img-table" /></span> </div>
-                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                        <div class="col-md-4 col-xs-4">
                                                                                                                 <select class="form-control mini mb-10">
                                                                                                                         <option>Boy</option>
                                                                                                                 </select>
                                                                                                         </div>
-                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                        <div class="col-md-4 col-xs-4">
                                                                                                                 <select class="form-control mini mb-10">
                                                                                                                         <option>Year of Birth</option>
                                                                                                                 </select>
                                                                                                         </div>
+                                                                                                     <div class="col-md-2 col-xs-2"> <a href="javascript:" class="counter remove mb-10"><i class="fa fa-remove fa-fw"></i></a> </div>
                                                                                                 </div>
                                                                                                 <div class="row row-slider mb-10">
-                                                                                                        <div class="col-md-2 col-xs-2"> <a href="javascript:" class="counter mb-10">+</a> </div>
+                                                                                                        <div class="col-md-2 col-xs-2"> <a href="javascript:" class="counter mb-10"><i class="fa fa-plus fa-fw"></i></a> </div>
                                                                                                         <div class="col-md-5 col-xs-5"> &nbsp; </div>
                                                                                                         <div class="col-md-5 col-xs-5"> &nbsp; </div>
                                                                                                 </div>
@@ -256,54 +257,55 @@
                                                                                         <div class="col-sm-9">
                                                                                                 <div class="row row-slider mb-10">
                                                                                                         <div class="col-md-2 col-xs-2"> <span class="counter mb-10"><img src="../images/dog.svg" class="img-responsive img-table" /></span> </div>
-                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                         <div class="col-md-4 col-xs-4">
                                                                                                                 <select class="form-control mini mb-10">
                                                                                                                         <option>Dog (Small)</option>
                                                                                                                 </select>
                                                                                                         </div>
-                                                                                                        <div class="col-md-5 col-xs-5">
+                                                                                                         <div class="col-md-4 col-xs-4">
                                                                                                                 <input type="text" class="form-control" placeholder="Beagle"/>
                                                                                                         </div>
+                                                                                                    <div class="col-md-2 col-xs-2"> <a href="javascript:" class="counter remove mb-10"><i class="fa fa-remove fa-fw"></i></a> </div>
                                                                                                 </div>
                                                                                                 <div class="row row-slider mb-10">
                                                                                                         <div class="col-md-2 col-xs-2"> <span class="counter mb-10"><img src="../images/cat.svg" class="img-responsive img-table" /></span> </div>
-                                                                                                        <div class="col-md-10 col-xs-10">
+                                                                                                        <div class="col-md-8 col-xs-8">
                                                                                                                 <select class="form-control  mb-10">
                                                                                                                         <option>Cat</option>
                                                                                                                 </select>
                                                                                                         </div>
+                                                                                                     <div class="col-md-2 col-xs-2"> <a href="javascript:" class="counter remove mb-10"><i class="fa fa-remove fa-fw"></i></a> </div>
+                                                                                                    
                                                                                                 </div>
                                                                                                 <div class="row row-slider mb-10">
-                                                                                                        <div class="col-md-2 col-xs-2"> <a href="javascript:" class="counter mb-10">+</a> </div>
+                                                                                                        <div class="col-md-2 col-xs-2"> <a href="javascript:" class="counter mb-10"><i class="fa fa-plus fa-fw"></i></a> </div>
                                                                                                         <div class="col-md-5 col-xs-5"> &nbsp; </div>
                                                                                                         <div class="col-md-5 col-xs-5"> &nbsp; </div>
                                                                                                 </div>
                                                                                         </div>
                                                                                 </div>
-                                                                                
                                                                                 <div class="form-group">
                                                                                         <div class="col-sm-offset-3 col-sm-9">
-                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
-                                                                                                <div class="clearfix"></div>
-                                                                                                <div class="hidden-xs hidden-sm">
-                                                                                                    <a href="javasccript:" nextPage="HouseAmenities" class="back-panel"> <img src="../images/back-link.svg"/>
-                                                                                                    <div class="clearfix"></div>
-                                                                                                    <h2>Next</h2>
-                                                                                                    <span>(House Amenities)</span> </a>
-                                                                                                </div> 
-                                                                                       	</div>
+                                                                                                <div class="row">
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" class="btn btn-block btn-lgt">CANCEL</button>
+                                                                                                </div>
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" disabled class="btn btn-block">SAVE CHANGES</button>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                               
+                                                                                        </div>
                                                                                 </div>
                                                                         </div>
-                                                                
-                                                                <div class="col-md-3 hidden-xs">
-                                                                        <div class="panel panel-default panel-picture mb-15">
-                                                                                <div class="panel-body"> <a href="javascript:" class="panel-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/jullia.jpeg" class="img-circle img-responsive img-table" /> </div>
-                                                                        </div>
-                                                                        <a href="javascript:" class="btn-link btn-block">Edit Photo</a> </div>
+                                                                        <div class="col-md-3 hidden-xs">
+                                                                                <div class="panel panel-default panel-picture mb-15">
+                                                                                        <div class="panel-body"> <a href="javascript:" class="panel-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/jullia.jpeg" class="img-circle img-responsive img-table" /> </div>
+                                                                                </div>
+                                                                                <a href="javascript:" class="btn-link btn-block">Edit Photo</a> </div>
+                                                                </div>
                                                         </div>
                                                 </div>
-                                                    
-                                            </div>
                                                 <div   class="tabContent" id="HouseAmenities">
                                                         <div class="row">
                                                                 <div class="col-md-9">
@@ -425,14 +427,15 @@
                                                                                 </div>
                                                                                 <div class="form-group mt-30">
                                                                                         <div class="col-sm-offset-3 col-sm-9">
-                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
-                                                                                                <div class="clearfix"></div>
-                                                                                                <div class="hidden-xs">
-                                                                                                    <a href="javasccript:" nextPage="HouseRules" class="back-panel"> <img src="../images/back-link.svg"/>
-                                                                                                    <div class="clearfix"></div>
-                                                                                                    <h2>Next</h2>
-                                                                                                    <span>(House Rules)</span></a>
+                                                                                                <div class="row">
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" class="btn btn-block btn-lgt">CANCEL</button>
                                                                                                 </div>
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" disabled class="btn btn-block">SAVE CHANGES</button>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                              
                                                                                         </div>
                                                                                 </div>
                                                                         </div>
@@ -503,15 +506,16 @@
                                                                                 </div>
                                                                                 <div class="form-group mt-30">
                                                                                         <div class="col-sm-offset-3 col-sm-9">
-                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
-                                                                                                <div class="clearfix"></div>
-                                                                                                <div class="hidden-xs">
-                                                                                                    <a href="javasccript:" nextPage="HostingPreferences" class="back-panel"> <img src="../images/back-link.svg"/>
-                                                                                                    <div class="clearfix"></div>
-                                                                                                    <h2>Next</h2>
-                                                                                                    <span>(Hosting Preferences)</span></a>
+                                                                                               <div class="row">
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" class="btn btn-block btn-lgt">CANCEL</button>
                                                                                                 </div>
-                                                                                    	</div>
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" disabled class="btn btn-block">SAVE CHANGES</button>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                               
+                                                                                        </div>
                                                                                 </div>
                                                                         </div>
                                                                 </div>
@@ -524,21 +528,21 @@
                                                                                 <div class="form-group">
                                                                                         <label for="inputEmail3" class="col-sm-3 control-label">Meal Plans offered (Select all that apply)</label>
                                                                                         <div class="col-sm-9">
-                                                                                                <div class="checkbox  checkbox-lg">
+                                                                                                <div class="checkbox checkbox-primary  checkbox-lg">
                                                                                                         <input type="checkbox" class="styled" id="Room1" value="Room">
                                                                                                         <label for="Room1">
                                                                                                         <h2>Room with Breakfast and Dinner</h2>
                                                                                                         <p>Dinner is usually prepared and served for the student. It should be the same portion of what you will be eating that night. If you are extremely busy, it is acceptable for you to prepare dinner for two days, which the student can reheat on the second day.</p>
                                                                                                         </label>
                                                                                                 </div>
-                                                                                                <div class="checkbox  checkbox-lg">
+                                                                                                <div class="checkbox checkbox-primary  checkbox-lg">
                                                                                                         <input type="checkbox" class="styled" id="Breakfast" value="Breakfast">
                                                                                                         <label for="Breakfast">
                                                                                                         <h2>Room with Breakfast</h2>
                                                                                                         <p>Typically continental, so you may not be there to prepare it in the morning, but you should have some food available. Typical breakfast foods include: toast, bread, cereals, pastry, fruit, milk, coffee, tea, juice, etc.</p>
                                                                                                         </label>
                                                                                                 </div>
-                                                                                                <div class="checkbox  checkbox-lg">
+                                                                                                <div class="checkbox checkbox-primary  checkbox-lg">
                                                                                                         <input type="checkbox" class="styled" id="only" value="only">
                                                                                                         <label for="only">
                                                                                                         <h2>Room only</h2>
@@ -566,10 +570,18 @@
                                                                                                 </select>
                                                                                         </div>
                                                                                 </div>
+                                                                            
+                                                                            
                                                                                 <div class="form-group mt-30">
                                                                                         <div class="col-sm-offset-3 col-sm-9">
-                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
-                                                                                                <div class="clearfix"></div>
+                                                                                                <div class="row">
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" class="btn btn-block btn-lgt">CANCEL</button>
+                                                                                                </div>
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" disabled class="btn btn-block">SAVE CHANGES</button>
+                                                                                                </div>
+                                                                                        </div>
                                                                                         </div>
                                                                                 </div>
                                                                         </div>

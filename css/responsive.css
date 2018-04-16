@@ -475,11 +475,21 @@ FOOTER Queruires
     
         ul.list-colors li {
     float: left;
-    width: auto !important;
+    width: 58px !important;
     text-align: center;
-    padding: 0px 10px;
-    margin-right: 0px;
+    padding: 0px 0px;
+            margin-right: 0px;
 }
+    
+     ul.list-colors li  a
+    {
+            font-size: 12px;
+    text-align: center;
+    color: #666;
+    position: relative;
+    float: left;
+    width: 100%;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -492,6 +502,11 @@ FOOTER Queruires
 .booking .process-model li::after {
     right: -50px;
 }
+    .panel.panel-payment
+    {
+        padding: 5px !important;
+        
+    }
     
 
 }

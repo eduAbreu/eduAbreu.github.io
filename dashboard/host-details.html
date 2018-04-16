@@ -72,321 +72,415 @@
                                 <li><a href="bedroom.html">Bedrooms</a></li>
                                 <li><a href="messsages.html">Messages <span class="label label-danger">23</span></a></li>
                                 <li><a href="payment-tax.html">Payment & Taxes</a></li>
+                            <li><a href="javascript:">Logout</a></li>
                         </ul>
                 </div>
                 <!--  Main content  -->
                 <div class="col-md-10 col-sm-9">
-                        <section class="dashboard-content">
-                                <div class="tabbing">
-                                        <ul class="tabNav">
-                                                <li><a href="#PersonalInformation">Personal Information</a></li>
-                                                <li><a href="#NotificationSettings">Notification Settings</a></li>
-                                        </ul>
-                                        <div class="tabContainer">
-                                                <div class="tabContent" id="PersonalInformation">
-                                                        <div class="row">
-                                                                <div class="col-md-9">
-                                                                        <div class="form-horizontal form-dashboard">
-                                                                            
-                                                                            <div class="visible-xs visible-sm">
+                <section class="dashboard-content">
+                        <div class="tabbing">
+                                <ul class="tabNav">
+                                        <li><a href="#PersonalInformation">Personal Information</a></li>
+                                        <li><a href="#NotificationSettings">Notification Settings</a></li>
+                                </ul>
+                                <div class="tabContainer">
+                                        <div class="tabContent" id="PersonalInformation">
+                                                <div class="row">
+                                                        <div class="col-md-9">
+                                                                <div class="form-horizontal form-dashboard">
+                                                                        <div class="visible-xs visible-sm">
                                                                                 <div class="panel panel-default panel-picture mb-15">
-                                                                                <div class="panel-body"> <a href="javascript:" class="panel-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/avatar1.png" class="img-circle img-responsive img-table"> </div>
+                                                                                        <div class="panel-body"> <a href="javascript:" class="panel-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/avatar1.png" class="img-circle img-responsive img-table"> </div>
+                                                                                </div>
+                                                                                <a href="javascript:" class="btn-link btn-block">Edit Photo</a> </div>
+                                                                        <div class="form-group">
+                                                                                <label for="inputEmail3" class="col-sm-3 control-label">First Name</label>
+                                                                                <div class="col-sm-9">
+                                                                                        <input type="text" class="form-control mb-10" id="First" value="Mike">
+                                                                                </div>
                                                                         </div>
-                                                                        <a href="javascript:" class="btn-link btn-block">Edit Photo</a>
-                                                                            </div>
-                                                                                <div class="form-group">
-                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">First Name</label>
-                                                                                        <div class="col-sm-9">
-                                                                                                <input type="text" class="form-control mb-10" id="First" value="Mike">
-                                                                                        </div>
+                                                                        <div class="form-group">
+                                                                                <label for="inputPassword3" class="col-sm-3 control-label">Last Name</label>
+                                                                                <div class="col-sm-9">
+                                                                                        <input type="text" class="form-control mb-10" id="Last" value="Lewis">
                                                                                 </div>
-                                                                                <div class="form-group">
-                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Last Name</label>
-                                                                                        <div class="col-sm-9">
-                                                                                                <input type="text" class="form-control mb-10" id="Last" value="Lewis">
-                                                                                        </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                                <label for="inputPassword3" class="col-sm-3 control-label">Gender</label>
+                                                                                <div class="col-sm-9">
+                                                                                        <select class="form-control mb-10">
+                                                                                                <option>Gender</option>
+                                                                                                <option selected>Male</option>
+                                                                                                <option>Female</option>
+                                                                                        </select>
                                                                                 </div>
-                                                                                <div class="form-group">
-                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Gender</label>
-                                                                                        <div class="col-sm-9">
-                                                                                                <select class="form-control mb-10">
-                                                                                                        <option>Gender</option>
-                                                                                                        <option selected>Male</option>
-                                                                                                        <option>Female</option>
-                                                                                                </select>
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Date of Birth</label>
-                                                                                        <div class="col-sm-9">
-                                                                                                <div class="row">
-                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
-                                                                                                                <select class="form-control mini mb-10">
-                                                                                                                        <option>Month</option>
-                                                                                                                </select>
-                                                                                                        </div>
-                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
-                                                                                                                <select class="form-control mini mb-10">
-                                                                                                                        <option>Day</option>
-                                                                                                                </select>
-                                                                                                        </div>
-                                                                                                        <div class="col-md-4 col-sm-4 col-xs-12">
-                                                                                                                <select class="form-control mini mb-10">
-                                                                                                                        <option>Year</option>
-                                                                                                                </select>
-                                                                                                        </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                                <label for="inputPassword3" class="col-sm-3 control-label">Date of Birth</label>
+                                                                                <div class="col-sm-9">
+                                                                                        <div class="row">
+                                                                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                        <select class="form-control mini mb-10">
+                                                                                                                <option>Month</option>
+                                                                                                        </select>
+                                                                                                </div>
+                                                                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                        <select class="form-control mini mb-10">
+                                                                                                                <option>Day</option>
+                                                                                                        </select>
+                                                                                                </div>
+                                                                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                                        <select class="form-control mini mb-10">
+                                                                                                                <option>Year</option>
+                                                                                                        </select>
                                                                                                 </div>
                                                                                         </div>
                                                                                 </div>
-                                                                                <div class="form-group">
-                                                                                        <label for="inputPassword3" class="col-sm-3 control-label">Welcome Message <a href="javascript:" class="visible-xs btn-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a></label>
-                                                                                        <div class="col-sm-9">
-                                                                                                <div class="fullwidth pr">
-                                                                                                        <textarea class="form-control mb-10" cols="5" rows="7" placeholder="Tell students a bit more about yourself. Here's an example: Hi, my name is Roger.  I am a real estate agent who enjoys spending time with my wife and daughter. We have been hosting international students for 5 years now, and we absolutely love getting to know students from around the globe." ></textarea>
-                                                                                                        <span class="text-counter pa">250/250</span> <a href="javascript:" class="btn-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> </div>
-                                                                                                <div class="clearfix"></div>
-                                                                                                <div class="alert alert-info mb-20"> Click on the info icon <i class="fa fa-info-circle fa-fw fa-red"></i> for more examples.</div>
-                                                                                        </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                                <label for="inputPassword3" class="col-sm-3 control-label">Welcome Message <a href="javascript:" class="visible-xs btn-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a></label>
+                                                                                <div class="col-sm-9">
+                                                                                        <div class="fullwidth pr">
+                                                                                                <textarea class="form-control mb-10" cols="5" rows="7" placeholder="Tell students a bit more about yourself. Here's an example: Hi, my name is Roger.  I am a real estate agent who enjoys spending time with my wife and daughter. We have been hosting international students for 5 years now, and we absolutely love getting to know students from around the globe." ></textarea>
+                                                                                                <span class="text-counter pa">250/250</span> <a href="javascript:" data-toggle="modal" data-target="#Welcome" class="btn-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> </div>
+                                                                                        <div class="clearfix"></div>
+                                                                                        <div class="alert alert-info mb-20" data-toggle="modal" data-target="#Welcome"> Click on the info icon <i class="fa fa-info-circle fa-fw fa-red"></i> for more examples.</div>
                                                                                 </div>
-                                                                                <h1>Contacts</h1>
-                                                                                <div class="form-group">
-                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Email Address</label>
-                                                                                        <div class="col-sm-9">
-                                                                                                <div class="fullwidth pr">
-                                                                                                        <input type="email" class="form-control mb-10" id="" value="mike.lewis@gmail.com">
-                                                                                                        <a href="javascript:" class="pr-ab btn btn-success btn-xs btn-abs">Verified</a> </div>
-                                                                                        </div>
+                                                                        </div>
+                                                                        <h1>Contacts</h1>
+                                                                        <div class="form-group">
+                                                                                <label for="inputEmail3" class="col-sm-3 control-label">Email Address</label>
+                                                                                <div class="col-sm-9">
+                                                                                        <div class="fullwidth pr">
+                                                                                                <input type="email" class="form-control mb-10" id="" value="mike.lewis@gmail.com">
+                                                                                                <a href="javascript:" class="pr-ab btn btn-success btn-xs btn-abs">Verified</a> </div>
                                                                                 </div>
-                                                                                <div class="form-group">
-                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Cell Phone Number <a href="javascript:" class="visible-xs btn-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a></label>
-                                                                                        <div class="col-sm-9">
-                                                                                                <div class="fullwidth pr">
-                                                                                                        <input type="email" class="form-control mb-10" id="" placeholder="">
-                                                                                                        <a href="javascript:" class="pr-ab btn btn-danger btn-xs btn-abs">Verify</a> <a href="javascript:" class="btn-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> </div>
-                                                                                        </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                                <label for="inputEmail3" class="col-sm-3 control-label">Cell Phone Number <a href="javascript:" class="visible-xs btn-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a></label>
+                                                                                <div class="col-sm-9">
+                                                                                        <div class="fullwidth pr">
+                                                                                                <input type="email" class="form-control mb-10" id="" placeholder="">
+                                                                                                <a href="javascript:" class="pr-ab btn btn-danger btn-xs btn-abs">Verify</a> <a href="javascript:" class="btn-info-icon" ><i class="fa fa-info-circle fa-fw fa-red"></i></a> </div>
                                                                                 </div>
-                                                                                <div class="form-group">
-                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Home Phone Number</label>
-                                                                                        <div class="col-sm-9">
-                                                                                                <input type="text" class="form-control mb-10" id="" placeholder="">
-                                                                                        </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                                <label for="inputEmail3" class="col-sm-3 control-label">Home Phone Number</label>
+                                                                                <div class="col-sm-9">
+                                                                                        <input type="text" class="form-control mb-10" id="" placeholder="">
                                                                                 </div>
-                                                                                <h1 class="fullwidth mt-40">Password</h1>
+                                                                        </div>
+                                                                        <h1 class="fullwidth mt-40">Password</h1>
+                                                                        <div class="form-group">
+                                                                                <label for="inputEmail3" class="col-sm-3 control-label">Current Password</label>
+                                                                                <div class="col-sm-9">
+                                                                                        <input type="passsword" class="form-control mb-10" id="" placeholder="">
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="collapse" id="changepassword">
                                                                                 <div class="form-group">
-                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">Current Password</label>
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">New Password</label>
                                                                                         <div class="col-sm-9">
                                                                                                 <input type="passsword" class="form-control mb-10" id="" placeholder="">
-                                                                                                <button type="submit" class="btn btn-block btn-default btn-grey">Change Password</button>
                                                                                         </div>
                                                                                 </div>
-                                                                                <div class="form-group">
-                                                                                        <div class="col-sm-offset-3 col-sm-9">
-                                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
+                                                                                <div class="form-group mb-5">
+                                                                                        <label for="inputEmail3" class="col-sm-3 control-label">New Password Confirmation</label>
+                                                                                        <div class="col-sm-9">
+                                                                                                <input type="passsword" class="form-control mb-10" id="" placeholder="">
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="form-group mb-5">
+                                                                                <label for="inputEmail3" class="col-sm-3 control-label">&nbsp;</label>
+                                                                                <div class="col-sm-9">
+                                                                                        <button type="submit" class="btn btn-block btn-default btn-grey" data-toggle="collapse" data-target="#changepassword" aria-expanded="false" aria-controls="changepassword">Change Password</button>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                                <div class="col-sm-offset-3 col-sm-9">
+                                                                                        <div class="row">
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" class="btn btn-block btn-lgt">CANCEL</button>
+                                                                                                </div>
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" disabled class="btn btn-block">SAVE CHANGES</button>
+                                                                                                </div>
                                                                                         </div>
                                                                                 </div>
                                                                         </div>
                                                                 </div>
-                                                                <div class="col-md-3 hidden-xs hidden-sm">
-                                                                        <div class="panel panel-default panel-picture mb-15">
-                                                                                <div class="panel-body"> <a href="javascript:" class="panel-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/avatar1.png" class="img-circle img-responsive img-table"> </div>
-                                                                        </div>
-                                                                        <a href="javascript:" class="btn-link btn-block">Edit Photo</a> </div>
                                                         </div>
-                                                </div>
-                                                <div class="tabContent" id="NotificationSettings">
-                                                        <table class="table table--db--st1">
-                                                                <thead>
-                                                                        <tr>
-                                                                                <th class="col-md-8">&nbsp;</th>
-                                                                                <th class="center">Email</th>
-                                                                                <th class="center">Text Message</th>
-                                                                        </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                        <tr>
-                                                                                <td colspan="3"><h1  class="mt-15 mb-15">Bookings </h1></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>New booking request</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="request" type="checkbox" checked >
-                                                                                                <label for="request"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="request2" type="checkbox" checked> 
-                                                                                                <label for="request2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>Booking updates (changes, cancellations, extensions)</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="extensions" type="checkbox" checked>
-                                                                                                <label for="extensions"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="cancellations" type="checkbox" checked>
-                                                                                                <label for="checcancellationskbox2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>Student move in confirmation</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="movein" type="checkbox" checked>
-                                                                                                <label for="movein"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox2" type="checkbox">
-                                                                                                <label for="checkbox2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>Student move out confirmation</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="moveout" type="checkbox" checked>
-                                                                                                <label for="moveout"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox2" type="checkbox">
-                                                                                                <label for="checkbox2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>Payment release</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox1" type="checkbox" checked>
-                                                                                                <label for="checkbox1"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox2" type="checkbox">
-                                                                                                <label for="checkbox2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td colspan="3"><h1 class="mt-15 mb-15">Communication </h1></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>New message from student</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="Communication" type="checkbox" checked>
-                                                                                                <label for="Communication"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="Communication2" type="checkbox" checked>
-                                                                                                <label for="Communication2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>Communication with Homestay Match (policy changes etc)</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox1" type="checkbox" checked>
-                                                                                                <label for="checkbox1"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox2" type="checkbox">
-                                                                                                <label for="checkbox2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td colspan="3"><h1 class="mt-15 mb-15">Reminders </h1></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>Student move in reminder (1 week before)</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="Studentmove" type="checkbox" checked>
-                                                                                                <label for="Studentmove"> </label>
-                                                                                        </div></td>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="Studentmove2" type="checkbox" >
-                                                                                                <label for="Studentmove2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td class="mt-15 mb-15">Student move in reminder (1 day before)</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="Studentmove1" type="checkbox" checked>
-                                                                                                <label for="Studentmove1"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary" >
-                                                                                                <input id="Studentmove3" type="checkbox" checked>
-                                                                                                <label for="Studentmove3"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>Student move out reminder (1 week before)</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox1" type="checkbox" checked>
-                                                                                                <label for="checkbox1"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox2" type="checkbox">
-                                                                                                <label for="checkbox2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>Student move out reminder (1 day before)</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox1" type="checkbox" checked>
-                                                                                                <label for="checkbox1"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="Studentmoveout2" type="checkbox" checked>
-                                                                                                <label for="Studentmoveout2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td colspan="3"><h1 class="mt-15 mb-15">Reviews </h1></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>Rate your home visit</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox1" type="checkbox" checked>
-                                                                                                <label for="checkbox1"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox2" type="checkbox">
-                                                                                                <label for="checkbox2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>Rate a student</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox1" type="checkbox" checked>
-                                                                                                <label for="checkbox1"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox2" type="checkbox">
-                                                                                                <label for="checkbox2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                                <td>Student posted a review about your homestay</td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox1" type="checkbox" checked>
-                                                                                                <label for="checkbox1"> </label>
-                                                                                        </div></td>
-                                                                                <td class="center"><div class="checkbox checkbox-primary">
-                                                                                                <input id="checkbox2" type="checkbox">
-                                                                                                <label for="checkbox2"> </label>
-                                                                                        </div></td>
-                                                                        </tr>
-                                                                </tbody>
-                                                        </table>
-                                                        <div class="form-horizontal mt-50">
-                                                                <div class="form-group">
-                                                                        <div class="col-sm-offset-3 col-sm-6">
-                                                                                <button type="submit" class="btn btn-block btn-default">SAVE CHANGES</button>
-                                                                        </div>
+                                                        <div class="col-md-3 hidden-xs hidden-sm">
+                                                                <div class="panel panel-default panel-picture mb-15">
+                                                                        <div class="panel-body"> <a href="javascript:" data-toggle="modal" data-target="#detail"  class="panel-info-icon"><i class="fa fa-info-circle fa-fw fa-red"></i></a> <img src="../images/avatar1.png" class="img-circle img-responsive img-table"> </div>
                                                                 </div>
+                                                                <a href="javascript:" class="btn-link btn-block">Edit Photo</a> </div>
+                                                </div>
+                                        </div>
+                                        <div class="tabContent" id="NotificationSettings">
+                                        <table class="table table--db--st1">
+                                                <thead>
+                                                        <tr>
+                                                                <th class="col-md-8">&nbsp;</th>
+                                                                <th class="center">Email</th>
+                                                                <th class="center">Text Message</th>
+                                                        </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <tr>
+                                                                <td colspan="3"><h1  class="mt-15 mb-15">Bookings </h1></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>New booking request</td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="request" type="checkbox" checked >
+                                                                                <label for="request"> </label>
+                                                                        </div></td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="request2" type="checkbox" checked>
+                                                                                <label for="request2"> </label>
+                                                                        </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Booking updates (changes, cancellations, extensions)</td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="extensions" type="checkbox" checked>
+                                                                                <label for="extensions"> </label>
+                                                                        </div></td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="cancellations" type="checkbox" checked>
+                                                                                <label for="checcancellationskbox2"> </label>
+                                                                        </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Student move in confirmation</td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="movein" type="checkbox" checked>
+                                                                                <label for="movein"> </label>
+                                                                        </div></td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="checkbox2" type="checkbox">
+                                                                                <label for="checkbox2"> </label>
+                                                                        </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Student move out confirmation</td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="moveout" type="checkbox" checked>
+                                                                                <label for="moveout"> </label>
+                                                                        </div></td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="checkbox2" type="checkbox">
+                                                                                <label for="checkbox2"> </label>
+                                                                        </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Payment release</td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="checkbox1" type="checkbox" checked>
+                                                                                <label for="checkbox1"> </label>
+                                                                        </div></td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="checkbox2" type="checkbox">
+                                                                                <label for="checkbox2"> </label>
+                                                                        </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td colspan="3"><h1 class="mt-15 mb-15">Communication </h1></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>New message from student</td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="Communication" type="checkbox" checked>
+                                                                                <label for="Communication"> </label>
+                                                                        </div></td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="Communication2" type="checkbox" checked>
+                                                                                <label for="Communication2"> </label>
+                                                                        </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Communication with Homestay Match (policy changes etc)</td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="checkbox1" type="checkbox" checked>
+                                                                                <label for="checkbox1"> </label>
+                                                                        </div></td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="checkbox2" type="checkbox">
+                                                                                <label for="checkbox2"> </label>
+                                                                        </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td colspan="3"><h1 class="mt-15 mb-15">Reminders </h1></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Student move in reminder (1 week before)</td>
+                                                                <td class="center"><div class="checkbox checkbox-primary">
+                                                                                <input id="Studentmove" type="checkbox" checked>
+                                                                                <label for="Studentmove"> </label>
+                                                                        </div></td>
+                                                        </div>
+                                                        </td>
+                                                
+                                                
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="Studentmove2" type="checkbox" >
+                                                                        <label for="Studentmove2"> </label>
+                                                                </div></td>
+                                                </tr>
+                                                <tr>
+                                                        <td class="mt-15 mb-15">Student move in reminder (1 day before)</td>
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="Studentmove1" type="checkbox" checked>
+                                                                        <label for="Studentmove1"> </label>
+                                                                </div></td>
+                                                        <td class="center"><div class="checkbox checkbox-primary" >
+                                                                        <input id="Studentmove3" type="checkbox" checked>
+                                                                        <label for="Studentmove3"> </label>
+                                                                </div></td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Student move out reminder (1 week before)</td>
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="checkbox1" type="checkbox" checked>
+                                                                        <label for="checkbox1"> </label>
+                                                                </div></td>
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="checkbox2" type="checkbox">
+                                                                        <label for="checkbox2"> </label>
+                                                                </div></td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Student move out reminder (1 day before)</td>
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="checkbox1" type="checkbox" checked>
+                                                                        <label for="checkbox1"> </label>
+                                                                </div></td>
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="Studentmoveout2" type="checkbox" checked>
+                                                                        <label for="Studentmoveout2"> </label>
+                                                                </div></td>
+                                                </tr>
+                                                <tr>
+                                                        <td colspan="3"><h1 class="mt-15 mb-15">Reviews </h1></td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Rate your home visit</td>
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="checkbox1" type="checkbox" checked>
+                                                                        <label for="checkbox1"> </label>
+                                                                </div></td>
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="checkbox2" type="checkbox">
+                                                                        <label for="checkbox2"> </label>
+                                                                </div></td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Rate a student</td>
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="checkbox1" type="checkbox" checked>
+                                                                        <label for="checkbox1"> </label>
+                                                                </div></td>
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="checkbox2" type="checkbox">
+                                                                        <label for="checkbox2"> </label>
+                                                                </div></td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Student posted a review about your homestay</td>
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="checkbox1" type="checkbox" checked>
+                                                                        <label for="checkbox1"> </label>
+                                                                </div></td>
+                                                        <td class="center"><div class="checkbox checkbox-primary">
+                                                                        <input id="checkbox2" type="checkbox">
+                                                                        <label for="checkbox2"> </label>
+                                                                </div></td>
+                                                </tr>
+                                                        </tbody>
+                                                
+                                        </table>
+                                        <div class="form-horizontal mt-50">
+                                                <div class="form-group">
+                                                        <div class="col-sm-offset-3 col-sm-6">
+                                                                <div class="row">
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" class="btn btn-block btn-lgt">CANCEL</button>
+                                                                                                </div>
+                                                                                                <div class="col-md-6 col-xs-6">
+                                                                                                        <button type="submit" disabled class="btn btn-block">SAVE CHANGES</button>
+                                                                                                </div>
+                                                                                        </div>
                                                         </div>
                                                 </div>
                                         </div>
                                 </div>
-                        </section>
-                </div>
+                        </div>
+                        </div>
+                </section>
         </div>
 </div>
+</div>
 <!--  Footer  -->
+
+<!-- Modal -->
+<div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>Smile! Upload a clear profile picture and let the students see you.</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="Welcome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+    <p>  Tell students a bit more about yourself. You could include your hobbies, occupation, hosting experience or why you have decided to host. You can see some successful examples here:</p> 
+
+
+
+<strong> Examples: </strong>
+
+
+ <p>
+a)Hi, my name is Roger.  I am a real estate agent who enjoys spending time with my wife and daughter. We have been hosting international students for 5 years now, and we absolutely love getting to know students from around the globe. </p>
+
+
+ <p>
+b)Welcome to my homestay! My name is Jeffery, I am a technology entrepreneur. When free, I appreciate a great movie and hangtime with friends. I studied abroad for a year my junior of college in the UK, and was lucky enough to be hosted by some amazing people I now consider family. I just want to return that favor. 
+     </p>
+
+ <p>
+
+c)Hello, my name is Bethany. I am a stay-at home mom of two. In my free time I enjoy cooking, going to the beach and reading. My husband and I love opening our home to people and creating a place for them to call home. We hope to host you soon!
+     </p>
+
+ <p>
+
+d)Hello students! My name is Ruth and I am a retired teacher. My children are off to college and I’ve found myself with an empty nest. I would love to meet people from around the world. In my spare time I enjoy going to the theatre, gym and eating out.
+     </p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
 
 <div class="otherContainer">
         <div class="buttonContainer">
@@ -411,7 +505,7 @@
 <script src="../js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
 <script src="../js/jquery.knob.js"></script> <!--  plugin to provide customisable notifications  --> 
 
-<script src="../plugins/responsivetabs/jquery.bootstrap-responsive-tabs.min.js"></script>
+<script src="../plugins/responsivetabs/jquery.bootstrap-responsive-tabs.min.js"></script> 
 
 <!-- Google language translation --> 
 <script type="text/javascript">

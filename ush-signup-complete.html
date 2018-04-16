@@ -38,106 +38,44 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
 </head>
 
-<body  data-spy="scroll" data-target=".scrollspy">
-<header class="top fixed">
-        <div class="container"> <a class="logo" href="/"><img src="images/logo.svg" class="img-responsive"/></a>
-                <nav class="mainmenu">
-                        <ul>
-                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
-                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
-                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a></li>
-                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
-                                <li>
-                                        <div class="dropdown drop-1" id="google_translate_element"></div>
-                                </li>
-                        </ul>
-                </nav>
-                <div class="nav-container">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                </div>
-                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
-        </div>
-</header>
+<body>
+<div class="host-signup host-ush"> <img src="images/ush.svg" class="img-responsive img-table"/>
+        <div class="overlay"></div>
+</div>
 <div class="container">
-        <div class="clearifx">
-                <div class="row">
-                        <div class="col-md-6 col-md-offset-3" >
-                                <div class="panel panel-default panel-payment mt-100 mb-100">
-                                        <div class="panel-body">
-                                                <h1>Move In Survey</h1>
-                                                <div class="payment-info">
-                                                        <label class="mb-15">1. Was everything ok with your move in?</label>
-                                                        <div class="clearfix"></div>
-                                                        <div class="fullwidth pull-left mb-20">
-                                                                <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="inlineRadio1" value="option1" name="radioInline" >
-                                                                        <label for="inlineRadio1"> Yes </label>
-                                                                </div>
-                                                                <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
-                                                                        <label for="inlineRadio2"> No </label>
-                                                                </div>
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                        <div class="panel panel-default panel-signup panel-ush">
+                                <h1 class="full-width text-center text-title">Host Registration</h1>
+                                <div class="panel-body">
+									  <div class="design-process-content pt-0">
+                                        <div class="row">
+                                                <div class="col-md-offset-2 col-sm-offset-2  col-sm-8 col-md-8">
+                                                        <h3 class="text-md mt-0">Thank you for registering with us!</h3>
+                                                        <p>We have sent a confirmation email to mike.host@gmail.com with important information.</p>
+                                                        <p class="mb-30">If you don't receive the email within 24 hours, please contact +1123456.</p>
+                                                        <h3 class="text-md">...before you go....</h3>
+                                                        <p>Please tell us how you heard about USH:</p>
+                                                        <div class="form-group">
+                                                                <select class="form-control  mb-30">
+                                                                        <option value="" disabled selected></option>
+                                                                </select>
                                                         </div>
-                                                        <div class="clearfix"></div>
-                                                        <label class="mb-15">2. Did your host give you a house key upon arrival?</label>
-                                                        <div class="clearfix"></div>
-                                                        <div class="fullwidth pull-left mb-20">
-                                                                <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="arrival1" value="option1" name="arrival1" >
-                                                                        <label for="arrival1"> Yes </label>
-                                                                </div>
-                                                                <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="arrival2" value="option1" name="arrival1">
-                                                                        <label for="arrival2"> No </label>
-                                                                </div>
-                                                        </div>
-                                                        <div class="clearfix"></div>
-                                                        <label class="mb-15">3. Is the house as you expected it?</label>
-                                                        <div class="clearfix"></div>
-                                                        <ul class="list-colors">
-                                                                <li><a  role="button" data-toggle="collapse" href="#rating" aria-expanded="false" aria-controls="rating"><img src="images/icons/terrible.svg"/>Terrible</a></li>
-                                                                <li><a role="button" data-toggle="collapse" href="#rating" aria-expanded="false" aria-controls="rating"><img src="images/icons/bad.svg"/>Bad</a></li>
-                                                                <li><a href=""><img src="images/icons/ok.svg"/>Ok</a></li>
-                                                                <li><a href=""><img src="images/icons/good.svg"/>Good</a></li>
-                                                                <li><a href=""><img src="images/icons/fantastic.svg"/>Fantastic</a></li>
-                                                        </ul>
-                                                        <div class="clearfix"></div>
-                                                        <div class="collapse" id="rating">
-                                                                <textarea class="form-control  mb-20" style="height: 120px !important" placeholder="(Optional) Please tell us about the bad things that you didn't expect..."></textarea>
-                                                        </div>
-                                                    
-                                                        <div class="clearfix"></div>
-                                                    
-                                                    
-                                                        <label class="mb-15">4. Is the bedroom as you expected it?</label>
-                                                        <div class="clearfix"></div>
-                                                        <ul class="list-colors">
-                                                                  <li><a  role="button" data-toggle="collapse" href="#rating1" aria-expanded="false" aria-controls="rating1"><img src="images/icons/terrible.svg"/>Terrible</a></li>
-                                                                <li><a role="button" data-toggle="collapse" href="#rating1" aria-expanded="false" aria-controls="rating1"><img src="images/icons/bad.svg"/>Bad</a></li>
-                                                                <li><a href=""><img src="images/icons/ok.svg"/>Ok</a></li>
-                                                                <li><a href=""><img src="images/icons/good.svg"/>Good</a></li>
-                                                                <li><a href=""><img src="images/icons/fantastic.svg"/>Fantastic</a></li>
-                                                        </ul>
-                                                        <div class="clearfix"></div>
-                                                        <div class="collapse" id="rating1">
-                                                                <textarea class="form-control  mb-20" style="height: 120px !important" placeholder="(Optional) Please tell us about the bad things that you didn't expect..."></textarea>
-                                                        </div>
-                                                     <div class="clearfix"></div>
-                                                    
-                                                    <label class="mb-15">5. Is there anything else you would like to tell us, so we can help you?</label>
-                                                        <textarea class="form-control mb-30" style="height: 120px !important" placeholder="(Optional) Please tell us..."></textarea>
-                                                        <button type="submit" class="btn btn-block btn-default">Submit the survey</button>
-                                                       </div>
+                                                        <h3 class="text-md mb-20 mt-40">Thank you!</h3>
+													<div class="clearfix"></div>
+                                                        <a href="host-signup-complete.html"  class="btn btn-primary btn-table btn-primary-line" >GO BACK TO HOMEPAGE </a> </div>
                                         </div>
+										  
+										   </div>
                                 </div>
                         </div>
                 </div>
         </div>
 </div>
+<div class="clearfix"></div>
 
 <!--  Footer  -->
+
 
 <div class="otherContainer">
         <div class="buttonContainer">
@@ -178,8 +116,6 @@
 <script src="js/swiper.min.js"></script> 
 <script>
 
-    
-    
         var map;
 
         var myCenter = new google.maps.LatLng(34.069297, -118.455495);
@@ -401,16 +337,34 @@
                 $(function(){
 
 					//******   Scrolling FORM   ********/
-						$(window).on('beforeunload', function(){
-						  $(window).scrollTop(0);
-						});
-						$('#profile-form-box').affix({
-							offset: {
-								//top: 100,
-								top: $('#profile-form-box').offset().top - 90,
-								bottom: $('#Map').outerHeight(true) + 520
-							}
-						});
+
+					//$(window).resize(function() {
+
+						var $scrollingDiv = $("#profile-form-box");
+
+						var $mapDivPosition = $("#Map").position();
+
+						var $bottomLimit = $mapDivPosition.top - 770;
+
+						if ($(window).width() > 800) {
+
+							$(window).scroll(function(){
+
+								if ($(window).scrollTop() >= 550  && $(window).scrollTop() < $bottomLimit) {
+
+									$scrollingDiv.addClass("fixed-form");
+
+								} else  {
+
+									$scrollingDiv.removeClass("fixed-form");
+
+								}
+
+							});
+
+						}
+
+					//});
 
 					//******   Date Picker   ********/
 
@@ -544,6 +498,19 @@
     });
 
 	
+	
+	// script for tab steps
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+        var href = $(e.target).attr('href');
+        var $curr = $(".process-model  a[href='" + href + "']").parent();
+
+        $('.process-model li').removeClass();
+
+        $curr.addClass("active");
+        $curr.prevAll().addClass("visited");
+    });
+// end  script for tab steps
 
 	
 

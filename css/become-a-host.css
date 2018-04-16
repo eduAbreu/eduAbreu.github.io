@@ -1,0 +1,81 @@
+/** CORE **/
+html,
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 400;
+}
+
+/** SECTION HEADER **/
+.clsbecome-a-host .section-header {
+  height: 100vh;
+}
+
+.section-hosting h2,
+.section-hosting h3,
+.section-hosting p {
+  text-align: left;
+}
+
+.section-hosting h2,
+.section-hosting h3 {
+  margin: 0px 0px 20px;
+  color: #4B5C74;
+}
+
+.section-hosting p {
+  color: #798DA9;
+  font-size: 20px;
+}
+
+.section-hosting:not(:first-child) h2 {
+  margin-top: 60px;
+}
+
+.section-hosting .cl-blue {
+  color: #1da0f3;
+  font-weight: 600;
+}
+
+.section-hosting .how-it-works-list {
+  list-style: none;
+  margin: 40px 0px 0px;
+  padding: 0px;
+}
+
+.section-hosting .how-it-works-list li {
+  margin-bottom: 40px;
+}
+
+.section-hosting .how-it-works-list p {
+  margin: 0px;
+}
+
+.section-hosting .how-it-works-list img {
+  position: relative;
+  margin: 0 auto 20px;
+}
+
+.section-hosting h3 {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.clsbecome-a-host .btn {
+  margin-top: 20px;
+  padding: 15px 80px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 480px) {
+  .section-hosting .how-it-works-list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .section-hosting .how-it-works-list img {
+    margin-right: 30px;
+    top: -10px;
+  }
+}

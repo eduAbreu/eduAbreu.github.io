@@ -129,6 +129,9 @@ ul.list-features li h2 {
 ul.list-features li p {
     margin-bottom: 0px;
 }
+ul.list-features li p i {
+    color: #009ee1;
+}
 /*
 ---------------
 Canvas Pie Chart
@@ -327,7 +330,7 @@ textarea.form-control {
     color: #4d4d4d;
 }
 .dashboard-content .counter, .dashboard-content a.counter {
-    float: left;
+ float: left;
     width: 100%;
     background: #d9f2ff;
     height: 41px;
@@ -337,7 +340,12 @@ textarea.form-control {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 17px;
+}
+.dashboard-content .counter.remove , .dashboard-content a.counter.remove
+{
+        background: #ffeaeb;
+      color: #fa7476;
 }
 .dashboard-content .counter img {
     height: 24px;

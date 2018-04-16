@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>Universal Student Housing | Student Dashboard</title>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="css/selectric.css" />
+<!--  jQuery plugin to customize HTML selects -->
+<link rel="stylesheet" type="text/css" href="css/hint.min.css" />
+<!-- tooltip library -->
+<link rel="stylesheet" type="text/css" href="plugins/datepicker/bootstrap-datepicker3.css" />
+<!-- daterange calendar -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<!-- bootstrap library -->
+<link rel="stylesheet" type="text/css" href="css/sumoselect.min.css" />
+<!--  Single/Multi Select plugin  -->
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<!--  Single/Ion Range Slider  -->
+<link rel="stylesheet" type="text/css" href="plugins/ionslider/css/ion.rangeSlider.css" />
+<link rel="stylesheet" type="text/css" href="plugins/ionslider/css/ion.rangeSlider.skinFlat.css" />
+<!--  DropZone  -->
+
+<link rel="stylesheet" type="text/css" href="plugins/dropzone/css/basic.min.css" />
+<link rel="stylesheet" type="text/css" href="plugins/dropzone/css/dropzone.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+</head>
+
+<body  data-spy="scroll" data-target=".scrollspy">
+<header class="top fixed">
+        <div class="container"> <a class="logo" href="/"><img src="images/logo.svg" class="img-responsive"/></a>
+                <nav class="mainmenu">
+                        <ul>
+                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
+                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
+                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a></li>
+                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
+                                <li>
+                                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                                </li>
+                        </ul>
+                </nav>
+                <div class="nav-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
+        </div>
+</header>
+<div class="container">
+        <div class="clearifx">
+                <div class="row  mt-100 mb-100">
+                        <div class="col-md-8">
+                                <p class="text-danger">Please reply to Michelle's booking request within 24 hours.</p>
+                                <h1 class="title-h1 mb-20">Michelle sent you a booking request!</h1>
+                                <div class="clearfix"></div>
+                                <div class="review">
+                                        <h2 class="mb-20">Here's the details:</h2>
+                                        <table class="table table-no-border">
+                                                <tr>
+                                                        <td> Listing: </td>
+                                                        <td> Blue Bedroom </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Move in: </td>
+                                                        <td> July 6th 2018 (Friday) </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Move out: </td>
+                                                        <td> July 28th 2018 (Saturday) </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Occupancy: </td>
+                                                        <td> Private Room </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Meal Plan: </td>
+                                                        <td> Room with Breakfast and Dinner </td>
+                                                </tr>
+                                        </table>
+                                        <h2 class="mb-20">About Michelle:</h2>
+                                        <table class="table table-no-border">
+                                                <tr>
+                                                        <td> Gender: </td>
+                                                        <td> Female </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Age: </td>
+                                                        <td> 25 years old </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Nationality: </td>
+                                                        <td> Germany </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Occupation: </td>
+                                                        <td> Occupation </td>
+                                                </tr>
+                                                <tr>
+                                                        <td colspan="2">Nonsmoker</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>English Level: </td>
+                                                        <td>Advanced </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Purpose of stay: </td>
+                                                        <td> Lorem Ipsum is dummy text of web industry. </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Special requirements: </td>
+                                                        <td> Lorem Ipsum is dummy text of web industry. </td>
+                                                </tr>
+                                        </table>
+                                        <h2 class="mb-20">Your potential earnings:</h2>
+                                        <table class="table table-no-border">
+                                                <tr>
+                                                        <td> Length of stay: </td>
+                                                        <td>31 days </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>You can earn: </td>
+                                                        <td><strong>$799.95</strong></td>
+                                                </tr>
+                                        </table>
+                                        <p class="text-danger">Homestay Match fees already included.</p>
+                                </div>    
+                             
+                            
+                             </div>
+                    
+                     <div class="col-md-4 "> <img src="images/bedroom2.jpg" class="img-responsive mt-100 img-rounded" /> </div>
+                            
+                                    <div class="clearfix"></div>
+                                       
+                                            
+                                            <div class="col-md-12 mt-30 mb-20">
+                                    <ul class="list-legends inline-legend">
+                                                                                                <li class="lb">Jun-seo</li>
+                                                                                                <li class="g">Luke</li>
+                                                                                                <li class="r">Not Available</li>
+                                                                                        </ul>
+                                
+                                </div>
+                                    
+                                                <div class="col-md-4">
+                                                        <div class="panel-date">
+                                                                <h2>February 2018</h2>
+                                                                <div id="inline-datepicker1">
+                                                                        <div></div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <div class="panel-date">
+                                                                <h2>March 2018</h2>
+                                                                <div id="inline-datepicker2">
+                                                                        <div></div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <div class="panel-date">
+                                                                <h2>April 2018</h2>
+                                                                <div id="inline-datepicker3">
+                                                                        <div></div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <div class="panel-date">
+                                                                <h2>May 2018</h2>
+                                                                <div id="inline-datepicker4">
+                                                                        <div></div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                            
+                                            <div class="col-md-4">
+                                                        <div class="panel-date">
+                                                                <h2>June 2018</h2>
+                                                                <div id="inline-datepicker5">
+                                                                        <div></div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                            
+                                            
+                                            <div class="col-md-4">
+                                                        <div class="panel-date">
+                                                                <h2>July 2018</h2>
+                                                                <div id="inline-datepicker6">
+                                                                        <div></div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                    
+                      <div class="col-md-4 col-md-offset-4 mt-30">
+                          
+                          <p class="text-center mb-20">Your potential earning for this homestay is $799.95</p>
+                          <a href="Booking-Review-Complete.html"  class="btn btn-block">Confirm Michelle's Homestay</a>
+                          <a href="javascript:"  class="btn btn-block btn-lgt">Deny Michelle's Homestay</a>
+                          
+                          <p class="text-center mb-20">If you have any questions, <strong>Talk to us </strong></p>
+                    </div>
+                    
+                    
+                    
+                                        
+                               
+                       
+                      
+                </div>
+        </div>
+</div>
+
+<!--  Footer  -->
+
+<div class="otherContainer">
+        <div class="buttonContainer">
+                <button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+        </div>
+</div>
+<div class="ontop"></div>
+
+<!-- Popup Group DIV -->
+
+<div id="popup-group" class="popup-wrapper"></div>
+
+<!-- Popup Group DIV end //--> 
+
+<!--  JAVASCRIPT  --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery-ui.min.js"></script> 
+<script src="js/jquery.ui.touch-punch.min.js"></script> 
+<script src="js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects --> 
+<script src="js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   --> 
+<script src="js/bootstrap.min.js"></script> 
+<!--<script src="js/custom.js"></script> --><script src="js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  --> 
+<script src="js/daterangepicker.js"></script> <!--  date picker  --> 
+<script src="js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
+<script src="js/jquery.knob.js"></script> <!--  Pie Chart  --> 
+<script src="plugins/ionslider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script> <!--  Range Slider  --> 
+
+<script src="plugins/datepicker/bootstrap-datepicker.min.js"></script> <!--  Range Slider  --> 
+<script src="plugins/responsivetabs/jquery.bootstrap-responsive-tabs.min.js"></script> 
+
+<script src="plugins/dropzone/js/dropzone.js"></script> 
+<!-- Google language translation --> 
+<script type="text/javascript">
+           		var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
+            	function googleTranslateElementInit(){
+					if (duplicate_google_translate_counter == 0) {
+						new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false,layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');function changeGoogleStyles(){if($('.goog-te-menu-frame').contents().find('.goog-te-menu2').length){$('.goog-te-menu-frame').contents().find('.goog-te-menu2').css({'max-width':'100%','overflow-x':'auto','box-sizing':'border-box','height':'auto'});}else{setTimeout(changeGoogleStyles,50);}}changeGoogleStyles();
+					}
+					duplicate_google_translate_counter++;
+				}
+            </script> 
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+<script type="text/javascript">
+ $(document).ready(function() {
+     
+     $('#inline-datepicker1 div').datepicker({
+});
+     
+      $('#inline-datepicker2 div').datepicker({
+});
+     
+     
+      $('#inline-datepicker3 div').datepicker({
+});
+     
+      $('#inline-datepicker4 div').datepicker({
+});
+     
+      $('#inline-datepicker5 div').datepicker({
+});
+     
+      $('#inline-datepicker6 div').datepicker({
+});
+     
+     $("#range_33").ionRangeSlider({
+		min: 400,
+		//step: 200,
+		max: 1000,
+		from: 700
+   
+         //prefix: "$"
+});
+        /* create jQuery knob with .dial class */
+        $(".dial").knob({
+            'readOnly': true
+        });
+
+       
+        animateChart('chart_anim_3', 0, 40);
+
+        /* Update circle value when input.animate changes */
+        $("input.dial").change(function () {
+            $(this).parent().siblings(".circle").find(".pie_value").text($(this).val() + "%");
+        })
+
+        /* Animate chart from start_val to end_val */
+        function animateChart (chart_id, start_val, end_val) {
+            $({chart_value: start_val}).animate({chart_value: end_val}, {
+                duration: 1000, // 1 second animation
+                easing: 'swing',
+                step: function () {
+                    $('#' + chart_id).val(Math.ceil(this.chart_value)).trigger('change');
+                },
+                complete: function () {
+                    /* complete */
+                    console.log('complete');
+                }
+            });
+        };
+     
+      $('.tabbing').mTab({
+		 navigation: ".tabNav"
+		,container: ".tabContainer"
+		,activeTab: 1
+		,activeClass: "active"
+		,scrollOffset: true
+		,accordScreen: 767
+		,toggleClose: true
+		,animation: false
+		,openWithUrl: true
+		,callbackonclick:  function() {  }
+		,callback: function() {  }
+	});
+	
+	//close by default all the accordion menu at a mobile level 
+	if ($(window).width() < 768) {
+    	$('.mResAccordAnchor').removeClass('active');
+		$('.mTabContent').removeClass('mTabActive');
+	}
+	//Next button
+	$('.back-panel').click(function(){
+		var nextPage = ($(this).attr('nextPage'));
+		//disable current tab and content
+		$('.mResTabNavTab').removeClass('active');
+		$('.mTabContent').removeClass('mTabActive');
+		//acrive new tab and conten
+		$('a[href="#' + nextPage + '"]').parent().addClass('active');
+		$('#' + nextPage).addClass('mTabActive');
+		$('#' + nextPage).removeClass('defaultState');
+		$(window).scrollTop(0);
+	});
+});
+</script>
+</body>
+</html>
