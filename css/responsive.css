@@ -493,6 +493,12 @@ FOOTER Queruires
 }
 
 @media screen and (max-width: 500px) {
+    
+    .review .table tr td:first-child {
+    font-weight: 600;
+    width: 50% !important;
+    color: #222;
+}
 .pl-xs-150 {
     padding-left: 10px !important
 }
