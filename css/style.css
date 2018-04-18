@@ -7380,7 +7380,7 @@ button.accordiontab:first-child {
     margin: 0;
     height: 55px;
     padding-top: 10px;
-    z-index: 9999;
+    z-index: 999;
     position: fixed!important;
     top: 0;
 }
@@ -9273,7 +9273,7 @@ ul.list-social li a:hover {
 }
 .host-signup.host-ush .overlay
 {
-        background: rgba(237, 132, 88, 0.8) !important;
+           background: rgba(110, 183, 163, .8) !important;
 }
 .panel-signup .text-title {
     float: left;
@@ -9289,9 +9289,9 @@ ul.list-social li a:hover {
 }
 .panel-ush .btn
 {
-        background-color: #ED8458;
-    border-bottom: 0px solid rgba(237, 132, 88, 1);
-    box-shadow: 1px 4px 21px rgba(237, 132, 88, .5);
+            background-color: rgb(110, 183, 163);
+    border-bottom: 0px solid #6eb7a3;
+    box-shadow: 1px 4px 21px rgba(110, 183, 163, .5);
 }
 
 .panel-ush .process-model li.active i {
@@ -9323,7 +9323,9 @@ ul.list-social li a:hover {
     color: #ED8458 !important;
 }
 
-.panel-signup label {
+
+
+.panel-signup .checkbox label {
     padding-left: 15px !important;
 }
 .panel-ush.panel-signup .checkbox label::before
@@ -9376,13 +9378,13 @@ ul.list-social li a:hover {
 
 .panel-ush.panel-signup .btn-primary-line
 {
-        background: #fff;
-    border: 2px solid #ED8458 !important;
-    color: #ED8458 !important;
+       background: #fff;
+    border: 2px solid #6eb7a3 !important;
+    color: #6eb7a3 !important;
 }
 .panel-ush.panel-signup .btn-primary-line:hover , .panel-ush.panel-signup .btn-primary-line:focus
 {
-    background: #ED8458 !important;
+    background: #6eb7a3 !important;
     color: #fff !important;
 }
 .panel-signup {
@@ -9796,6 +9798,7 @@ ul.list-social li a:hover {
 }
 .radio.radio-inline {
     margin-top: 0;
+    margin-left: 0;
 }
 .radio-primary input[type="radio"] + label::after {
     background-color: #337ab7;
@@ -11049,4 +11052,18 @@ ul.list-legends.inline-legend li {
 ul.list-legends.inline-legend li:last-child
 {
     margin-right: 0px !important;
+}
+
+.modal-body .panel.panel-payment
+{
+    float: none;
+    width: auto;
+    box-shadow: none !important;
+    border: none !important;
+    margin-bottom: 0px !important;
+}
+
+.modal-body .panel.panel-payment .panel-body
+{
+    padding: 0px !important;
 }

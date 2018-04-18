@@ -35,10 +35,11 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/custom.css" />
 <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<link rel="stylesheet" type="text/css" href="css/search-result.css" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
 </head>
-<body>
+<body class="clssearch-result">
 <header class="top fixed">
         <div class="container-fluid"> <a class="logo" href="/"><img src="images/logo.svg" alt="" class="img-responsive"/></a>
                 <nav class="mainmenu">
@@ -74,49 +75,78 @@
                         <ul class="jq-dropdown-menu">
                                 <li>
                                         <div class="radio">
-                                                <input type="radio" name="room" value="option1" checked>
+                                                <input type="radio" name="room" value="option1" class="private-radio-option">
                                                 <label for="Private"> Private Room </label>
                                         </div>
                                 </li>
                                 <li>
                                         <div class="radio">
-                                                <input type="radio" name="room" value="option2" checked>
+                                                <input type="radio" name="room" value="option2" class="shared-radio-option">
                                                 <label for="Shared"> Shared Room </label>
                                         </div>
                                 </li>
+                                <li class="jq-dropdown-divider shared-options shared-options_hidden"></li>
+                                <li class="shared-options shared-options_hidden">Guest 1</li>
                                 <li class="jq-dropdown-divider"></li>
                                 <li>
                                         <div class="radio">
-                                                <input type="radio" name="gender" value="option1" checked>
+                                                <input type="radio" name="gender" value="option1">
                                                 <label for="Male"> Male </label>
                                         </div>
                                 </li>
                                 <li>
                                         <div class="radio">
-                                                <input type="radio" name="gender" value="option2" checked>
+                                                <input type="radio" name="gender" value="option2">
                                                 <label for="Female"> Female </label>
                                         </div>
                                 </li>
                                 <li class="jq-dropdown-divider"></li>
                                 <li>
                                         <div class="radio">
-                                                <input type="radio" name="Smoker" value="option1" checked>
+                                                <input type="radio" name="Smoker" value="option1">
                                                 <label for="Smoker"> Smoker </label>
                                         </div>
                                 </li>
                                 <li>
                                         <div class="radio">
-                                                <input type="radio" name="Smoker" value="option2" checked>
+                                                <input type="radio" name="Smoker" value="option2">
                                                 <label for="NonSmoker"> Non Smoker </label>
                                         </div>
                                 </li>
-                            
-                             <li class="jq-dropdown-divider"></li>
-                            
-                             <li class="inline-block">
-                                <a href="javascript:" class="btn btn-default">Cancel</a>
-                                <a href="javascript:" class="btn btn-primary">Apply</a>
-                            </li>
+                                <li class="jq-dropdown-divider shared-options shared-options_hidden"></li>
+                                <li class="shared-options shared-options_hidden">Guest 2</li>
+                                <li class="jq-dropdown-divider shared-options shared-options_hidden"></li>
+                                <li class="shared-options shared-options_hidden">
+                                       <div class="radio">
+                                               <input type="radio" name="gender_friend" value="option1">
+                                               <label for="Smoker"> Male </label>
+                                       </div>
+                                </li>
+                                <li class="shared-options shared-options_hidden">
+                                         <div class="radio">
+                                                 <input type="radio" name="gender_friend" value="option2">
+                                                 <label for="NonSmoker"> Female </label>
+                                         </div>
+                                </li>
+                                <li class="jq-dropdown-divider shared-options shared-options_hidden"></li>
+                                <li class="shared-options shared-options_hidden">
+                                         <div class="radio">
+                                                 <input type="radio" name="smoke_friend" value="option1">
+                                                 <label for="Smoker"> Smoker </label>
+                                         </div>
+                                </li>
+                                <li class="shared-options shared-options_hidden">
+                                         <div class="radio">
+                                                 <input type="radio" name="smoke_friend" value="option2">
+                                                 <label for="NonSmoker"> Non Smoker </label>
+                                         </div>
+                                 </li>
+                                 <li class="jq-dropdown-divider"></li>
+
+                                 <li class="inline-block">
+                                    <a href="javascript:" class="btn btn-default">Cancel</a>
+                                    <a href="javascript:" class="btn btn-primary">Apply</a>
+                                </li>
                         </ul>
                 </div>
         </div>
@@ -124,13 +154,13 @@
 <!-- Main Top Image -->
 <div class="container-fluid search-container pb-30">
         <div class="row">
-            
+
              <div class="col-md-12 visible-xs hidde-sm hidden-md hidden-lg">
-                 
+
                  <div class="panel panel-default panel-mobile">
-                 
+
                      <div class="panel-body">
-                         
+
                          <select class="search-form place mb-20">
                         <option selected>University of California Los Angles</option>
                         <option selected>University of Michigen</option>
@@ -138,7 +168,7 @@
                          <div class="clearfix"></div>
                          <input class="search-form calendar fromDatePicker" data-float-label="true" data-label="move Out"  name="move-in" placeholder="Move in - Move out" tabindex="23" type="text" readonly="true" autocomplete="false">
                            <div class="clearfix"></div>
-                         
+
                          <div class="search-others" data-jq-dropdown="#jq-dropdown-1"> Private Room <span> <img src="images/male.svg" style="width:12px;" /> <img src="images/smoker.svg"/> </span> </div>
                 <div id="jq-dropdown-1" class="jq-dropdown jq-dropdown-tip">
                         <ul class="jq-dropdown-menu">
@@ -180,21 +210,21 @@
                                                 <label for="NonSmoker1"> Non Smoker </label>
                                         </div>
                                 </li>
-                            
+
                             <li class="jq-dropdown-divider"></li>
-                            
+
                              <li class="inline-block">
                                 <a href="javascript:" class="btn btn-default">Cancel</a>
                                 <a href="javascript:" class="btn btn-primary">Apply</a>
                             </li>
                         </ul>
                 </div>
-                         
+
                      </div>
                  </div>
-                 
+
             </div>
-            
+
             <div class="clearfix"></div>
                 <div class="col-md-12 fixed-btn">
                         <p class="pull-left">22 Homestays found</p>
@@ -334,7 +364,7 @@
                                         </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6">
-                                        <div class="panel-listing">
+                                        <div class="panel-listing" id="panel-listing-2">
                                                 <div class="swiper-container swiper-lists"> <a href="javascript:" class="link-heart"><img src="images/heart-filled.svg"/></a>
                                                         <div class="overlay-price">
                                                                 <p>From</p>
@@ -386,7 +416,7 @@
                                         </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6">
-                                        <div class="panel-listing">
+                                        <div class="panel-listing" id="panel-listing-1">
                                                 <div class="swiper-container swiper-lists"> <a href="javascript:" class="link-heart"><img src="images/heart-filled.svg"/></a>
                                                         <div class="overlay-price">
                                                                 <p>From</p>
@@ -412,7 +442,7 @@
                                         </div>
                                 </div>
                         </div>
-                    
+
                     <div class="clearfix"></div>
                         <p class="pull-left mt-xs-5 mt-md-10 mt-lg-15">Showing 8 of 22</p>
                         <nav class="nav-pagination pull-right">
@@ -431,6 +461,7 @@
                             <div class="iframe-container">
                                 <div id="Map" class="hidden-xs hidden-sm" >
                                     <div id="map-host"></div>
+                                    <div class="info-window"></div>
                                 </div>
                             </div>
                          <!--    <div class="iframe-container">
@@ -445,22 +476,134 @@
 <div class="ontop"></div>
 <!-- Popup Group DIV -->
 <div id="popup-group" class="popup-wrapper"></div>
-<!-- Popup Group DIV end //--> 
+<!-- Popup Group DIV end //-->
 
-<!--  JAVASCRIPT  --> 
-<script src="js/jquery.min.js"></script> 
-<script src="js/jquery-ui.min.js"></script> 
-<script src="js/jquery.ui.touch-punch.min.js"></script> 
-<script src="js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects --> 
-<script src="js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   --> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/custom.js"></script> 
-<script src="js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  --> 
-<script src="js/daterangepicker.js"></script> <!--  date picker  --> 
-<script src="js/notify.min.js"></script> <!--  plugin to provide customisable notifications  --> 
-<script src="js/swiper.min.js"></script> 
-<script src="js/jquery.dropdown.min.js"></script> 
-<!-- Google language translation --> 
+
+    <div class="modal fade" id="intermedaietform" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+        <button type="button" class="close hide" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+      <div class="modal-body">
+        <div class="panel panel-default panel-payment">
+                                        <div class="panel-body">
+                                                <h1>Help us find the best homestay for you</h1>
+                                                <div class="payment-info">
+                                                        <label class="mb-15">What are you looking for?</label>
+                                                        <div class="clearfix"></div>
+                                                        <div class="fullwidth pull-left mb-20">
+                                                                <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="inlineRadio1" value="option1" name="radioInline" >
+                                                                        <label for="inlineRadio1"> A Private Room (The entire room for myself) </label>
+                                                                </div>
+                                                                <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+                                                                        <label for="inlineRadio2"> A Shared Room (I will share the room with a friend) </label>
+                                                                </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+
+                                                        <div class="clearfix"></div>
+                                                        <div class="fullwidth pull-left mb-20">
+
+
+                                                            <div class="row">
+                                                                <div class="col-md-6 col-xs-5">
+                                                                  <label class="mb-15">Are you a:</label>
+                                                                    <div class="clearfix"></div>
+                                                                    <div class="radio radio-info">
+                                                                        <input type="radio" id="arrival1" value="option1" name="arrival1" >
+                                                                        <label for="arrival1"> Male </label>
+                                                                </div>
+                                                                <div class="radio radio-info">
+                                                                        <input type="radio" id="arrival2" value="option1" name="arrival1">
+                                                                        <label for="arrival2"> Female </label>
+                                                                </div>
+
+                                                                </div>
+                                                                <div class="col-md-6  col-xs-7">
+                                                                <label class="mb-15">Is your friend a:</label>
+                                                                    <div class="clearfix"></div>
+                                                                    <div class="radio radio-info">
+                                                                        <input type="radio" id="friend" value="option1" name="arrival1" >
+                                                                        <label for="friend"> Male </label>
+                                                                </div>
+                                                                <div class="radio radio-info">
+                                                                        <input type="radio" id="friend1" value="option1" name="arrival1">
+                                                                        <label for="friend1"> Female </label>
+                                                                </div>
+
+                                                                </div>
+
+
+                                                                </div>
+
+
+
+                                                            <div class="row">
+                                                                <div class="col-md-6  col-xs-5">
+                                                                  <label class="mb-15">Do you smoke?</label>
+                                                                    <div class="clearfix"></div>
+                                                                    <div class="radio radio-info">
+                                                                        <input type="radio" id="smoke" value="option1" name="arrival1" >
+                                                                        <label for="smoke"> Yes </label>
+                                                                </div>
+                                                                <div class="radio radio-info">
+                                                                        <input type="radio" id="smoke1" value="option1" name="arrival1">
+                                                                        <label for="smoke1"> No </label>
+                                                                </div>
+
+                                                                </div>
+                                                                <div class="col-md-6  col-xs-7">
+                                                                <label class="mb-15">Does your friend smoke?</label>
+                                                                    <div class="clearfix"></div>
+                                                                    <div class="radio radio-info">
+                                                                        <input type="radio" id="friendsmoke1" value="option1" name="arrival1" >
+                                                                        <label for="friendsmoke1"> Yes </label>
+                                                                </div>
+                                                                <div class="radio radio-info">
+                                                                        <input type="radio" id="friendsmoke2" value="option1" name="arrival1">
+                                                                        <label for="friendsmoke2"> No </label>
+                                                                </div>
+
+                                                                </div>
+
+
+                                                                </div>
+
+
+                                                        </div>
+
+
+
+                                                     <div class="clearfix"></div>
+
+
+                                                        <button type="submit" class="btn btn-block btn-default mb-0">Show Homestays</button>
+                                                       </div>
+                                        </div>
+                                </div>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--  JAVASCRIPT  -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/jquery.selectric.min.js"></script> <!--  jQuery plugin to customize HTML selects -->
+<script src="js/jquery.sumoselect.min.js"></script> <!-- jQuery plugin for Single/Multi Select   -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/moment.js"></script> <!-- Parse, validate, manipulate and display dates and times in JavaScript  -->
+<script src="js/daterangepicker.js"></script> <!--  date picker  -->
+<script src="js/notify.min.js"></script> <!--  plugin to provide customisable notifications  -->
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.dropdown.min.js"></script>
+<!-- Google language translation -->
 <script type="text/javascript">
 	var duplicate_google_translate_counter = 0;//this stops google adding button multiple times
 	function googleTranslateElementInit(){
@@ -469,21 +612,25 @@
 		}
 		duplicate_google_translate_counter++;
 	}
-</script> 
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script type="text/javascript">
 	//********  Date picker initialization   *********//
 	$(function(){
 		var today=new Date();
 		var firstDay=new Date(today.getFullYear(),today.getMonth(),1);$('.fromDatePicker').daterangepicker({"autoApply":true,"alwaysShowCalendars":true,"minDate":firstDay,"dateFormat":"mmm d yyyy","autoUpdateInput":false,"autoApply":true,"stepMonths":false,"minDate":today,"locale":{"format":"MMM D YYYY","separator":" - ",},isInvalidDate:function(date){return false;}},function(start,end,label){$('#fromDatePicker').val(start.format('MMM D YYYY')+' - '+end.format('MMM D YYYY'));});$("#date_of_birth").datepicker({dateFormat:'mm-dd-yy'});$("#date_of_birth2").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth1").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth2").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth3").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth4").datepicker({dateFormat:'mm-dd-yy'});$("#child_date_of_birth5").datepicker({dateFormat:'mm-dd-yy'});});$(document).ready(function(e){$('.daterangepicker').hide();$('.daterangepicker .table-condensed td').each(function(){alert($(this).attr('class'));});$('#destination').focusin(function(){});$('#destination').focusout(function(){});$('#fromDatePicker').focusin(function(){});$('#fromDatePicker').focusout(function(){});$('#toDatePicker').focusin(function(){});$('#toDatePicker').focusout(function(){});setTimeout(function(){var ssWinScroll=getCurrentScroll();if(ssWinScroll>=100){$('.h_new').addClass('fixed');}else{$('.h_new').removeClass('fixed');}},400);
-	
+
 	});
-</script> 
+</script>
 <!-- Google Map - list of destinations -->
 <!-- <script src="https://maps.google.com/maps/api/js?libraries=placeses,geometry,places&key=AIzaSyCiMT2KwUzR_nC52PZUXLHITgAlTdIKkrE"></script>  -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyAb63loxs1OJOsWwDOf-l9IVG_8oX0RsBs&amp;"></script>
 <script src="js/CustomMarker.js"></script>
 <script>
+
+     $(window).on('load',function(){
+        $('#intermedaietform').modal('show');
+    });
         var map;
         var myCenter = new google.maps.LatLng(34.025797, -118.455495);
         function initialize() {
@@ -502,24 +649,104 @@
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             map = new google.maps.Map(document.getElementById('map-host'), mapOptions);
-			//Markers
-			var marker1 = new google.maps.Marker({
-                position: new google.maps.LatLng(34.059297, -118.445254),
-                icon: "images/marker.png",
-                title: "UCLA Extension"
-            });
-            marker1.setMap(map);
 
-			var marker2 = new MarkerWithLabel({
-			  map: map,
-			  //animation: google.maps.Animation.DROP,
-			  position: new google.maps.LatLng(34.069839, -118.463289),
-			  icon: "images/marker2.png",
-			  labelContent: "$120",
-			  labelAnchor: new google.maps.Point(35, 36),
-			  labelClass: "custom-marker", // your desired CSS class
-			  labelInBackground: true
-			});
+      //Markers
+			var markerCollege = new google.maps.Marker({
+          position: new google.maps.LatLng(34.020960, -118.470687),
+          icon: {
+            scaledSize: new google.maps.Size(40, 40),
+            origin: new google.maps.Point(0,0),
+            anchor: new google.maps.Point(0, 0),
+            url: "images/school_marker.png",
+          },
+          title: "Santa Monica College"
+      });
+
+      markerCollege.setMap(map);
+
+			var marker1 = new google.maps.Marker({
+        position: new google.maps.LatLng(34.059297, -118.445254),
+        icon: {
+          scaledSize: new google.maps.Size(30, 40),
+          origin: new google.maps.Point(0,0),
+          anchor: new google.maps.Point(0, 0),
+          url: "images/location_marker.png",
+        },
+        labelClass: "custom-marker",
+      });
+      marker1.setMap(map);
+
+      var marker3 = new google.maps.Marker({
+        position: new google.maps.LatLng(34.039885, -118.469544),
+        icon: {
+          scaledSize: new google.maps.Size(30, 40),
+          origin: new google.maps.Point(0,0),
+          anchor: new google.maps.Point(0, 0),
+          url: "images/location_marker.png",
+        },
+        labelClass: "custom-marker"
+      });
+      marker3.setMap(map);
+
+      var previousMarker=null;
+      function closeMarkerInfo(infoId) {
+        $('.info-window').removeClass('show');
+        infoId.removeClass('highlight');
+        previousMarker = null;
+      }
+
+      marker1.addListener('click', function() {
+        $('.panel-listing').removeClass('highlight');
+        $('.info-window').html(
+          '<div class="d-flex justify-content-space-between align-items-center">' +
+          '<h1>Mike L.</h1>' +
+          '<img src="images/avatar1.jpg" alt="img-avatar img-responsive" />' +
+          '</div>' +
+          '<div class="info-room-info">' +
+          '<p class="info-room-name">Blue Bedroom</p>' +
+          '<p class="info-room-price">From $32 per day</p>' +
+          '</div>' +
+          '<div class="info-room-info">' +
+          '<p class="info-room-name">Blue Bedroom</p>' +
+          '<p class="info-room-price">From $32 per day</p>' +
+          '</div>'
+        );
+        if(this === previousMarker) {
+          closeMarkerInfo($('#panel-listing-1'));
+        } else {
+          $('.info-window').addClass('show');
+          $('#panel-listing-1').addClass('highlight');
+          $('html, body').animate({scrollTop: $('#panel-listing-1').offset().top}, 1000);
+          previousMarker = this;
+        }
+      });
+
+      marker3.addListener('click', function() {
+        $('.panel-listing').removeClass('highlight');
+        $('.info-window').html(
+          '<div class="d-flex justify-content-space-between align-items-center">' +
+          '<h1>Rachel S.</h1>' +
+          '<img src="images/ava5.jpg" alt="img-avatar img-responsive" />' +
+          '</div>' +
+          '<div class="info-room-info">' +
+          '<p class="info-room-name">Blue Bedroom</p>' +
+          '<p class="info-room-price">From $32 per day</p>' +
+          '</div>'
+        );
+        if(this === previousMarker) {
+          closeMarkerInfo($('#panel-listing-2'));
+        } else {
+          $('.info-window').addClass('show');
+          $('#panel-listing-2').addClass('highlight');
+          $('html, body').animate({scrollTop: $('#panel-listing-2').offset().top - 50}, 1000);
+          previousMarker = this;
+        }
+      });
+
+      /** CLICK EVENT INSIDE MAP CONTAINER **/
+      map.addListener('click', function() {
+        closeMarkerInfo($('.panel-listing'));
+      });
 		}
 		google.maps.event.addDomListener(window, 'load', initialize);
 </script>
@@ -533,15 +760,15 @@
 		var parentwidth = $(".relativeparent").width();
 	   $(".fixchild").width(parentwidth);
 	 }
-		 
+
 	$(window).resize(function() {
        adjustWidth();
-     }) 
+     })
 	//********  Date picker initialization   *********//
 	$(function(){
 		adjustWidth();
 	});
-    
+
     var swiper = new Swiper('.swiper-container', {
        slidesPerView: 1,
          loop: true,
@@ -550,7 +777,15 @@
         prevEl: '.swiper-button-prev',
       }
     });
-    
+
+    $('.jq-dropdown-menu input[type=radio]').click(function() {
+      if ( $(this).hasClass('shared-radio-option') && $(this).is(':checked') )
+        $('.shared-options').removeClass('shared-options_hidden');
+      else if ( $(this).hasClass('private-radio-option') && $(this).is(':checked') )
+        $('.shared-options').addClass('shared-options_hidden');
+    });
+
+
 </script>
 </body>
 </html>

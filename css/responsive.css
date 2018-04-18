@@ -514,6 +514,11 @@ FOOTER Queruires
         
     }
     
+    .panel.panel-payment label
+    {
+        font-size: 13px !important;
+    }
+    
 
 }
 

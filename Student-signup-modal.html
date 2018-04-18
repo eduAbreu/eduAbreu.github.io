@@ -38,14 +38,132 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
 </head>
 
-<body>
-<div class="host-signup"> <img src="images/logo.svg" alt="" class="img-responsive img-table"/>
-        <div class="overlay"></div>
-</div>
+<body  data-spy="scroll" data-target=".scrollspy">
+<header class="top fixed">
+        <div class="container"> <a class="logo" href="/"><img src="images/logo.svg" class="img-responsive"/></a>
+                <nav class="mainmenu">
+                        <ul>
+                                <li> <a id="signup" data-target="#student-signup" class="signin" href="#student-signup">Student Sign Up</a> </li>
+                                <li> <a data-target="#signup" onclick="" class="host" href="#signup">Become a Host</a> </li>
+                                <li class="posRelative"> <a id="signin" class="signin">Sign In</a></li>
+                                <li> <a data-target="#" class="signin" href="/help.html">Help</a> </li>
+                                <li>
+                                        <div class="dropdown drop-1" id="google_translate_element"></div>
+                                </li>
+                        </ul>
+                </nav>
+                <div class="nav-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class="mobile-host"> <a data-target="#signup" onclick="pop('popup-group')" class="host" href="#signup">Become a Host</a> </div>
+        </div>
+</header>
 <div class="container">
-        <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                        <div class="panel panel-default panel-signup">
+        <div class="clearifx">
+                <div class="row">
+                        <div class="col-md-6 col-md-offset-3" >
+                                <div class="panel panel-default panel-payment mt-100 mb-100">
+                                        <div class="panel-body">
+                                                <h1>Payment</h1>
+                                                <div class="payment-info">
+                                                        <label>Reference #</label>
+                                                        <p class="mb-30">123456</p>
+                                                        <label>Description</label>
+                                                        <address  class="mb-30">
+                                                        Homestay Services <br/>
+                                                        Shared Room (2 Guests) <br/>
+                                                        Room + Breakfast & Dinner <br/>
+                                                        From April 22, 2018 to May 20, 2018
+                                                        </address>
+                                                        <label>Total Amount</label>
+                                                        <p>$311.25 USD</p>
+                                                        <small class="fullwidth mb-30 pull-left">(includes a 3.75% Convenience Fee equal to $11.25 USD)</small>
+                                                        <div class="clearfix"></div>
+                                                        <label>Select Credit Card</label>
+                                                        <a class="btn btn-xs pull-right" role="button" data-toggle="collapse" href="#addnewcard" aria-expanded="false" aria-controls="addnewcard">Add New Card</a>
+                                                        <div class="clearfix"></div>
+                                                        <div class="row mt-30 mb-30">
+                                                                <div class="col-md-6"> <a href="javasccript:" class="btn-card selected"> <img src="images/visa.svg"/> <span>Visa</span>
+                                                                        <p>************6235</p>
+                                                                        </a> </div>
+                                                                <div class="col-md-6"> <a href="javasccript:" class="btn-card"> <img src="images/mastercard.svg"/> <span>Mastercard</span>
+                                                                        <p>************6235</p>
+                                                                        </a> </div>
+                                                        </div>
+                                                        <div class="form-group mb-30">
+                                                                <p class="mb-10">Please confirm the credit card security code</p>
+                                                                <div class="fullwidth pr">
+                                                                        <input type="text" class="form-control" placeholder="CVV" />
+                                                                        <a href="javascript:" class="hidden-xs btn-info-icon" style="top: 12px; right: 10px;"><i class="fa fa-info-circle fa-fw fa-red"></i></a> </div>
+                                                        </div>
+                                                        <div class="collapse" id="addnewcard">
+                                                            
+                                                           <label class="mb-20">New Card</label>
+                                                            <p>Please enter the credit card details:</p>
+                                                                <div class="row row-slider mb-30">
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                <input type="text" class="form-control mb-10" placeholder="Name on Card">
+                                                                        </div>
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                <input type="text" class="form-control mb-10" placeholder="Card Number">
+                                                                        </div>
+                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                <input type="text" class="form-control mb-10" placeholder="Expiration (MM/YY)">
+                                                                        </div>
+                                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                                                <div class="fullwidth pr">
+                                                                                        <input type="text" class="form-control mb-10" placeholder="CVV">
+                                                                                        <a href="javascript:" class="btn-info-icon" style="top: 12px; right: 10px;"><i class="fa fa-info-circle fa-fw fa-red"></i></a> </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="row row-slider mb-20">
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                <input type="text" class="form-control mb-10" placeholder="Billing Address">
+                                                                        </div>
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                <input type="text" class="form-control mb-10" placeholder="Billing City">
+                                                                        </div>
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                <input type="text" class="form-control mb-10" placeholder="Billing Postal Code">
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-block btn-default">Pay $311.25 USD</button>
+                                                        <a href="javascript:" type="submit" class="btn-link btn-block">Cancel</a> </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>
+
+<!--  Footer  -->
+
+
+<div class="otherContainer">
+        <div class="buttonContainer">
+                <button class="map-button" id="show" type="submit" style="width: 100%;"></button>
+        </div>
+</div>
+<div class="ontop"></div>
+
+<!-- Popup Group DIV -->
+
+<div id="popup-group" class="popup-wrapper"></div>
+
+<!-- Popup Group DIV end //--> 
+    
+    <div class="modal fade" id="studentsignup" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+     
+        <button type="button" class="close hide" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      
+      <div class="modal-body">
+        
+          <div class="panel  panel-payment">
                                 <div class="panel-body">
                                         <ul class="nav nav-tabs process-model more-icon-preocess hide" role="tablist">
                                                 <li role="presentation" class="active"><a href="#Disclaimer"  aria-controls="Disclaimer" role="tab" data-toggle="tab"><i class="" aria-hidden="true">1</i> </a></li>
@@ -53,10 +171,10 @@
                                         </ul>
                                         <!-- end design process steps--> 
                                         <!-- Tab panes -->
-                                        <div class="tab-content">
+                                        <div class="tab-content pt-0">
                                                 <div role="tabpanel" class="tab-pane fade in active" id="Disclaimer">
                                                         <div class="design-process-content">
-                                                                <div class="col-md-offset-2 col-sm-offset-2  col-sm-8 col-md-8">
+                                                                <div class="col-sm-12 col-md-12">
                                                                         <h1 class="full-width text-center text-title mt-0 mb-40">Student Sign Up</h1>
                                                                         <input type="text" class="form-control mb-10" placeholder="First Name">
                                                                         <input type="text" class="form-control mb-10" placeholder="Last Name">
@@ -597,13 +715,13 @@
                                                                         </div>
                                                                         <a href="#HostProfile" aria-controls="HostProfile" role="tab" data-toggle="tab" class="btn btn-block scroll-back" aria-expanded="true">Sign up </a>
                                                                         <div class="clearfix"></div>
-                                                                        <p class="text-center">By signing up, you agree with the <a href="javascript:">Terms & Conditions</a></p>
+                                                                        <p class="text-center mb-0">By signing up, you agree with the <a href="javascript:">Terms & Conditions</a></p>
                                                                 </div>
                                                         </div>
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane fade" id="HostProfile">
                                                         <div class="design-process-content">
-                                                                <div class="col-md-offset-2 col-sm-offset-2  col-sm-8 col-md-8">
+                                                                <div class="col-sm-12 col-md-12">
                                                                         <h1 class="full-width text-center text-title mt-0 mb-40">Thanks for signing up!</h1>
                                                                         <p>We have sent a confirmation email to student@gmail.com. </p>
                                                                         <p>We look forward to help you find the perfect homestay.</p>
@@ -613,25 +731,11 @@
                                         </div>
                                 </div>
                         </div>
-                </div>
-        </div>
+      </div>
+     
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
 </div>
-<div class="clearfix"></div>
-
-<!--  Footer  -->
-
-<div class="otherContainer">
-        <div class="buttonContainer">
-                <button class="map-button" id="show" type="submit" style="width: 100%;"></button>
-        </div>
-</div>
-<div class="ontop"></div>
-
-<!-- Popup Group DIV -->
-
-<div id="popup-group" class="popup-wrapper"></div>
-
-<!-- Popup Group DIV end //--> 
 
 <script src="js/jquery.min.js"></script> 
 <script src="js/jquery-ui.min.js"></script> 
@@ -657,8 +761,11 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyAb63loxs1OJOsWwDOf-l9IVG_8oX0RsBs&amp;"></script> 
 <script src="js/CustomMarker.js"></script> 
 <script src="js/swiper.min.js"></script> 
-<!--
 <script>
+    
+     $(window).on('load',function(){
+        $('#studentsignup').modal('show');
+    });
 
         var map;
 
@@ -791,8 +898,14 @@
 
 
         }
+
+
+
         google.maps.event.addDomListener(window, 'load', initialize);
-    </script>  --> 
+
+
+
+    </script> 
 <script type="text/javascript">
 
                 $(function(){
@@ -875,34 +988,16 @@
                 $(function(){
 
 					//******   Scrolling FORM   ********/
-
-					//$(window).resize(function() {
-
-/*						var $scrollingDiv = $("#profile-form-box");
-
-						var $mapDivPosition = $("#Map").position();
-
-						var $bottomLimit = $mapDivPosition.top - 770;
-
-						if ($(window).width() > 800) {
-
-							$(window).scroll(function(){
-
-								if ($(window).scrollTop() >= 550  && $(window).scrollTop() < $bottomLimit) {
-
-									$scrollingDiv.addClass("fixed-form");
-
-								} else  {
-
-									$scrollingDiv.removeClass("fixed-form");
-
-								}
-
-							});
-
-						}   */
-
-					//});
+						$(window).on('beforeunload', function(){
+						  $(window).scrollTop(0);
+						});
+						$('#profile-form-box').affix({
+							offset: {
+								//top: 100,
+								top: $('#profile-form-box').offset().top - 90,
+								bottom: $('#Map').outerHeight(true) + 520
+							}
+						});
 
 					//******   Date Picker   ********/
 
@@ -941,6 +1036,35 @@
 						minDate: firstDay
 
 					});
+
+					
+
+					//Collapse - expande Box
+
+					$('#rules-expand').click(function() {
+
+						$(this).find('i').toggleClass('fa fa-chevron-up fa fa-chevron-down');
+
+						$('#rules-extra').toggle();
+
+					});
+
+					$('#homestay-expand').click(function() {
+
+						$(this).find('i').toggleClass('fa fa-chevron-up fa fa-chevron-down');
+
+						$('#homestay-extra').toggle();
+
+					});
+
+					$('#amenity-expand').click(function() {
+
+						$(this).find('i').toggleClass('fa fa-chevron-up fa fa-chevron-down');
+
+						$('#amenity-extra').toggle();
+
+					});
+
 					
 
 				});
@@ -961,7 +1085,12 @@
         prevEl: '.swiper-button-prev',
 
       },
-	
+
+		
+
+		
+
+		
 
 	breakpoints: {
 
@@ -1001,147 +1130,10 @@
 
     });
 
-$(function(){	
 	
-	// script for tab steps
-    $('.process-model a').on('shown.bs.tab', function (e) {
-  	    var href = $(e.target).attr('href');
-        var $curr = $(".process-model  a[href='" + href + "']").parent();
-        $("html, body").animate({ scrollTop: 0 }, 0);
-		$curr.addClass("active");
-		$curr.prevAll().removeClass("active");
-		$curr.removeClass("visited");
-		$curr.prevAll().addClass("visited");
-		$curr.nextAll().removeClass("visited");
-    });
-	//Back button and step active/visited
-	$('.link-back').on('shown.bs.tab', function (e) {
-		var href = $(e.target).attr('href');
-        var $curr = $(".process-model  a[href='" + href + "']").parent();
-		$("html, body").animate({ scrollTop: 0 }, 0);
-		$curr.addClass("active");
-		$curr.prevAll().removeClass("active");
-		$curr.nextAll().removeClass("active");
-		$curr.removeClass("visited");
-		$curr.prevAll().addClass("visited");
-		$curr.nextAll().removeClass("visited");
-	});
-	$('.btn[data-toggle="tab"]').on('shown.bs.tab',function (e) {
-		 var href = $(e.target).attr('href');
-		 var $currParent = $(".process-model  a[href='" + href + "']").parent();
-		 var $currLink = $(".process-model  a[href='" + href + "']");
-		 $("html, body").animate({ scrollTop: 0 }, 0);
-		 $currLink.attr("data-toggle", "tab"); //add the data-toggle tab to activate the link
-       	 //to deal with the style
-		 //$currParent.addClass("visited");
-		 $currParent.addClass("active");
-         $currParent.prevAll().addClass("visited"); 
-		 $currParent.prevAll().removeClass("active");
-	});
+
 	
-});
-</script> 
-<script type="text/javascript">
-          
-/* $('.scroll-back').click(function(e){
-    $("html, body").animate({ scrollTop: 0 }, 600);
-     e.preventDefault();
-     $(this).tab('show');
-     return false;
- });         */  
-   
-    </script> 
-<script>   
-    $(function(){
-		//*********   Dropdown options show/hide **********************************//
-		//Children
-		$(".children select").change(function(){
-			//initialization --> hide all the boxes
-			$(".children .optionBox").hide(); 
-			$(".more-child").hide();
-			$(this).find("option:selected").each(function(){
-				var optionValue = $(this).attr("value");
-				if(optionValue != "more" && optionValue != "no"){
-					//it show the first 3 extra fields
-					for (i=1; i<=optionValue ; i++) {
-						$(".child-" + i).show();
-					}
-				} else if (optionValue == "more") {
-					for (i=1; i<=4 ; i++) {
-						$(".child-" + i).show();
-					}
-					$(".more-child").show();
-				} else {
-					$(".children .optionBox").hide();
-				}
-			});
-		});
-		//add field when more than 4
-		$(".more-child").click(function(){
-			$(".children select").find("option:selected").each(function(){
-				var optionValue = $(this).attr("value");
-				if (optionValue == "more") {
-					for (i=5; i<=6; i++) {
-						if ($(".child-" + i).css('display') == 'none') {
-							$(".child-" + i).show();
-							if (i==6) {
-								$(".more-child").hide();
-							}
-							return false;
-						}
-					}
-				} 
-			});
-		});
-		//Pets
-		$(".pets select").change(function(){
-			//initialization --> hide all the boxes
-			$(".pets .optionBox").hide(); 
-			$(".more-pet").hide();
-			$(this).find("option:selected").each(function(){
-				var optionValue = $(this).attr("value");
-				if(optionValue == "yes"){
-					//it show the first 3 extra fields
-					$(".pet-1").show();
-					$(".more-pet").show();
-				} else {
-					$(".pets .optionBox").hide();
-					$(".more-pet").hide();
-				}
-			});
-		});
-		//add field when more than 4
-		$(".more-pet").click(function(){
-			$(".pets select").find("option:selected").each(function(){
-				var optionValue = $(this).attr("value");
-				if (optionValue == "yes") {
-					for (i=2; i<=6; i++) {
-						if ($(".pet-" + i).css('display') == 'none') {
-							$(".pet-" + i).show();
-							if (i==6) {
-								$(".more-pet").hide();
-							}
-							return false;
-						}
-					}
-				} 
-			});
-		});
-		//Partner
-		$(".partner select").change(function(){
-			//initialization --> hide all the boxes
-			$(".partner .optionBox").hide(); 
-			$(this).find("option:selected").each(function(){
-				var optionValue = $(this).attr("value");
-				if(optionValue == "yes"){
-					//it show the first 3 extra fields
-					$(".partner-1").show();
-				} else {
-					$(".partner .optionBox").hide();
-				}
-			});
-		});
-	});
-</script>
+
+  </script>
 </body>
 </html>
